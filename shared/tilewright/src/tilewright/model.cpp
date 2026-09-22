@@ -1267,11 +1267,15 @@ int resolve_model_cell_index(const LoadedModel& mdl, const Problem& p) {
 
 // ── feasibility filter (byte-for-byte mirror of the analytical
 //     is_kernel_feasible check) ───────────────────────────────────────────
-// `pool_has_cache_hints` tells rule 3 whether the candidate pool actually
-// contains NonTemporal/TemporalHint variants. gfx1250 Origami ships none, and
-// the hint-requiring branches would otherwise reject every candidate instead
-// of choosing among them.
-bool is_kernel_feasible(const Problem& p, const Config& c, bool pool_has_cache_hints) {
+// The two availability flags tell rule 3 whether the candidate pool actually
+// contains a NonTemporal variant of that operand. gfx1250 Origami ships none,
+// and the hint-requiring branches would otherwise reject every candidate
+// instead of choosing among them. They are per-operand because a pool can ship
+// one and not the other (gfx950 Origami_nta4 is A-only).
+bool is_kernel_feasible(const Problem&  p,
+                        const Config&   c,
+                        bool            non_temporal_a_available,
+                        bool            non_temporal_b_available) {
   const long long M      = static_cast<long long>(p.size.m);
   const long long N      = static_cast<long long>(p.size.n);
   const long long K      = static_cast<long long>(p.size.k);
@@ -1298,10 +1302,10 @@ bool is_kernel_feasible(const Problem& p, const Config& c, bool pool_has_cache_h
   long long MT_K_mod_128b = (MT_K * a_bits) % 1024;
   if (K_mod_128b == 0 && MT_K_mod_128b == 0) {
     if (M <= MT_M * 2 && (!b_trans) && ((N * b_bits) / std::max<long long>(M * a_bits, 1) > 5)) {
-      if (pool_has_cache_hints && chb != 4) return false;
+      if (non_temporal_b_available && chb != 4) return false;
     } else if (N <= MT_N * 2 && a_trans &&
                ((M * a_bits) / std::max<long long>(N * b_bits, 1) > 5)) {
-      if (pool_has_cache_hints && cha != 4) return false;
+      if (non_temporal_a_available && cha != 4) return false;
     } else {
       if (cha || chb) return false;
     }
@@ -1387,10 +1391,21 @@ std::vector<Result> rank_configs_impl(const LoadedModel& model,
   // Rule 3 of is_kernel_feasible requires a NonTemporal/TemporalHint kernel on
   // skinny shapes. gfx1250 Origami ships no such variants, so that requirement
   // would reject the whole pool; derive it from the pool rather than assuming.
-  const bool pool_has_cache_hints =
-      std::any_of(configs.begin(), configs.end(), [](const Config& cc) {
-        return cc.cache_hints_a != 0 || cc.cache_hints_b != 0;
-      });
+  //
+  // Mirrors origami::rank_configs (shared/origami/src/origami/origami.cpp:676-681)
+  // exactly, and must keep mirroring it: PER OPERAND, and testing `== 4` rather
+  // than `!= 0`. Both details matter. A pool with only NT-A variants (gfx950
+  // Origami_nta4, where NonTemporalA=4 and NonTemporalB=0 throughout) would set
+  // a single shared flag, re-arming the NT-B branch and rejecting every
+  // candidate -- the very failure this check exists to prevent. And 1/2/3 are
+  // temporal hints under origami's own `> 3` convention (gemm.cpp:1434), so
+  // `!= 0` would count them as non-temporal availability.
+  bool non_temporal_a_available = false;
+  bool non_temporal_b_available = false;
+  for (const auto& cc : configs) {
+    non_temporal_a_available |= cc.cache_hints_a == 4;
+    non_temporal_b_available |= cc.cache_hints_b == 4;
+  }
 
   // Two-pass survivor scan (LDS gate -> is_kernel_feasible -> optional
   // smart_K signature filter), with the C++/Python shared fallback: if the
@@ -1401,7 +1416,8 @@ std::vector<Result> rank_configs_impl(const LoadedModel& model,
       const Config& cc = configs[ci];
       // LDS budget gate (tilewright::check_lds_capacity).
       if (!check_lds_capacity(hardware, cc.mt, problem.a_dtype, problem.b_dtype)) continue;
-      if (!is_kernel_feasible(problem, cc, pool_has_cache_hints)) continue;
+      if (!is_kernel_feasible(problem, cc, non_temporal_a_available, non_temporal_b_available))
+        continue;
       if (use_sig_filter && have_sk) {
         if (!sig_in_set(sig_of(cc))) continue;
       }
