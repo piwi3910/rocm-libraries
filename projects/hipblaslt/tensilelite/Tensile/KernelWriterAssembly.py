@@ -11862,6 +11862,11 @@ class KernelWriterAssembly(KernelWriter):
         comp.setMemToken([self.states.memTokenLdsSplit[tdmParity][0]])
       else:
         comp.setMemToken([self.states.ldsTensorTokenIdx])
+      ringClasses = ["A"]
+      if self.isTdmWaveSeparated(kernel) and not self.tdmSeparateABDescriptors(kernel):
+        ringClasses.append("B")
+      comp.setLdsRingAccesses(
+        self._ldsRingAccessRows(kernel, ringClasses, comp.mem_token, 1))  # Write
       if self.states.inTailLoop and not kernel["1LDSBuffer"] and kernel["StreamK"]:
         ldsAddrSgprName = comp.getLdsAddrSgprName("tdmAGroup0")
         if self.isPrefetchAcrossPersistentEnabled(kernel):
@@ -11958,6 +11963,8 @@ class KernelWriterAssembly(KernelWriter):
         return imod
       comp: TensorDataMoverLoad = TensorDataMoverLoad.find(self)
       comp.setMemToken([self.states.ldsTensorTokenIdx])
+      comp.setLdsRingAccesses(
+        self._ldsRingAccessRows(kernel, ["MXSA"], comp.mem_token, 1))  # Write
       if kernel["ProblemType"]["MXBlockA"]:
         if self.states.inTailLoop and not kernel["1LDSBuffer"] and kernel["StreamK"]:
           ldsAddrSgprName = comp.getLdsAddrSgprName("tdmMXSAGroup0")
@@ -11976,6 +11983,8 @@ class KernelWriterAssembly(KernelWriter):
     if tc == "Metadata" and kernel["enableTDMMetadata"]:
       comp: TensorDataMoverLoad = TensorDataMoverLoad.find(self)
       comp.setMemToken([self.states.ldsTensorTokenIdx])
+      comp.setLdsRingAccesses(
+        self._ldsRingAccessRows(kernel, ["Metadata"], comp.mem_token, 1))  # Write
       if self.isTdmWaveSeparated(kernel):
         skipMetadataLabel = Label(self.labels.getNameInc("TdmMetadataSkipOddWave"), "")
         guardedLoad = Module("tdmMetadataWSGuardedLoad")
@@ -11998,6 +12007,8 @@ class KernelWriterAssembly(KernelWriter):
           comp.setMemToken(self._dcpTdmIssueTokens(kernel, "B"))
         else:
           comp.setMemToken([self.states.ldsTensorTokenIdx])
+        comp.setLdsRingAccesses(
+          self._ldsRingAccessRows(kernel, ["B"], comp.mem_token, 1))  # Write
         isIterB = kernel.get("_TDMIterateModeB", False)
         tdmBGroup2 = "tdmBGroup2" if isIterB else None
         tdmBGroup3 = "tdmBGroup3" if isIterB else None
@@ -12012,6 +12023,8 @@ class KernelWriterAssembly(KernelWriter):
           comp.setMemToken([self.states.memTokenLdsSplit[tdmParity][0]])
         else:
           comp.setMemToken([self.states.ldsTensorTokenIdx])
+        comp.setLdsRingAccesses(
+          self._ldsRingAccessRows(kernel, ["B"], comp.mem_token, 1))  # Write
         if self.states.inTailLoop and not kernel["1LDSBuffer"] and kernel["StreamK"]:
           ldsAddrSgprName = comp.getLdsAddrSgprName("tdmBGroup0")
           if self.isPrefetchAcrossPersistentEnabled(kernel):
