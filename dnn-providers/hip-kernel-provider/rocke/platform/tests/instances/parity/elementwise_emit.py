@@ -40,6 +40,13 @@ def _spec(idx: int) -> ElementwiseSpec:
             ElementwiseSpec(op="relu", dtype="f16", block_size=256, vec=8),
             "gfx1201",
         )
+    if idx == 8:
+        # f64: natively computed, exact ops only (vec=2).
+        return ElementwiseSpec(op="add", dtype="f64", block_size=256, vec=2)
+    if idx == 9:
+        return ElementwiseSpec(op="relu", dtype="f64", block_size=128, vec=2)
+    if idx == 10:
+        return ElementwiseSpec(op="max", dtype="f64", block_size=512, vec=2)
     raise SystemExit(f"unknown config index {idx}")
 
 

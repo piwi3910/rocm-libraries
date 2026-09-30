@@ -52,6 +52,7 @@ ROCKE_SCALAR_SINGLETON(rocke_i64, ROCKE_SCALAR_I64, "i64")
 ROCKE_SCALAR_SINGLETON(rocke_bf16, ROCKE_SCALAR_BF16, "bf16")
 ROCKE_SCALAR_SINGLETON(rocke_f16, ROCKE_SCALAR_F16, "f16")
 ROCKE_SCALAR_SINGLETON(rocke_f32, ROCKE_SCALAR_F32, "f32")
+ROCKE_SCALAR_SINGLETON(rocke_f64, ROCKE_SCALAR_F64, "f64")
 ROCKE_SCALAR_SINGLETON(rocke_fp8e4m3, ROCKE_SCALAR_FP8E4M3, "fp8e4m3")
 ROCKE_SCALAR_SINGLETON(rocke_bf8e5m2, ROCKE_SCALAR_BF8E5M2, "bf8e5m2")
 
@@ -77,6 +78,8 @@ const rocke_type_t* rocke_scalar_by_name(const char* name)
         return rocke_f16();
     if(strcmp(name, "f32") == 0)
         return rocke_f32();
+    if(strcmp(name, "f64") == 0)
+        return rocke_f64();
     if(strcmp(name, "fp8e4m3") == 0)
         return rocke_fp8e4m3();
     if(strcmp(name, "bf8e5m2") == 0)

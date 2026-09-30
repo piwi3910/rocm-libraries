@@ -3,7 +3,7 @@
  *
  * tests/parity/emit.c -- C-side emitter for the rocke parity harness.
  *
- * Builds one of four kernels (selected by argv[1]) identically to the Python
+ * Builds one of five kernels (selected by argv[1]) identically to the Python
  * emitter in emit.py and prints the lowered AMDGPU LLVM .ll to stdout, so the
  * two outputs can be byte-compared.
  *
@@ -11,9 +11,11 @@
  *   memory  : params -> tid -> 2x global_load_f32 -> fadd -> global_store
  *   forloop : scf.for accumulating loop (exercises scf.for port)
  *   vector  : vector splat + vector binop + vector fptrunc/extract
+ *   f64const: f64 literal edge cases (0.1, -0.0, denormal, +/-inf, NaN) stored
  *
  * arch = gfx950, flavor = AUTO (matches Python defaults in this harness).
  */
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -96,11 +98,23 @@ static int build_vector(rocke_ir_builder_t* b)
     return 0;
 }
 
+static int build_f64const(rocke_ir_builder_t* b)
+{
+    const rocke_type_t* pf64 = rocke_ptr_type(b, rocke_f64(), "global");
+    rocke_value_t* C = rocke_b_param(b, "C", pf64, NULL);
+    const double values[6] = {0.1, -0.0, 4.9406564584124654e-324, INFINITY, -INFINITY, NAN};
+    int i;
+    for(i = 0; i < 6; ++i)
+        rocke_b_global_store(b, C, rocke_b_const_i32(b, i), rocke_b_const_f64(b, values[i]), 8);
+    rocke_b_ret(b);
+    return 0;
+}
+
 int main(int argc, char** argv)
 {
     if(argc < 2)
     {
-        fprintf(stderr, "usage: %s <scalar|memory|forloop|vector>\n", argv[0]);
+        fprintf(stderr, "usage: %s <scalar|memory|forloop|vector|f64const>\n", argv[0]);
         return 2;
     }
     const char* which = argv[1];
@@ -121,6 +135,8 @@ int main(int argc, char** argv)
         rc = build_forloop(&b);
     else if(strcmp(which, "vector") == 0)
         rc = build_vector(&b);
+    else if(strcmp(which, "f64const") == 0)
+        rc = build_f64const(&b);
     else
     {
         fprintf(stderr, "unknown kernel %s\n", which);

@@ -4,7 +4,7 @@
 #
 # tests/parity/emit.py -- Python-side emitter for the rocke parity harness.
 #
-# Builds one of four kernels (selected by argv[1]) identically to the C emitter
+# Builds one of five kernels (selected by argv[1]) identically to the C emitter
 # in emit.c and prints the lowered AMDGPU LLVM .ll to stdout, so the two outputs
 # can be byte-compared.
 #
@@ -12,11 +12,12 @@
 #   memory  : params -> tid -> 2x global_load_f32 -> fadd -> global_store
 #   forloop : scf.for accumulating loop (exercises scf.for port)
 #   vector  : vector splat + vector binop + vector fptrunc/extract
+#   f64const: f64 literal edge cases (0.1, -0.0, denormal, +/-inf, NaN) stored
 #
 # arch = gfx950, llvm_flavor = None (AUTO), matching the C side.
 import sys
 
-from rocke.core.ir import IRBuilder, F16, F32, PtrType
+from rocke.core.ir import IRBuilder, F16, F32, F64, PtrType
 from rocke.core.lower_llvm import lower_kernel_to_llvm
 
 
@@ -78,17 +79,27 @@ def build_vector(b: IRBuilder) -> None:
     b.ret()
 
 
+def build_f64const(b: IRBuilder) -> None:
+    pf64 = PtrType(F64, "global")
+    C = b.param("C", pf64)
+    values = (0.1, -0.0, 5e-324, float("inf"), float("-inf"), float("nan"))
+    for i, v in enumerate(values):
+        b.global_store(C, b.const_i32(i), b.const_f64(v), align=8)
+    b.ret()
+
+
 BUILDERS = {
     "scalar": build_scalar,
     "memory": build_memory,
     "forloop": build_forloop,
     "vector": build_vector,
+    "f64const": build_f64const,
 }
 
 
 def main() -> int:
     if len(sys.argv) < 2 or sys.argv[1] not in BUILDERS:
-        sys.stderr.write("usage: emit.py <scalar|memory|forloop|vector>\n")
+        sys.stderr.write("usage: emit.py <scalar|memory|forloop|vector|f64const>\n")
         return 2
     which = sys.argv[1]
     b = IRBuilder("parity_kernel")

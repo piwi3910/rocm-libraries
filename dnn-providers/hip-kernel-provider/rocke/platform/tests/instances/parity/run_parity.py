@@ -30,7 +30,7 @@ HERE = Path(__file__).resolve().parent
 ROCKE = HERE.parents[2]  # parity -> instances -> tests -> rocKE
 INCLUDE = ROCKE / "cpp" / "include"
 PYROOT = ROCKE / "python"
-KERNELS = ["scalar", "memory", "forloop", "vector"]
+KERNELS = ["scalar", "memory", "forloop", "vector", "f64const"]
 
 
 def _cxx() -> str:
