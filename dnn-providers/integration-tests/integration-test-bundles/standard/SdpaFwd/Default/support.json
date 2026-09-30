@@ -20,6 +20,7 @@
           "b1_hq32_kv4_sq512_skv2048_d128_fp16_bshd_causal_flag",
           "b1_hq32_kv4_sq512_skv512_d128_bfp16_bshd_causal_br",
           "b1_hq32_kv4_sq512_skv512_d64_bfp16_bshd_causal_br",
+          "b1_hq32_kv8_sq2048_skv512_d128_bfp16_bshd_causal_flag",
           "b1_hq32_kv8_sq512_skv512_d128_bfp16_bshd_causal_br",
           "b1_hq32_kv8_sq512_skv512_d64_bfp16_bshd_causal_br",
           "b1_hq40_kv10_sq512_skv512_d128_bfp16_bshd_causal_br",

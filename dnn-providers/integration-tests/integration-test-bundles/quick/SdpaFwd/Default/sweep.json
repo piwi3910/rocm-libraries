@@ -79,9 +79,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/bf16/hd128_causal_bm128/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/bf16/hd128_causal_bm128/Small.json."
       }
     },
     {
@@ -162,9 +165,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/bf16/hd128_causal_gqa/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/bf16/hd128_causal_gqa/Small.json."
       }
     },
     {
@@ -245,9 +251,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/bf16/hd128_causal_mha/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/bf16/hd128_causal_mha/Small.json."
       }
     },
     {
@@ -328,9 +337,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/bf16/hd64_causal_gqa/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/bf16/hd64_causal_gqa/Small.json."
       }
     },
     {
@@ -411,9 +423,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/bf16/hd64_nomask_bn32/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/bf16/hd64_nomask_bn32/Small.json."
       }
     },
     {
@@ -494,9 +509,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/fp16/hd128_causal_mha/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/fp16/hd128_causal_mha/Small.json."
       }
     },
     {
@@ -577,9 +595,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/fp16/hd64_causal_gqa/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/fp16/hd64_causal_gqa/Small.json."
       }
     },
     {
@@ -660,9 +681,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from quick/SdpaFwd/bshd/fp16/hd64_nomask_mqa/Small.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle quick/SdpaFwd/bshd/fp16/hd64_nomask_mqa/Small.json."
       }
     }
   ]

@@ -80,9 +80,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from standard/SdpaFwd/bshd/bf16/hd128_causal_mha/Prefill.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle standard/SdpaFwd/bshd/bf16/hd128_causal_mha/Prefill.json."
       }
     },
     {
@@ -164,9 +167,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from standard/SdpaFwd/bshd/bf16/hd128_nomask_bm128/Prefill.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle standard/SdpaFwd/bshd/bf16/hd128_nomask_bm128/Prefill.json."
       }
     },
     {
@@ -248,9 +254,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from standard/SdpaFwd/bshd/bf16/hd128_nomask_gqa/Prefill.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle standard/SdpaFwd/bshd/bf16/hd128_nomask_gqa/Prefill.json."
       }
     },
     {
@@ -332,9 +341,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "place_bundles.py",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: consolidated from standard/SdpaFwd/bshd/fp16/hd128_causal_crossattn/Prefill.json"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Consolidated from the standalone bundle standard/SdpaFwd/bshd/fp16/hd128_causal_crossattn/Prefill.json."
       }
     },
     {
@@ -416,9 +428,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -500,9 +515,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -584,9 +602,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -668,9 +689,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -752,9 +776,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -836,9 +863,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -920,9 +950,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1004,9 +1037,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1088,9 +1124,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1172,9 +1211,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1256,9 +1298,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1340,9 +1385,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1424,9 +1472,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1508,9 +1559,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1592,9 +1646,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1676,9 +1733,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1760,9 +1820,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1844,9 +1907,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -1928,9 +1994,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2012,9 +2081,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2096,9 +2168,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2180,9 +2255,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2264,9 +2342,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2348,9 +2429,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2432,9 +2516,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2516,9 +2603,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2600,9 +2690,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2684,9 +2777,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2768,9 +2864,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2852,9 +2951,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -2936,9 +3038,12 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
       }
     },
     {
@@ -3020,9 +3125,99 @@
       },
       "metadata": {
         "format_version": 1,
-        "generator": "hand-authored (ALMIOPEN-2797 one-hot expansion)",
-        "reference_source": "graph-only: no golden data; graded at run time against the harness reference executor",
-        "notes": "ALMIOPEN-2797: one-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br"
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "One-hot off baseline b1_hq32_kv32_sq512_skv512_d128_bfp16_bshd_causal_br."
+      }
+    },
+    {
+      "id": "b1_hq32_kv8_sq2048_skv512_d128_bfp16_bshd_causal_flag",
+      "values": {
+        "io_data_type": "bfloat16",
+        "tensors": [
+          {
+            "uid": 0,
+            "dims": [
+              1,
+              8,
+              512,
+              128
+            ],
+            "strides": [
+              524288,
+              128,
+              1024,
+              1
+            ],
+            "data_type": "bfloat16"
+          },
+          {
+            "uid": 1,
+            "dims": [
+              1,
+              32,
+              2048,
+              128
+            ],
+            "strides": [
+              8388608,
+              128,
+              4096,
+              1
+            ],
+            "data_type": "bfloat16"
+          },
+          {
+            "uid": 2,
+            "dims": [
+              1,
+              32,
+              2048,
+              128
+            ],
+            "strides": [
+              8388608,
+              128,
+              4096,
+              1
+            ],
+            "data_type": "bfloat16"
+          },
+          {
+            "uid": 3,
+            "dims": [
+              1,
+              8,
+              512,
+              128
+            ],
+            "strides": [
+              524288,
+              128,
+              1024,
+              1
+            ],
+            "data_type": "bfloat16"
+          }
+        ],
+        "attributes": {
+          "attn_scale_value": 0.08838834764831843,
+          "causal_mask": true,
+          "diagonal_alignment": "TOP_LEFT",
+          "right_bound": -1
+        }
+      },
+      "metadata": {
+        "format_version": 1,
+        "generator": "manual",
+        "generator_version": "1.0.0",
+        "operation": "SdpaFwd",
+        "reference_source": "CpuReferenceGraphExecutor or GpuReferenceGraphExecutor at run time, per --reference-executor (graph-only, no golden data)",
+        "seed": 42,
+        "notes": "Top-left causal with Sq > Skv, the only shape where the causal KV-tile count is clamped to Skv; query blocks past Skv attend every key."
       }
     }
   ]
