@@ -651,3 +651,14 @@ reordering another group cannot silently redirect a set-cover test.
 newer baseline through every conflict. The rebased run passed at 84.14%; use its
 report to raise 38 per-file floors without lowering any, and raise the exact
 whole-project floor from 75% to 82%.
+
+## D44 — Accept basename identity changes from the LDSTrInstA/LDSTrInstB split
+
+**ADR:** [`adr/0029-ldstrinst-ab-split-basename-identity-change.md`](adr/0029-ldstrinst-ab-split-basename-identity-change.md)
+
+**Decision:** Accept the `basename`-only golden changes on stable
+architectures (gfx90a, gfx942) and other targets (gfx950, gfx1250) that
+result from splitting the single `LDSTrInst` parameter into per-tensor
+`LDSTrInstA`/`LDSTrInstB` fields that now feed the solution naming hash.
+These targets have no LDSTr hardware, so `err` codes and emitted assembly
+are unchanged; only the recorded hash text differs.
