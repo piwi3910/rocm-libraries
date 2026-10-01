@@ -573,10 +573,13 @@ class CDNA5ReadyQueue : public ReadyQueue {
     //
     // Fix: each window is owed fillQuotaPerWindow_ fillers, computed once per
     // region in onInitRegion as ceil(fillers / WMMAs). Once the quota is met,
-    // (1) the window closes so the next WMMA can issue (Phase B), and
-    // (2) further fillers are deferred unless nothing else can issue
-    // (findSmallestPickableNonWmma). A window can still get more than the
-    // quota when a hazard or dependency forces it, e.g. an s_cmp/s_cmov SCC chain.
+    // (1) the window closes early so the next WMMA can issue (Phase B), and
+    // (2) further fillers are deferred unless nothing else can issue without
+    // stalling (findSmallestPickableNonWmma). The quota only ever shortens a
+    // window: when it cannot be met (fillers exhausted late in the region),
+    // the original cycle limit and hide budget still close the window. A window
+    // can get more than the quota when a hazard or dependency forces it, e.g.
+    // an s_cmp/s_cmov SCC chain.
     //
     // Invariants: ds_load selection and the ds_load half of the hide budget are
     // untouched. fillsThisWindow_ is separate from nonWmmaFillsSinceActiveWmma_,
@@ -1405,9 +1408,10 @@ bool CDNA5ReadyQueue::findSmallestPickableNonWmma(DAGNode* pickedDS, DAGNode** o
     }
     // SALU/other allows hidden stalls (see pickFreeBest); VALU stays
     // RAW-free-only.
-    // evenSpreadFillers: past this window's quota a filler only goes when
-    // nothing else can, so it is not pulled forward from a later window.
-    const bool fillerAllowed = !fillQuotaMet() || best == nullptr;
+    // evenSpreadFillers: past this window's quota a filler is held back so it
+    // is not pulled forward from a later window, unless nothing else can issue
+    // without stalling (no candidate, or the best one carries a wait).
+    const bool fillerAllowed = !fillQuotaMet() || best == nullptr || bestWait > 0;
     int otherWait = 0;
     if (DAGNode* t = pickFreeBest(otherQueue, &otherWait, /*allowHiddenStall=*/true)) {
         if (fillerAllowed) consider(t, kOther, otherWait);
@@ -2048,12 +2052,15 @@ DAGNode* CDNA5ReadyQueue::pickOne() {
 
         const bool blockWmmaForLoopHeadBalance =
             deferHeadBalanceThisRegion_ && deferFirstHeadWmmaActive_ && otherQueuesHaveWork;
-        // evenSpreadFillers: an open window closes on the fill quota instead of
-        // on its full cycle count, so surplus fillers are not pulled in to pad it.
-        const bool quotaClosesWindow = fillQuotaPerWindow_ > 0 && activeWmmaNode_ != nullptr;
-        const bool blockWmmaForActiveWindow =
-            (quotaClosesWindow ? !fillQuotaMet() : coIssueCyclePos_ < activeWmmaLatency_) &&
-            (smallestPickable != nullptr);
+        // evenSpreadFillers: meeting the fill quota closes an open window early,
+        // so surplus fillers are not pulled in to pad it. The quota can only
+        // shorten a window, never lengthen it: once a region's fillers run out
+        // the quota is unreachable, and the original cycle limit must still
+        // release the WMMA, or every pickable ds_load/tensor_load would drain first.
+        const bool quotaClosedWindow = activeWmmaNode_ != nullptr && fillQuotaMet();
+        const bool blockWmmaForActiveWindow = !quotaClosedWindow &&
+                                              (coIssueCyclePos_ < activeWmmaLatency_) &&
+                                              (smallestPickable != nullptr);
 
         bool blockWmmaForAtLeastOneNonWmmaInterleaving = false;
         if (lastPickedNode_ != nullptr) {
@@ -2070,12 +2077,12 @@ DAGNode* CDNA5ReadyQueue::pickOne() {
         }
         const int hideBudget = cumulativeWmmaHideBudget_;
         const int dsLoadBudget = cumulativeWmmaDsLoadBudget_;
-        // The ds_load budget always applies; under the quota it replaces the
-        // non-WMMA count, which is what demanded the surplus fillers.
-        const bool fillsOwed =
-            quotaClosesWindow ? !fillQuotaMet() : nonWmmaIssuedThisRegion_ < hideBudget;
+        // The ds_load half of the budget always applies. A window closed by the
+        // quota waives only the non-WMMA count, which is what demanded the
+        // surplus fillers; otherwise the count applies as before.
+        const bool nonWmmaOwed = !quotaClosedWindow && nonWmmaIssuedThisRegion_ < hideBudget;
         const bool blockWmmaForHideBudget =
-            hasPickableNonWmma && (fillsOwed || dsLoadIssuedThisRegion_ < dsLoadBudget);
+            hasPickableNonWmma && (nonWmmaOwed || dsLoadIssuedThisRegion_ < dsLoadBudget);
         PASS_DEBUG(std::cerr << "[CDNA5 pickOne] Phase B candidate wmmaId=" << bestWMMA->id
                              << " bestLatency=" << bestLatency
                              << " blockLoopHead=" << blockWmmaForLoopHeadBalance

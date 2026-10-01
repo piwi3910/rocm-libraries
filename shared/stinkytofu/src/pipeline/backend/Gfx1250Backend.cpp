@@ -219,8 +219,13 @@ bool buildGfx1250Pipeline(ModulePassManager& mpm, StinkyAsmModule& module, const
             // WMMA that consumes its loads, so that WMMA has nothing to issue behind
             // it. Repair moves this many non-WMMA instructions past each anchor to
             // refill those slots, without changing any wait immediate.
+            //
+            // Skipped under EvenSpreadFillers: the scheduler already places one
+            // filler per WMMA window, and moving non-WMMA work past each anchor
+            // re-packs those fillers into a few windows, undoing the spread.
             const int waitRepairSlotsAfterAnchor = 1;
-            if (runScheduler && waitRepairSlotsAfterAnchor > 0) {
+            if (runScheduler && waitRepairSlotsAfterAnchor > 0 &&
+                !moduleOptions.EvenSpreadFillers) {
                 innerPM.addPass(createWaitAwareScheduleRepairPass(waitRepairSlotsAfterAnchor));
             }
 
