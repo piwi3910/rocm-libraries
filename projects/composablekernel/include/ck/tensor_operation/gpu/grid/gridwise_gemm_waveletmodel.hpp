@@ -148,7 +148,7 @@ struct GridwiseGemmLoadWave<TileLoadThreadGroup, 1>
                                                ABlockBuffer& a_block_buf,
                                                const ABlockTransferStep& a_block_copy_step,
                                                const BGridDesc& b_grid_desc,
-                                               const BBlockDesc& b_block_desc,
+                                               const BBlockDesc&,
                                                BBlockTransfer& b_blockwise_copy,
                                                const BGridBuffer& b_grid_buf,
                                                BBlockBuffer& b_block_buf,
@@ -165,11 +165,12 @@ struct GridwiseGemmLoadWave<TileLoadThreadGroup, 1>
 
         __builtin_amdgcn_sched_barrier(0);
         a_blockwise_copy.PrecomputeIdx(a_grid_desc);
-        b_blockwise_copy.PrecomputeIdx(b_grid_desc);
+        // b_blockwise_copy.PrecomputeIdx(b_grid_desc);
 
         // First prefetch buffer A0, B0
         __builtin_amdgcn_sched_barrier(0);
-        b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I0));
+        // b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I0));
+        b_blockwise_copy.Run(b_grid_buf, b_block_buf.At(I0));
         a_blockwise_copy.Load(a_grid_buf, a_block_desc, a_block_buf.At(I0));
         __builtin_amdgcn_sched_barrier(0);
 
@@ -177,7 +178,7 @@ struct GridwiseGemmLoadWave<TileLoadThreadGroup, 1>
         a_blockwise_copy.MoveSrcSliceWindow(a_grid_desc, a_block_copy_step);
         b_blockwise_copy.MoveSrcSliceWindow(b_grid_desc, b_block_copy_step);
         a_blockwise_copy.PrecomputeIdx(a_grid_desc);
-        b_blockwise_copy.PrecomputeIdx(b_grid_desc);
+        // b_blockwise_copy.PrecomputeIdx(b_grid_desc);
         __builtin_amdgcn_sched_barrier(0);
 
         wait_dscnt();
@@ -186,13 +187,14 @@ struct GridwiseGemmLoadWave<TileLoadThreadGroup, 1>
         // Second prefetch buffer A1, B1
         __builtin_amdgcn_sched_barrier(0);
         a_blockwise_copy.Load(a_grid_buf, a_block_desc, a_block_buf.At(I1));
-        b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I1));
+        // b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I1));
+        b_blockwise_copy.Run(b_grid_buf, b_block_buf.At(I1));
         __builtin_amdgcn_sched_barrier(0);
 
         a_blockwise_copy.MoveSrcSliceWindow(a_grid_desc, a_block_copy_step);
         b_blockwise_copy.MoveSrcSliceWindow(b_grid_desc, b_block_copy_step);
         a_blockwise_copy.PrecomputeIdx(a_grid_desc);
-        b_blockwise_copy.PrecomputeIdx(b_grid_desc);
+        // b_blockwise_copy.PrecomputeIdx(b_grid_desc);
         __builtin_amdgcn_sched_barrier(0);
 
         if constexpr(HasMainLoop)
@@ -211,14 +213,15 @@ struct GridwiseGemmLoadWave<TileLoadThreadGroup, 1>
 
                 // Load A0, B0. Precompute indices for A1, B1
                 __builtin_amdgcn_sched_barrier(0);
-                b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I0));
+                // b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I0));
+                b_blockwise_copy.Run(b_grid_buf, b_block_buf.At(I0));
                 a_blockwise_copy.Load(a_grid_buf, a_block_desc, a_block_buf.At(I0));
                 __builtin_amdgcn_sched_barrier(0);
 
                 a_blockwise_copy.MoveSrcSliceWindow(a_grid_desc, a_block_copy_step);
                 b_blockwise_copy.MoveSrcSliceWindow(b_grid_desc, b_block_copy_step);
                 a_blockwise_copy.PrecomputeIdx(a_grid_desc);
-                b_blockwise_copy.PrecomputeIdx(b_grid_desc);
+                // b_blockwise_copy.PrecomputeIdx(b_grid_desc);
                 __builtin_amdgcn_sched_barrier(0);
 
                 wait_dscnt();
@@ -227,13 +230,14 @@ struct GridwiseGemmLoadWave<TileLoadThreadGroup, 1>
                 // Load A1, B1. Precompute indices for A0, B0
                 __builtin_amdgcn_sched_barrier(0);
                 a_blockwise_copy.Load(a_grid_buf, a_block_desc, a_block_buf.At(I1));
-                b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I1));
+                // b_blockwise_copy.Load(b_grid_buf, b_block_desc, b_block_buf.At(I1));
+                b_blockwise_copy.Run(b_grid_buf, b_block_buf.At(I1));
                 __builtin_amdgcn_sched_barrier(0);
 
                 a_blockwise_copy.MoveSrcSliceWindow(a_grid_desc, a_block_copy_step);
                 b_blockwise_copy.MoveSrcSliceWindow(b_grid_desc, b_block_copy_step);
                 a_blockwise_copy.PrecomputeIdx(a_grid_desc);
-                b_blockwise_copy.PrecomputeIdx(b_grid_desc);
+                // b_blockwise_copy.PrecomputeIdx(b_grid_desc);
                 __builtin_amdgcn_sched_barrier(0);
 
                 i += 2;
