@@ -94568,80 +94568,89 @@ Solutions:
   tailLoopOptA: false
   tailLoopOptB: false
 - SolutionIndex: 431
-  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT256x256x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB16_GSUAMB_GLS0_HPLR0_ISA942_ICIWn1_IU1_K1_LDSTI0_LBSPPA2048_LBSPPB2048_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB32_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT16_4_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB1_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW16_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA16_VWB2_WSGRA0_WSGRB0_WS64_WG16_16_1_WGMXCC1
-  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT256x256x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB16_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIWn1_IU1_K1_LDSTI0_LBSPPA2048_LBSPPB2048_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB32_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT16_4_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB1_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW16_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA16_VWB2_WSGRA0_WSGRB0_WS64_WG16_16_1_WGM8_WGMXCC1_WGMXCCGn1
+  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT144x192x64_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR0_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA4_GRVWB8_GSUAMB_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT9_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR0_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGMXCC1
+  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT144x192x64_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR0_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA4_GRVWB8_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT9_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR0_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGM1_WGMXCC1_WGMXCCGn1
   1LDSBuffer: 1
   AssertSummationElementMultiple: 8
   AssignedDerivedParameters: true
   AssignedProblemIndependentDerivedParameters: true
-  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAVmBHXo4MRSxToip7PsyxB8JtmAZ7DfaOQjPR_GYj4iuo=
+  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV9UrnCcYkcVaZtzXKG8_Zbh5869Q6Sxd3OrfBTW0WCw8=
   CUCount: null
   CUOccupancy: -1
-  CodeObjectVersion: "4"
-  DepthU: 128
+  ClusterBarrier: false
+  ClusterLocalRead: 0
+  CodeObjectVersion: '4'
+  DepthU: 64
+  DeviceNames: [Device 0049, Device 0050]
   DirectToLdsA: false
   DirectToLdsB: false
   DirectToLdsMetadata: 0
   DtlPlusLdsBuf: 0
   ESMRuntimeGate: false
   EdgeType: ShiftPtr
+  EnableESM2TrackValuVsrc: true
   EnableF32XdlMathOp: false
   EnableMatrixInstruction: true
+  EnableStinkyTofuESM2: false
   ExpertSchedulingMode: 0
   ForceUnrollSubIter: false
-  GlobalReadVectorWidthA: 16
-  GlobalReadVectorWidthB: 16
-  GlobalReadVectorWidthMetadata: 16
+  GlobalReadVectorWidthA: 4
+  GlobalReadVectorWidthB: 8
+  GlobalReadVectorWidthMetadata: 2
   GlobalSplitU: -1
   GlobalSplitUCoalesced: true
   GlobalSplitUWorkGroupMappingRoundRobin: true
-  GlobalWriteVectorWidth: 16
+  GlobalWriteVectorWidth: 1
   GuaranteeNoPartialA: true
   GuaranteeNoPartialB: false
   GuaranteeNoPartialMetadata: false
+  HalfPLRA: false
+  HalfPLRB: false
   ISA: [9, 4, 2]
+  InitCIterWmma: 0
   InternalSupportParams: {SupportCustomStaggerU: true, SupportCustomWGM: true,
     SupportUserGSU: true, UseSFC: false, UseUniversalArgs: true}
   Kernel: true
-  LSCA: 128
-  LSCB: 256
-  LSCMetadata: 16
-  LSPA: 32
-  LSPB: 16
-  LSPMetadata: 256
-  LVCA: 8
-  LVCB: 16
-  LVCMetadata: 1
-  LVPA: 2
-  LVPB: 1
-  LVPMetadata: 16
-  LdsBlockSizePerPadA: 2048
-  LdsBlockSizePerPadB: 2048
+  LDSSegInterleaveOffsets: null
+  LSCA: 64
+  LSCB: 64
+  LSCMetadata: 8
+  LSPA: 16
+  LSPB: 32
+  LSPMetadata: 64
+  LVCA: 16
+  LVCB: 8
+  LVCMetadata: 4
+  LVPA: 4
+  LVPB: 4
+  LVPMetadata: 32
+  LdsBlockSizePerPadA: 128
+  LdsBlockSizePerPadB: 1536
   LdsBlockSizePerPadMXSA: 0
   LdsBlockSizePerPadMXSB: 0
-  LdsBytesNoAmax: 54016
+  LdsBytesNoAmax: 19456
   LdsInitCVgprs: false
-  LdsNumBytes: 54016
-  LdsNumElementsAlignedA: 33280
-  LdsNumElementsAlignedB: 16640
+  LdsNumBytes: 19456
+  LdsNumElementsAlignedA: 11520
+  LdsNumElementsAlignedB: 6400
   LdsNumElementsAlignedMXSA: 0
   LdsNumElementsAlignedMXSB: 0
-  LdsNumElementsAlignedMetadata: 4096
+  LdsNumElementsAlignedMetadata: 1536
   LdsOffsetA: 0
-  LdsOffsetA_Blk: 54016
-  LdsOffsetB: 33280
-  LdsOffsetB_Blk: 91392
+  LdsOffsetA_Blk: 19456
+  LdsOffsetB: 11520
+  LdsOffsetB_Blk: 32512
   LdsOffsetBias: 0
   LdsOffsetBiasGSU: 0
   LdsOffsetBiasNonGSU: 0
-  LdsOffsetMXSA: 33280
-  LdsOffsetMXSA_Blk: 87296
-  LdsOffsetMXSB: 49920
-  LdsOffsetMXSB_Blk: 87296
-  LdsOffsetMetadata: 49920
-  LdsOffsetMetadata_Blk: 87296
+  LdsOffsetMXSA: 11520
+  LdsOffsetMXSA_Blk: 30976
+  LdsOffsetMXSB: 17920
+  LdsOffsetMXSB_Blk: 30976
+  LdsOffsetMetadata: 17920
+  LdsOffsetMetadata_Blk: 30976
   LdsPadA: 32
-  LdsPadB: 32
+  LdsPadB: 16
   LdsPadMXSA: 0
   LdsPadMXSB: 0
   LocalReadVectorWidthA: 16
@@ -94652,8 +94661,8 @@ Solutions:
   LocalWriteUseSgprA: false
   LocalWriteUseSgprB: false
   LocalWriteUseSgprMetadata: false
-  LoopIters: 2
-  LoopUnroll: 128
+  LoopIters: 1
+  LoopUnroll: 64
   MFMA_BF16_1K: false
   MIBlock: [16, 16, 64, 1, 1, 1]
   MIInputPerThread: 16
@@ -94663,17 +94672,17 @@ Solutions:
   MIOutputVectorWidth: 4
   MIRegPerOut: 1
   MIWaveGroup: [1, 4]
-  MIWaveTile: [16, 4]
-  MIWaveTileA: 16
-  MIWaveTileB: 4
-  MIWaveTileMetadata: 4
+  MIWaveTile: [9, 3]
+  MIWaveTileA: 9
+  MIWaveTileB: 3
+  MIWaveTileMetadata: 3
   MXLoadInst: BufferLoad
   MXScaleFormat: NoSwizzle
-  MacroTile0: 256
-  MacroTile1: 256
-  MacroTileA: 256
-  MacroTileB: 256
-  MacroTileMetadata: 256
+  MacroTile0: 144
+  MacroTile1: 192
+  MacroTileA: 144
+  MacroTileB: 192
+  MacroTileMetadata: 192
   MathClocksUnrolledLoop: 0
   MatrixInstB: 1
   MatrixInstBM: 1
@@ -94691,43 +94700,48 @@ Solutions:
   NoTailLoop: false
   NonDTLTailLoopA: false
   NonDTLTailLoopB: false
+  NonDTLTailLoopMetadata: false
   NonTemporalD: 4
-  NumElementsPerThread: 256
-  NumGlobalWriteVectorsPerThread: 16
+  NumElementsPerBatchStore: 16
+  NumElementsPerThread: 108
+  NumGlobalWriteVectorsPerThread: 108
   NumLdsBlk: 1
-  NumLoadsA: 8
-  NumLoadsB: 4
+  NumLoadsA: 9
+  NumLoadsB: 3
+  NumLoadsCoalescedB: 3
   NumLoadsCoalescedMetadata: 1
-  NumLoadsMetadata: 1
-  NumLoadsPerpendicularA: 8
-  NumLoadsPerpendicularB: 4
-  NumLoadsPerpendicularMetadata: 1
+  NumLoadsMetadata: 3
+  NumLoadsPerpendicularA: 9
+  NumLoadsPerpendicularB: 1
+  NumLoadsPerpendicularMetadata: 3
   NumThreads: 256
   NumTotalPackedLoadsA: -1
   NumTotalPackedLoadsB: -1
   NumTotalPackedLoadsMetadata: -1
   NumWaveSplitK: 1
+  NumWaves: 4
   PackedC0IdxChars: [I]
   PackedC0IndicesX: [0]
   PackedC1IdxChars: [J]
   PackedC1IndicesX: [1]
   PrefetchGlobalRead: 2
+  PrefetchLocalRead: 0
   ScheduleGROverBarrier: 0
   SourceSwap: true
   StaggerU: 16
   StoreSwapAddr: false
-  StoreVectorWidth: 16
+  StoreVectorWidth: 1
   SubGroup0: 4
   SubGroup1: 64
   SubGroupA: 4
   SubGroupB: 64
   SubGroupMetadata: 64
   ThreadTile: [1, 1]
-  ThreadTile0: 64
-  ThreadTile1: 4
-  ThreadTileA: 64
-  ThreadTileB: 4
-  ThreadTileMetadata: 4
+  ThreadTile0: 36
+  ThreadTile1: 3
+  ThreadTileA: 36
+  ThreadTileB: 3
+  ThreadTileMetadata: 3
   TransposeLDS: 1
   TransposeLDSMetadata: 1
   ULSGRODoubleG2L: 0
@@ -94746,16 +94760,16 @@ Solutions:
   UseGeneralizedNLCOneMetadata: false
   UseMFMAF32XEmulation: false
   Valid: true
-  VectorWidthA: 16
-  VectorWidthB: 2
-  VectorWidthMetadata: 2
+  VectorWidthA: 1
+  VectorWidthB: 1
+  VectorWidthMetadata: 1
   WavefrontSize: 64
-  WorkGroupMappingXCC: 8
+  WorkGroupMapping: 1
   WorkspaceCheck: [4, 0, -1]
-  _DepthU: 128
-  _DepthUA: 128
-  _DepthUB: 64
-  _DepthUMetadata: 16
+  _DepthU: 64
+  _DepthUA: 64
+  _DepthUB: 32
+  _DepthUMetadata: 8
   _GlobalAccumulation: MultipleBuffer
   _ScheduleIterAlg: 3
   _StinkyTofuOptLevel: 0
@@ -94763,7 +94777,9 @@ Solutions:
   _VectorStore: 1
   _WorkspaceSizePerElemBias: 0
   _WorkspaceSizePerElemC: 4
-  _staggerStrideShift: 1
+  _inputVWA_was_auto: false
+  _inputVWB_was_auto: false
+  _staggerStrideShift: 2
   enableGLTrA: false
   enableGLTrB: false
   enableLDSTrA: false
@@ -94774,11 +94790,11 @@ Solutions:
   enableTDMA: false
   enableTDMB: false
   enableTDMMetadata: false
-  ldsNumBytesA: 33280
-  ldsNumBytesB: 16640
+  ldsNumBytesA: 11520
+  ldsNumBytesB: 6208
   ldsNumBytesMXSA: 0
   ldsNumBytesMXSB: 0
-  ldsNumBytesMetadata: 4096
+  ldsNumBytesMetadata: 1536
   numSubTiles: 1
   reorderGRInstForDTVA: false
   reorderGRInstForDTVB: false
@@ -97407,78 +97423,86 @@ Solutions:
   tailLoopOptA: false
   tailLoopOptB: false
 - SolutionIndex: 444
-  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT256x192x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB16_GSUAMB_GLS0_HPLR0_ISA942_ICIWn1_IU1_K1_LDSTI0_LBSPPA2048_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT16_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW16_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA16_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGMXCC1
-  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT256x192x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB16_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIWn1_IU1_K1_LDSTI0_LBSPPA2048_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT16_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW16_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA16_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGM8_WGMXCC1_WGMXCCGn1
+  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT48x192x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA8_GRVWB16_GSUAMB_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT3_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGMXCC1
+  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT48x192x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA8_GRVWB16_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT3_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGM1_WGMXCC1_WGMXCCGn1
   1LDSBuffer: 1
   AssertSummationElementMultiple: 8
   AssignedDerivedParameters: true
   AssignedProblemIndependentDerivedParameters: true
-  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAVdSqPjtT-NYpJvr04lzNQKgMleP5HiwDLnr4AFW6omjM=
+  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAVV5nDOv55s4UVxoxguN-vSTcym8IfUqzWYH1fDukTLWE=
   CUCount: null
   CUOccupancy: -1
-  CodeObjectVersion: "4"
+  ClusterBarrier: false
+  CodeObjectVersion: '4'
   DepthU: 128
+  DeviceNames: [Device 0049, Device 0050]
   DirectToLdsA: false
   DirectToLdsB: false
   DirectToLdsMetadata: 0
   DtlPlusLdsBuf: 0
   ESMRuntimeGate: false
   EdgeType: ShiftPtr
+  EnableESM2TrackValuVsrc: true
   EnableF32XdlMathOp: false
   EnableMatrixInstruction: true
+  EnableStinkyTofuESM2: false
   ExpertSchedulingMode: 0
   ForceUnrollSubIter: false
-  GlobalReadVectorWidthA: 16
+  GlobalReadVectorWidthA: 8
   GlobalReadVectorWidthB: 16
   GlobalReadVectorWidthMetadata: 4
   GlobalSplitU: -1
   GlobalSplitUCoalesced: true
   GlobalSplitUWorkGroupMappingRoundRobin: true
-  GlobalWriteVectorWidth: 16
+  GlobalWriteVectorWidth: 1
   GuaranteeNoPartialA: true
   GuaranteeNoPartialB: false
   GuaranteeNoPartialMetadata: false
+  HalfPLRA: false
+  HalfPLRB: false
   ISA: [9, 4, 2]
+  InitCIterWmma: 0
   InternalSupportParams: {SupportCustomStaggerU: true, SupportCustomWGM: true,
     SupportUserGSU: true, UseSFC: false, UseUniversalArgs: true}
   Kernel: true
+  LDSSegInterleaveOffsets: null
   LSCA: 128
   LSCB: 64
   LSCMetadata: 16
-  LSPA: 32
+  LSPA: 16
   LSPB: 64
   LSPMetadata: 64
-  LVCA: 8
+  LVCA: 16
   LVCB: 4
   LVCMetadata: 4
   LVPA: 2
   LVPB: 4
   LVPMetadata: 16
-  LdsBlockSizePerPadA: 2048
+  LdsBlockSizePerPadA: 128
   LdsBlockSizePerPadB: 1536
   LdsBlockSizePerPadMXSA: 0
   LdsBlockSizePerPadMXSB: 0
-  LdsBytesNoAmax: 48896
+  LdsBytesNoAmax: 23296
   LdsInitCVgprs: false
-  LdsNumBytes: 48896
-  LdsNumElementsAlignedA: 33280
+  LdsNumBytes: 23296
+  LdsNumElementsAlignedA: 7680
   LdsNumElementsAlignedB: 12544
   LdsNumElementsAlignedMXSA: 0
   LdsNumElementsAlignedMXSB: 0
   LdsNumElementsAlignedMetadata: 3072
   LdsOffsetA: 0
-  LdsOffsetA_Blk: 48896
-  LdsOffsetB: 33280
-  LdsOffsetB_Blk: 85248
+  LdsOffsetA_Blk: 23296
+  LdsOffsetB: 7680
+  LdsOffsetB_Blk: 34048
   LdsOffsetBias: 0
   LdsOffsetBiasGSU: 0
   LdsOffsetBiasNonGSU: 0
-  LdsOffsetMXSA: 33280
-  LdsOffsetMXSA_Blk: 82176
-  LdsOffsetMXSB: 45824
-  LdsOffsetMXSB_Blk: 82176
-  LdsOffsetMetadata: 45824
-  LdsOffsetMetadata_Blk: 82176
+  LdsOffsetMXSA: 7680
+  LdsOffsetMXSA_Blk: 30976
+  LdsOffsetMXSB: 20224
+  LdsOffsetMXSB_Blk: 30976
+  LdsOffsetMetadata: 20224
+  LdsOffsetMetadata_Blk: 30976
   LdsPadA: 32
   LdsPadB: 16
   LdsPadMXSA: 0
@@ -97502,15 +97526,15 @@ Solutions:
   MIOutputVectorWidth: 4
   MIRegPerOut: 1
   MIWaveGroup: [1, 4]
-  MIWaveTile: [16, 3]
-  MIWaveTileA: 16
+  MIWaveTile: [3, 3]
+  MIWaveTileA: 3
   MIWaveTileB: 3
   MIWaveTileMetadata: 3
   MXLoadInst: BufferLoad
   MXScaleFormat: NoSwizzle
-  MacroTile0: 256
+  MacroTile0: 48
   MacroTile1: 192
-  MacroTileA: 256
+  MacroTileA: 48
   MacroTileB: 192
   MacroTileMetadata: 192
   MathClocksUnrolledLoop: 0
@@ -97530,16 +97554,18 @@ Solutions:
   NoTailLoop: false
   NonDTLTailLoopA: false
   NonDTLTailLoopB: false
+  NonDTLTailLoopMetadata: false
   NonTemporalD: 4
-  NumElementsPerThread: 192
-  NumGlobalWriteVectorsPerThread: 12
+  NumElementsPerBatchStore: 16
+  NumElementsPerThread: 36
+  NumGlobalWriteVectorsPerThread: 36
   NumLdsBlk: 1
-  NumLoadsA: 8
+  NumLoadsA: 3
   NumLoadsB: 3
   NumLoadsCoalescedB: 3
   NumLoadsCoalescedMetadata: 1
   NumLoadsMetadata: 3
-  NumLoadsPerpendicularA: 8
+  NumLoadsPerpendicularA: 3
   NumLoadsPerpendicularB: 1
   NumLoadsPerpendicularMetadata: 3
   NumThreads: 256
@@ -97547,6 +97573,7 @@ Solutions:
   NumTotalPackedLoadsB: -1
   NumTotalPackedLoadsMetadata: -1
   NumWaveSplitK: 1
+  NumWaves: 4
   PackedC0IdxChars: [I]
   PackedC0IndicesX: [0]
   PackedC1IdxChars: [J]
@@ -97556,16 +97583,16 @@ Solutions:
   SourceSwap: true
   StaggerU: 16
   StoreSwapAddr: false
-  StoreVectorWidth: 16
+  StoreVectorWidth: 1
   SubGroup0: 4
   SubGroup1: 64
   SubGroupA: 4
   SubGroupB: 64
   SubGroupMetadata: 64
   ThreadTile: [1, 1]
-  ThreadTile0: 64
+  ThreadTile0: 12
   ThreadTile1: 3
-  ThreadTileA: 64
+  ThreadTileA: 12
   ThreadTileB: 3
   ThreadTileMetadata: 3
   TransposeLDS: 1
@@ -97586,11 +97613,11 @@ Solutions:
   UseGeneralizedNLCOneMetadata: false
   UseMFMAF32XEmulation: false
   Valid: true
-  VectorWidthA: 16
+  VectorWidthA: 1
   VectorWidthB: 1
   VectorWidthMetadata: 1
   WavefrontSize: 64
-  WorkGroupMappingXCC: 8
+  WorkGroupMapping: 1
   WorkspaceCheck: [4, 0, -1]
   _DepthU: 128
   _DepthUA: 128
@@ -97603,6 +97630,8 @@ Solutions:
   _VectorStore: 1
   _WorkspaceSizePerElemBias: 0
   _WorkspaceSizePerElemC: 4
+  _inputVWA_was_auto: false
+  _inputVWB_was_auto: false
   _staggerStrideShift: 1
   enableGLTrA: false
   enableGLTrB: false
@@ -97614,7 +97643,7 @@ Solutions:
   enableTDMA: false
   enableTDMB: false
   enableTDMMetadata: false
-  ldsNumBytesA: 33280
+  ldsNumBytesA: 7680
   ldsNumBytesB: 12416
   ldsNumBytesMXSA: 0
   ldsNumBytesMXSB: 0
@@ -133814,80 +133843,88 @@ Solutions:
   tailLoopOptA: false
   tailLoopOptB: false
 - SolutionIndex: 611
-  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT256x256x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB8_GSUAMB_GLS0_HPLR0_ISA942_ICIWn1_IU1_K1_LDSTI0_LBSPPA2048_LBSPPB2048_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB32_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT16_4_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB1_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW16_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA16_VWB2_WSGRA0_WSGRB0_WS64_WG16_16_1_WGMXCC1
-  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT256x256x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB8_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIWn1_IU1_K1_LDSTI0_LBSPPA2048_LBSPPB2048_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB32_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT16_4_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB1_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW16_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA16_VWB2_WSGRA0_WSGRB0_WS64_WG16_16_1_WGM8_WGMXCC1_WGMXCCGn1
+  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT320x96x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB8_GSUAMB_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA256_LBSPPB768_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT10_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW2_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA2_VWB1_WSGRA0_WSGRB0_WS64_WG32_8_1_WGMXCC1
+  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT320x96x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB8_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA256_LBSPPB768_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT10_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW2_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA2_VWB1_WSGRA0_WSGRB0_WS64_WG32_8_1_WGM1_WGMXCC1_WGMXCCGn1
   1LDSBuffer: 1
   AssertSummationElementMultiple: 8
   AssignedDerivedParameters: true
   AssignedProblemIndependentDerivedParameters: true
-  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV1Qyda-HSu00NsCx-eQuuGK8x3IAJmQjoYhYysQIITP0=
+  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAVR_vovuM7_k9htAdcSExxGTkJ7bSHkG4SRlNqM-oQGYU=
   CUCount: null
   CUOccupancy: -1
-  CodeObjectVersion: "4"
+  ClusterBarrier: false
+  CodeObjectVersion: '4'
   DepthU: 128
+  DeviceNames: [Device 0049, Device 0050]
   DirectToLdsA: false
   DirectToLdsB: false
   DirectToLdsMetadata: 0
   DtlPlusLdsBuf: 0
   ESMRuntimeGate: false
   EdgeType: ShiftPtr
+  EnableESM2TrackValuVsrc: true
   EnableF32XdlMathOp: false
   EnableMatrixInstruction: true
+  EnableStinkyTofuESM2: false
   ExpertSchedulingMode: 0
   ForceUnrollSubIter: false
   GlobalReadVectorWidthA: 16
   GlobalReadVectorWidthB: 8
-  GlobalReadVectorWidthMetadata: 16
+  GlobalReadVectorWidthMetadata: 2
   GlobalSplitU: -1
   GlobalSplitUCoalesced: true
   GlobalSplitUWorkGroupMappingRoundRobin: true
-  GlobalWriteVectorWidth: 16
+  GlobalWriteVectorWidth: 2
   GuaranteeNoPartialA: true
   GuaranteeNoPartialB: false
   GuaranteeNoPartialMetadata: false
+  HalfPLRA: false
+  HalfPLRB: false
   ISA: [9, 4, 2]
+  InitCIterWmma: 0
   InternalSupportParams: {SupportCustomStaggerU: true, SupportCustomWGM: true,
     SupportUserGSU: true, UseSFC: false, UseUniversalArgs: true}
   Kernel: true
+  LDSSegInterleaveOffsets: null
   LSCA: 128
-  LSCB: 256
+  LSCB: 32
   LSCMetadata: 16
   LSPA: 32
-  LSPB: 8
-  LSPMetadata: 256
+  LSPB: 64
+  LSPMetadata: 32
   LVCA: 8
-  LVCB: 32
-  LVCMetadata: 1
+  LVCB: 4
+  LVCMetadata: 8
   LVPA: 2
-  LVPB: 1
+  LVPB: 8
   LVPMetadata: 16
-  LdsBlockSizePerPadA: 2048
-  LdsBlockSizePerPadB: 2048
+  LdsBlockSizePerPadA: 256
+  LdsBlockSizePerPadB: 768
   LdsBlockSizePerPadMXSA: 0
   LdsBlockSizePerPadMXSB: 0
   LdsBytesNoAmax: 54016
   LdsInitCVgprs: false
   LdsNumBytes: 54016
-  LdsNumElementsAlignedA: 33280
-  LdsNumElementsAlignedB: 16640
+  LdsNumElementsAlignedA: 46080
+  LdsNumElementsAlignedB: 6400
   LdsNumElementsAlignedMXSA: 0
   LdsNumElementsAlignedMXSB: 0
-  LdsNumElementsAlignedMetadata: 4096
+  LdsNumElementsAlignedMetadata: 1536
   LdsOffsetA: 0
   LdsOffsetA_Blk: 54016
-  LdsOffsetB: 33280
-  LdsOffsetB_Blk: 91392
+  LdsOffsetB: 46080
+  LdsOffsetB_Blk: 101632
   LdsOffsetBias: 0
   LdsOffsetBiasGSU: 0
   LdsOffsetBiasNonGSU: 0
-  LdsOffsetMXSA: 33280
-  LdsOffsetMXSA_Blk: 87296
-  LdsOffsetMXSB: 49920
-  LdsOffsetMXSB_Blk: 87296
-  LdsOffsetMetadata: 49920
-  LdsOffsetMetadata_Blk: 87296
+  LdsOffsetMXSA: 46080
+  LdsOffsetMXSA_Blk: 100096
+  LdsOffsetMXSB: 52480
+  LdsOffsetMXSB_Blk: 100096
+  LdsOffsetMetadata: 52480
+  LdsOffsetMetadata_Blk: 100096
   LdsPadA: 32
-  LdsPadB: 32
+  LdsPadB: 16
   LdsPadMXSA: 0
   LdsPadMXSB: 0
   LocalReadVectorWidthA: 16
@@ -133908,18 +133945,18 @@ Solutions:
   MIInputPerThreadMetadata: 2
   MIOutputVectorWidth: 4
   MIRegPerOut: 1
-  MIWaveGroup: [1, 4]
-  MIWaveTile: [16, 4]
-  MIWaveTileA: 16
-  MIWaveTileB: 4
-  MIWaveTileMetadata: 4
+  MIWaveGroup: [2, 2]
+  MIWaveTile: [10, 3]
+  MIWaveTileA: 10
+  MIWaveTileB: 3
+  MIWaveTileMetadata: 3
   MXLoadInst: BufferLoad
   MXScaleFormat: NoSwizzle
-  MacroTile0: 256
-  MacroTile1: 256
-  MacroTileA: 256
-  MacroTileB: 256
-  MacroTileMetadata: 256
+  MacroTile0: 320
+  MacroTile1: 96
+  MacroTileA: 320
+  MacroTileB: 96
+  MacroTileMetadata: 96
   MathClocksUnrolledLoop: 0
   MatrixInstB: 1
   MatrixInstBM: 1
@@ -133937,22 +133974,25 @@ Solutions:
   NoTailLoop: false
   NonDTLTailLoopA: false
   NonDTLTailLoopB: false
+  NonDTLTailLoopMetadata: false
   NonTemporalD: 4
-  NumElementsPerThread: 256
-  NumGlobalWriteVectorsPerThread: 16
+  NumElementsPerThread: 120
+  NumGlobalWriteVectorsPerThread: 60
   NumLdsBlk: 1
-  NumLoadsA: 8
-  NumLoadsB: 8
+  NumLoadsA: 10
+  NumLoadsB: 3
+  NumLoadsCoalescedB: 3
   NumLoadsCoalescedMetadata: 1
-  NumLoadsMetadata: 1
-  NumLoadsPerpendicularA: 8
-  NumLoadsPerpendicularB: 8
-  NumLoadsPerpendicularMetadata: 1
+  NumLoadsMetadata: 3
+  NumLoadsPerpendicularA: 10
+  NumLoadsPerpendicularB: 1
+  NumLoadsPerpendicularMetadata: 3
   NumThreads: 256
   NumTotalPackedLoadsA: -1
   NumTotalPackedLoadsB: -1
   NumTotalPackedLoadsMetadata: -1
   NumWaveSplitK: 1
+  NumWaves: 4
   PackedC0IdxChars: [I]
   PackedC0IndicesX: [0]
   PackedC1IdxChars: [J]
@@ -133962,18 +134002,18 @@ Solutions:
   SourceSwap: true
   StaggerU: 16
   StoreSwapAddr: false
-  StoreVectorWidth: 16
-  SubGroup0: 4
-  SubGroup1: 64
-  SubGroupA: 4
-  SubGroupB: 64
-  SubGroupMetadata: 64
+  StoreVectorWidth: 2
+  SubGroup0: 8
+  SubGroup1: 32
+  SubGroupA: 8
+  SubGroupB: 32
+  SubGroupMetadata: 32
   ThreadTile: [1, 1]
-  ThreadTile0: 64
-  ThreadTile1: 4
-  ThreadTileA: 64
-  ThreadTileB: 4
-  ThreadTileMetadata: 4
+  ThreadTile0: 40
+  ThreadTile1: 3
+  ThreadTileA: 40
+  ThreadTileB: 3
+  ThreadTileMetadata: 3
   TransposeLDS: 1
   TransposeLDSMetadata: 1
   ULSGRODoubleG2L: 0
@@ -133992,11 +134032,12 @@ Solutions:
   UseGeneralizedNLCOneMetadata: false
   UseMFMAF32XEmulation: false
   Valid: true
-  VectorWidthA: 16
-  VectorWidthB: 2
-  VectorWidthMetadata: 2
+  VectorWidthA: 2
+  VectorWidthB: 1
+  VectorWidthMetadata: 1
   WavefrontSize: 64
-  WorkGroupMappingXCC: 8
+  WorkGroup: [32, 8, 1]
+  WorkGroupMapping: 1
   WorkspaceCheck: [4, 0, -1]
   _DepthU: 128
   _DepthUA: 128
@@ -134009,6 +134050,8 @@ Solutions:
   _VectorStore: 1
   _WorkspaceSizePerElemBias: 0
   _WorkspaceSizePerElemC: 4
+  _inputVWA_was_auto: false
+  _inputVWB_was_auto: false
   _staggerStrideShift: 1
   enableGLTrA: false
   enableGLTrB: false
@@ -134020,11 +134063,11 @@ Solutions:
   enableTDMA: false
   enableTDMB: false
   enableTDMMetadata: false
-  ldsNumBytesA: 33280
-  ldsNumBytesB: 16640
+  ldsNumBytesA: 46080
+  ldsNumBytesB: 6272
   ldsNumBytesMXSA: 0
   ldsNumBytesMXSB: 0
-  ldsNumBytesMetadata: 4096
+  ldsNumBytesMetadata: 1536
   numSubTiles: 1
   reorderGRInstForDTVA: false
   reorderGRInstForDTVB: false
@@ -343000,701 +343043,6 @@ Solutions:
   enableTDMB: false
   enableTDMMetadata: false
   ldsNumBytesA: 25600
-  ldsNumBytesB: 6272
-  ldsNumBytesMXSA: 0
-  ldsNumBytesMXSB: 0
-  ldsNumBytesMetadata: 1536
-  numSubTiles: 1
-  reorderGRInstForDTVA: false
-  reorderGRInstForDTVB: false
-  tailLoopOptA: false
-  tailLoopOptB: false
-- SolutionIndex: 1545
-  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT144x192x64_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR0_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA4_GRVWB8_GSUAMB_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT9_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR0_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGMXCC1
-  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT144x192x64_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR0_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA4_GRVWB8_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT9_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR0_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGM1_WGMXCC1_WGMXCCGn1
-  1LDSBuffer: 1
-  AssertSummationElementMultiple: 8
-  AssignedDerivedParameters: true
-  AssignedProblemIndependentDerivedParameters: true
-  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV9UrnCcYkcVaZtzXKG8_Zbh5869Q6Sxd3OrfBTW0WCw8=
-  CUCount: null
-  CUOccupancy: -1
-  ClusterBarrier: false
-  ClusterLocalRead: 0
-  CodeObjectVersion: '4'
-  DepthU: 64
-  DeviceNames: [Device 0049, Device 0050]
-  DirectToLdsA: false
-  DirectToLdsB: false
-  DirectToLdsMetadata: 0
-  DtlPlusLdsBuf: 0
-  ESMRuntimeGate: false
-  EdgeType: ShiftPtr
-  EnableESM2TrackValuVsrc: true
-  EnableF32XdlMathOp: false
-  EnableMatrixInstruction: true
-  EnableStinkyTofuESM2: false
-  ExpertSchedulingMode: 0
-  ForceUnrollSubIter: false
-  GlobalReadVectorWidthA: 4
-  GlobalReadVectorWidthB: 8
-  GlobalReadVectorWidthMetadata: 2
-  GlobalSplitU: -1
-  GlobalSplitUCoalesced: true
-  GlobalSplitUWorkGroupMappingRoundRobin: true
-  GlobalWriteVectorWidth: 1
-  GuaranteeNoPartialA: true
-  GuaranteeNoPartialB: false
-  GuaranteeNoPartialMetadata: false
-  HalfPLRA: false
-  HalfPLRB: false
-  ISA: [9, 4, 2]
-  InitCIterWmma: 0
-  InternalSupportParams: {SupportCustomStaggerU: true, SupportCustomWGM: true,
-    SupportUserGSU: true, UseSFC: false, UseUniversalArgs: true}
-  Kernel: true
-  LDSSegInterleaveOffsets: null
-  LSCA: 64
-  LSCB: 64
-  LSCMetadata: 8
-  LSPA: 16
-  LSPB: 32
-  LSPMetadata: 64
-  LVCA: 16
-  LVCB: 8
-  LVCMetadata: 4
-  LVPA: 4
-  LVPB: 4
-  LVPMetadata: 32
-  LdsBlockSizePerPadA: 128
-  LdsBlockSizePerPadB: 1536
-  LdsBlockSizePerPadMXSA: 0
-  LdsBlockSizePerPadMXSB: 0
-  LdsBytesNoAmax: 19456
-  LdsInitCVgprs: false
-  LdsNumBytes: 19456
-  LdsNumElementsAlignedA: 11520
-  LdsNumElementsAlignedB: 6400
-  LdsNumElementsAlignedMXSA: 0
-  LdsNumElementsAlignedMXSB: 0
-  LdsNumElementsAlignedMetadata: 1536
-  LdsOffsetA: 0
-  LdsOffsetA_Blk: 19456
-  LdsOffsetB: 11520
-  LdsOffsetB_Blk: 32512
-  LdsOffsetBias: 0
-  LdsOffsetBiasGSU: 0
-  LdsOffsetBiasNonGSU: 0
-  LdsOffsetMXSA: 11520
-  LdsOffsetMXSA_Blk: 30976
-  LdsOffsetMXSB: 17920
-  LdsOffsetMXSB_Blk: 30976
-  LdsOffsetMetadata: 17920
-  LdsOffsetMetadata_Blk: 30976
-  LdsPadA: 32
-  LdsPadB: 16
-  LdsPadMXSA: 0
-  LdsPadMXSB: 0
-  LocalReadVectorWidthA: 16
-  LocalReadVectorWidthB: 8
-  LocalReadVectorWidthMetadata: 8
-  LocalSplitU: 1
-  LocalSplitUReuseLDS: 1
-  LocalWriteUseSgprA: false
-  LocalWriteUseSgprB: false
-  LocalWriteUseSgprMetadata: false
-  LoopIters: 1
-  LoopUnroll: 64
-  MFMA_BF16_1K: false
-  MIBlock: [16, 16, 64, 1, 1, 1]
-  MIInputPerThread: 16
-  MIInputPerThreadA: 16
-  MIInputPerThreadB: 8
-  MIInputPerThreadMetadata: 2
-  MIOutputVectorWidth: 4
-  MIRegPerOut: 1
-  MIWaveGroup: [1, 4]
-  MIWaveTile: [9, 3]
-  MIWaveTileA: 9
-  MIWaveTileB: 3
-  MIWaveTileMetadata: 3
-  MXLoadInst: BufferLoad
-  MXScaleFormat: NoSwizzle
-  MacroTile0: 144
-  MacroTile1: 192
-  MacroTileA: 144
-  MacroTileB: 192
-  MacroTileMetadata: 192
-  MathClocksUnrolledLoop: 0
-  MatrixInstB: 1
-  MatrixInstBM: 1
-  MatrixInstBN: 1
-  MatrixInstK: 64
-  MatrixInstM: 16
-  MatrixInstN: 16
-  MatrixInstruction: [16, 16, 64, 1]
-  MaxLDS: 65536
-  MbskPrefetchMethod: 0
-  MfmaInitCVgprs: false
-  MinGRIncPerMfma: 1
-  Multicast: false
-  NoLdsWriteCode: false
-  NoTailLoop: false
-  NonDTLTailLoopA: false
-  NonDTLTailLoopB: false
-  NonDTLTailLoopMetadata: false
-  NonTemporalD: 4
-  NumElementsPerBatchStore: 16
-  NumElementsPerThread: 108
-  NumGlobalWriteVectorsPerThread: 108
-  NumLdsBlk: 1
-  NumLoadsA: 9
-  NumLoadsB: 3
-  NumLoadsCoalescedB: 3
-  NumLoadsCoalescedMetadata: 1
-  NumLoadsMetadata: 3
-  NumLoadsPerpendicularA: 9
-  NumLoadsPerpendicularB: 1
-  NumLoadsPerpendicularMetadata: 3
-  NumThreads: 256
-  NumTotalPackedLoadsA: -1
-  NumTotalPackedLoadsB: -1
-  NumTotalPackedLoadsMetadata: -1
-  NumWaveSplitK: 1
-  NumWaves: 4
-  PackedC0IdxChars: [I]
-  PackedC0IndicesX: [0]
-  PackedC1IdxChars: [J]
-  PackedC1IndicesX: [1]
-  PrefetchGlobalRead: 2
-  PrefetchLocalRead: 0
-  ScheduleGROverBarrier: 0
-  SourceSwap: true
-  StaggerU: 16
-  StoreSwapAddr: false
-  StoreVectorWidth: 1
-  SubGroup0: 4
-  SubGroup1: 64
-  SubGroupA: 4
-  SubGroupB: 64
-  SubGroupMetadata: 64
-  ThreadTile: [1, 1]
-  ThreadTile0: 36
-  ThreadTile1: 3
-  ThreadTileA: 36
-  ThreadTileB: 3
-  ThreadTileMetadata: 3
-  TransposeLDS: 1
-  TransposeLDSMetadata: 1
-  ULSGRODoubleG2L: 0
-  UnrollMajorLDSA: true
-  UnrollMajorLDSB: false
-  UnrollMajorLDSMetadata: 1
-  UseCustomMainLoopSchedule: 0
-  UseDirect32XEmulation: false
-  UseDot2F32XEmulation: false
-  UseDotInstruction: false
-  UseF32XEmulation: false
-  UseGeneralizedNLCOneA: false
-  UseGeneralizedNLCOneB: false
-  UseGeneralizedNLCOneMXSA: false
-  UseGeneralizedNLCOneMXSB: false
-  UseGeneralizedNLCOneMetadata: false
-  UseMFMAF32XEmulation: false
-  Valid: true
-  VectorWidthA: 1
-  VectorWidthB: 1
-  VectorWidthMetadata: 1
-  WavefrontSize: 64
-  WorkGroupMapping: 1
-  WorkspaceCheck: [4, 0, -1]
-  _DepthU: 64
-  _DepthUA: 64
-  _DepthUB: 32
-  _DepthUMetadata: 8
-  _GlobalAccumulation: MultipleBuffer
-  _ScheduleIterAlg: 3
-  _StinkyTofuOptLevel: 0
-  _UseSgprForGRO: false
-  _VectorStore: 1
-  _WorkspaceSizePerElemBias: 0
-  _WorkspaceSizePerElemC: 4
-  _inputVWA_was_auto: false
-  _inputVWB_was_auto: false
-  _staggerStrideShift: 2
-  enableGLTrA: false
-  enableGLTrB: false
-  enableLDSTrA: false
-  enableLDSTrB: false
-  enableLDSTrMXSA: false
-  enableLDSTrMXSB: false
-  enableLDSTrMetadata: 0
-  enableTDMA: false
-  enableTDMB: false
-  enableTDMMetadata: false
-  ldsNumBytesA: 11520
-  ldsNumBytesB: 6208
-  ldsNumBytesMXSA: 0
-  ldsNumBytesMXSB: 0
-  ldsNumBytesMetadata: 1536
-  numSubTiles: 1
-  reorderGRInstForDTVA: false
-  reorderGRInstForDTVB: false
-  tailLoopOptA: false
-  tailLoopOptB: false
-- SolutionIndex: 1546
-  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT48x192x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA8_GRVWB16_GSUAMB_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT3_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGMXCC1
-  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT48x192x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA8_GRVWB16_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA128_LBSPPB1536_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT3_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS16_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW1_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA1_VWB1_WSGRA0_WSGRB0_WS64_WG16_16_1_WGM1_WGMXCC1_WGMXCCGn1
-  1LDSBuffer: 1
-  AssertSummationElementMultiple: 8
-  AssignedDerivedParameters: true
-  AssignedProblemIndependentDerivedParameters: true
-  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAVV5nDOv55s4UVxoxguN-vSTcym8IfUqzWYH1fDukTLWE=
-  CUCount: null
-  CUOccupancy: -1
-  ClusterBarrier: false
-  CodeObjectVersion: '4'
-  DepthU: 128
-  DeviceNames: [Device 0049, Device 0050]
-  DirectToLdsA: false
-  DirectToLdsB: false
-  DirectToLdsMetadata: 0
-  DtlPlusLdsBuf: 0
-  ESMRuntimeGate: false
-  EdgeType: ShiftPtr
-  EnableESM2TrackValuVsrc: true
-  EnableF32XdlMathOp: false
-  EnableMatrixInstruction: true
-  EnableStinkyTofuESM2: false
-  ExpertSchedulingMode: 0
-  ForceUnrollSubIter: false
-  GlobalReadVectorWidthA: 8
-  GlobalReadVectorWidthB: 16
-  GlobalReadVectorWidthMetadata: 4
-  GlobalSplitU: -1
-  GlobalSplitUCoalesced: true
-  GlobalSplitUWorkGroupMappingRoundRobin: true
-  GlobalWriteVectorWidth: 1
-  GuaranteeNoPartialA: true
-  GuaranteeNoPartialB: false
-  GuaranteeNoPartialMetadata: false
-  HalfPLRA: false
-  HalfPLRB: false
-  ISA: [9, 4, 2]
-  InitCIterWmma: 0
-  InternalSupportParams: {SupportCustomStaggerU: true, SupportCustomWGM: true,
-    SupportUserGSU: true, UseSFC: false, UseUniversalArgs: true}
-  Kernel: true
-  LDSSegInterleaveOffsets: null
-  LSCA: 128
-  LSCB: 64
-  LSCMetadata: 16
-  LSPA: 16
-  LSPB: 64
-  LSPMetadata: 64
-  LVCA: 16
-  LVCB: 4
-  LVCMetadata: 4
-  LVPA: 2
-  LVPB: 4
-  LVPMetadata: 16
-  LdsBlockSizePerPadA: 128
-  LdsBlockSizePerPadB: 1536
-  LdsBlockSizePerPadMXSA: 0
-  LdsBlockSizePerPadMXSB: 0
-  LdsBytesNoAmax: 23296
-  LdsInitCVgprs: false
-  LdsNumBytes: 23296
-  LdsNumElementsAlignedA: 7680
-  LdsNumElementsAlignedB: 12544
-  LdsNumElementsAlignedMXSA: 0
-  LdsNumElementsAlignedMXSB: 0
-  LdsNumElementsAlignedMetadata: 3072
-  LdsOffsetA: 0
-  LdsOffsetA_Blk: 23296
-  LdsOffsetB: 7680
-  LdsOffsetB_Blk: 34048
-  LdsOffsetBias: 0
-  LdsOffsetBiasGSU: 0
-  LdsOffsetBiasNonGSU: 0
-  LdsOffsetMXSA: 7680
-  LdsOffsetMXSA_Blk: 30976
-  LdsOffsetMXSB: 20224
-  LdsOffsetMXSB_Blk: 30976
-  LdsOffsetMetadata: 20224
-  LdsOffsetMetadata_Blk: 30976
-  LdsPadA: 32
-  LdsPadB: 16
-  LdsPadMXSA: 0
-  LdsPadMXSB: 0
-  LocalReadVectorWidthA: 16
-  LocalReadVectorWidthB: 8
-  LocalReadVectorWidthMetadata: 8
-  LocalSplitU: 1
-  LocalSplitUReuseLDS: 1
-  LocalWriteUseSgprA: false
-  LocalWriteUseSgprB: false
-  LocalWriteUseSgprMetadata: false
-  LoopIters: 2
-  LoopUnroll: 128
-  MFMA_BF16_1K: false
-  MIBlock: [16, 16, 64, 1, 1, 1]
-  MIInputPerThread: 16
-  MIInputPerThreadA: 16
-  MIInputPerThreadB: 8
-  MIInputPerThreadMetadata: 2
-  MIOutputVectorWidth: 4
-  MIRegPerOut: 1
-  MIWaveGroup: [1, 4]
-  MIWaveTile: [3, 3]
-  MIWaveTileA: 3
-  MIWaveTileB: 3
-  MIWaveTileMetadata: 3
-  MXLoadInst: BufferLoad
-  MXScaleFormat: NoSwizzle
-  MacroTile0: 48
-  MacroTile1: 192
-  MacroTileA: 48
-  MacroTileB: 192
-  MacroTileMetadata: 192
-  MathClocksUnrolledLoop: 0
-  MatrixInstB: 1
-  MatrixInstBM: 1
-  MatrixInstBN: 1
-  MatrixInstK: 64
-  MatrixInstM: 16
-  MatrixInstN: 16
-  MatrixInstruction: [16, 16, 64, 1]
-  MaxLDS: 65536
-  MbskPrefetchMethod: 0
-  MfmaInitCVgprs: false
-  MinGRIncPerMfma: 1
-  Multicast: false
-  NoLdsWriteCode: false
-  NoTailLoop: false
-  NonDTLTailLoopA: false
-  NonDTLTailLoopB: false
-  NonDTLTailLoopMetadata: false
-  NonTemporalD: 4
-  NumElementsPerBatchStore: 16
-  NumElementsPerThread: 36
-  NumGlobalWriteVectorsPerThread: 36
-  NumLdsBlk: 1
-  NumLoadsA: 3
-  NumLoadsB: 3
-  NumLoadsCoalescedB: 3
-  NumLoadsCoalescedMetadata: 1
-  NumLoadsMetadata: 3
-  NumLoadsPerpendicularA: 3
-  NumLoadsPerpendicularB: 1
-  NumLoadsPerpendicularMetadata: 3
-  NumThreads: 256
-  NumTotalPackedLoadsA: -1
-  NumTotalPackedLoadsB: -1
-  NumTotalPackedLoadsMetadata: -1
-  NumWaveSplitK: 1
-  NumWaves: 4
-  PackedC0IdxChars: [I]
-  PackedC0IndicesX: [0]
-  PackedC1IdxChars: [J]
-  PackedC1IndicesX: [1]
-  PrefetchGlobalRead: 2
-  ScheduleGROverBarrier: 0
-  SourceSwap: true
-  StaggerU: 16
-  StoreSwapAddr: false
-  StoreVectorWidth: 1
-  SubGroup0: 4
-  SubGroup1: 64
-  SubGroupA: 4
-  SubGroupB: 64
-  SubGroupMetadata: 64
-  ThreadTile: [1, 1]
-  ThreadTile0: 12
-  ThreadTile1: 3
-  ThreadTileA: 12
-  ThreadTileB: 3
-  ThreadTileMetadata: 3
-  TransposeLDS: 1
-  TransposeLDSMetadata: 1
-  ULSGRODoubleG2L: 0
-  UnrollMajorLDSA: true
-  UnrollMajorLDSB: false
-  UnrollMajorLDSMetadata: 1
-  UseCustomMainLoopSchedule: 0
-  UseDirect32XEmulation: false
-  UseDot2F32XEmulation: false
-  UseDotInstruction: false
-  UseF32XEmulation: false
-  UseGeneralizedNLCOneA: false
-  UseGeneralizedNLCOneB: false
-  UseGeneralizedNLCOneMXSA: false
-  UseGeneralizedNLCOneMXSB: false
-  UseGeneralizedNLCOneMetadata: false
-  UseMFMAF32XEmulation: false
-  Valid: true
-  VectorWidthA: 1
-  VectorWidthB: 1
-  VectorWidthMetadata: 1
-  WavefrontSize: 64
-  WorkGroupMapping: 1
-  WorkspaceCheck: [4, 0, -1]
-  _DepthU: 128
-  _DepthUA: 128
-  _DepthUB: 64
-  _DepthUMetadata: 16
-  _GlobalAccumulation: MultipleBuffer
-  _ScheduleIterAlg: 3
-  _StinkyTofuOptLevel: 0
-  _UseSgprForGRO: false
-  _VectorStore: 1
-  _WorkspaceSizePerElemBias: 0
-  _WorkspaceSizePerElemC: 4
-  _inputVWA_was_auto: false
-  _inputVWB_was_auto: false
-  _staggerStrideShift: 1
-  enableGLTrA: false
-  enableGLTrB: false
-  enableLDSTrA: false
-  enableLDSTrB: false
-  enableLDSTrMXSA: false
-  enableLDSTrMXSB: false
-  enableLDSTrMetadata: 0
-  enableTDMA: false
-  enableTDMB: false
-  enableTDMMetadata: false
-  ldsNumBytesA: 7680
-  ldsNumBytesB: 12416
-  ldsNumBytesMXSA: 0
-  ldsNumBytesMXSB: 0
-  ldsNumBytesMetadata: 3072
-  numSubTiles: 1
-  reorderGRInstForDTVA: false
-  reorderGRInstForDTVB: false
-  tailLoopOptA: false
-  tailLoopOptB: false
-- SolutionIndex: 1547
-  KernelNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT320x96x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB8_GSUAMB_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA256_LBSPPB768_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT10_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SPO0_SRVW0_SSO0_SVW2_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA2_VWB1_WSGRA0_WSGRB0_WS64_WG32_8_1_WGMXCC1
-  SolutionNameMin: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAV_GateRes_MT320x96x128_MI16x16x1_SN_LDSB1_AFC1_AG0_AGGSUA0_AGNTAB0_AFEM1_AFEM1_ASEM8_BL1_BS1_CD1_1_CLR1_CLS0_CADS0_DTLA0_DTLB0_DTLM0_DTVA0_DTVB0_DTVMXSA0_DTVMXSB0_DTVSM0_DPLB0_EPS1_ELFLR0_EMLLn1_FDSI0_GRPM1_GRVWA16_GRVWB8_GSUn1_GSUAMB_GSUC1_GSUWGMRR1_GLS0_HPLR0_ISA942_ICIW0_IU1_K1_LDSTI0_LBSPPA256_LBSPPB768_LBSPPMXSA0_LBSPPMXSB0_LBSPPM0_LPA32_LPB16_LPMXSA0_LPMXSB0_LPM0_LRVWn1_LWPMn1_MIAV0_MIWT10_3_MXLIBL_MXSFNS_MO40_MGRIPM1_NTn1_NTA0_NTB0_NTC0_NTD4_NTE0_NTMXSA0_NTMXSB0_NTM0_NTWS0_NVn1_NVA0_NVB0_NVC0_NVD0_NVE0_NVMXSA0_NVMXSB0_NVM0_NVWS0_NEPBS0_NLCA1_NLCB3_ONLL1_PAP0_PGL0_PGR2_PLR1_PKA1_SGROB0_SIA3_SS1_SU16_SUM0_SUS256_SPO0_SRVW0_SSO0_SVW2_SK0_SKFTR0_SKFDPO0_SKWS0_SKXCCM0_SNLL0_SIP1_SGRO0_TDMI0_TDMIM0_TDMS0_TIN0_THn1_THA0_THB0_THC0_THD0_THE0_THMXSA0_THMXSB0_THM0_THWS0_TLDS1_TLDSM1_ULSGRO0_USL1_USLMX0_UDFMAC0_UIOFGRO0_UPLRP0_USFGROn1_USI0_VSn1_VWA2_VWB1_WSGRA0_WSGRB0_WS64_WG32_8_1_WGM1_WGMXCC1_WGMXCCGn1
-  1LDSBuffer: 1
-  AssertSummationElementMultiple: 8
-  AssignedDerivedParameters: true
-  AssignedProblemIndependentDerivedParameters: true
-  BaseName: Cijk_Alik_Bjlk_F8NSS_BH_Bias_FDMN_SPBML0_A_S_SAVR_vovuM7_k9htAdcSExxGTkJ7bSHkG4SRlNqM-oQGYU=
-  CUCount: null
-  CUOccupancy: -1
-  ClusterBarrier: false
-  CodeObjectVersion: '4'
-  DepthU: 128
-  DeviceNames: [Device 0049, Device 0050]
-  DirectToLdsA: false
-  DirectToLdsB: false
-  DirectToLdsMetadata: 0
-  DtlPlusLdsBuf: 0
-  ESMRuntimeGate: false
-  EdgeType: ShiftPtr
-  EnableESM2TrackValuVsrc: true
-  EnableF32XdlMathOp: false
-  EnableMatrixInstruction: true
-  EnableStinkyTofuESM2: false
-  ExpertSchedulingMode: 0
-  ForceUnrollSubIter: false
-  GlobalReadVectorWidthA: 16
-  GlobalReadVectorWidthB: 8
-  GlobalReadVectorWidthMetadata: 2
-  GlobalSplitU: -1
-  GlobalSplitUCoalesced: true
-  GlobalSplitUWorkGroupMappingRoundRobin: true
-  GlobalWriteVectorWidth: 2
-  GuaranteeNoPartialA: true
-  GuaranteeNoPartialB: false
-  GuaranteeNoPartialMetadata: false
-  HalfPLRA: false
-  HalfPLRB: false
-  ISA: [9, 4, 2]
-  InitCIterWmma: 0
-  InternalSupportParams: {SupportCustomStaggerU: true, SupportCustomWGM: true,
-    SupportUserGSU: true, UseSFC: false, UseUniversalArgs: true}
-  Kernel: true
-  LDSSegInterleaveOffsets: null
-  LSCA: 128
-  LSCB: 32
-  LSCMetadata: 16
-  LSPA: 32
-  LSPB: 64
-  LSPMetadata: 32
-  LVCA: 8
-  LVCB: 4
-  LVCMetadata: 8
-  LVPA: 2
-  LVPB: 8
-  LVPMetadata: 16
-  LdsBlockSizePerPadA: 256
-  LdsBlockSizePerPadB: 768
-  LdsBlockSizePerPadMXSA: 0
-  LdsBlockSizePerPadMXSB: 0
-  LdsBytesNoAmax: 54016
-  LdsInitCVgprs: false
-  LdsNumBytes: 54016
-  LdsNumElementsAlignedA: 46080
-  LdsNumElementsAlignedB: 6400
-  LdsNumElementsAlignedMXSA: 0
-  LdsNumElementsAlignedMXSB: 0
-  LdsNumElementsAlignedMetadata: 1536
-  LdsOffsetA: 0
-  LdsOffsetA_Blk: 54016
-  LdsOffsetB: 46080
-  LdsOffsetB_Blk: 101632
-  LdsOffsetBias: 0
-  LdsOffsetBiasGSU: 0
-  LdsOffsetBiasNonGSU: 0
-  LdsOffsetMXSA: 46080
-  LdsOffsetMXSA_Blk: 100096
-  LdsOffsetMXSB: 52480
-  LdsOffsetMXSB_Blk: 100096
-  LdsOffsetMetadata: 52480
-  LdsOffsetMetadata_Blk: 100096
-  LdsPadA: 32
-  LdsPadB: 16
-  LdsPadMXSA: 0
-  LdsPadMXSB: 0
-  LocalReadVectorWidthA: 16
-  LocalReadVectorWidthB: 8
-  LocalReadVectorWidthMetadata: 8
-  LocalSplitU: 1
-  LocalSplitUReuseLDS: 1
-  LocalWriteUseSgprA: false
-  LocalWriteUseSgprB: false
-  LocalWriteUseSgprMetadata: false
-  LoopIters: 2
-  LoopUnroll: 128
-  MFMA_BF16_1K: false
-  MIBlock: [16, 16, 64, 1, 1, 1]
-  MIInputPerThread: 16
-  MIInputPerThreadA: 16
-  MIInputPerThreadB: 8
-  MIInputPerThreadMetadata: 2
-  MIOutputVectorWidth: 4
-  MIRegPerOut: 1
-  MIWaveGroup: [2, 2]
-  MIWaveTile: [10, 3]
-  MIWaveTileA: 10
-  MIWaveTileB: 3
-  MIWaveTileMetadata: 3
-  MXLoadInst: BufferLoad
-  MXScaleFormat: NoSwizzle
-  MacroTile0: 320
-  MacroTile1: 96
-  MacroTileA: 320
-  MacroTileB: 96
-  MacroTileMetadata: 96
-  MathClocksUnrolledLoop: 0
-  MatrixInstB: 1
-  MatrixInstBM: 1
-  MatrixInstBN: 1
-  MatrixInstK: 64
-  MatrixInstM: 16
-  MatrixInstN: 16
-  MatrixInstruction: [16, 16, 64, 1]
-  MaxLDS: 65536
-  MbskPrefetchMethod: 0
-  MfmaInitCVgprs: false
-  MinGRIncPerMfma: 1
-  Multicast: false
-  NoLdsWriteCode: false
-  NoTailLoop: false
-  NonDTLTailLoopA: false
-  NonDTLTailLoopB: false
-  NonDTLTailLoopMetadata: false
-  NonTemporalD: 4
-  NumElementsPerThread: 120
-  NumGlobalWriteVectorsPerThread: 60
-  NumLdsBlk: 1
-  NumLoadsA: 10
-  NumLoadsB: 3
-  NumLoadsCoalescedB: 3
-  NumLoadsCoalescedMetadata: 1
-  NumLoadsMetadata: 3
-  NumLoadsPerpendicularA: 10
-  NumLoadsPerpendicularB: 1
-  NumLoadsPerpendicularMetadata: 3
-  NumThreads: 256
-  NumTotalPackedLoadsA: -1
-  NumTotalPackedLoadsB: -1
-  NumTotalPackedLoadsMetadata: -1
-  NumWaveSplitK: 1
-  NumWaves: 4
-  PackedC0IdxChars: [I]
-  PackedC0IndicesX: [0]
-  PackedC1IdxChars: [J]
-  PackedC1IndicesX: [1]
-  PrefetchGlobalRead: 2
-  ScheduleGROverBarrier: 0
-  SourceSwap: true
-  StaggerU: 16
-  StoreSwapAddr: false
-  StoreVectorWidth: 2
-  SubGroup0: 8
-  SubGroup1: 32
-  SubGroupA: 8
-  SubGroupB: 32
-  SubGroupMetadata: 32
-  ThreadTile: [1, 1]
-  ThreadTile0: 40
-  ThreadTile1: 3
-  ThreadTileA: 40
-  ThreadTileB: 3
-  ThreadTileMetadata: 3
-  TransposeLDS: 1
-  TransposeLDSMetadata: 1
-  ULSGRODoubleG2L: 0
-  UnrollMajorLDSA: true
-  UnrollMajorLDSB: false
-  UnrollMajorLDSMetadata: 1
-  UseCustomMainLoopSchedule: 0
-  UseDirect32XEmulation: false
-  UseDot2F32XEmulation: false
-  UseDotInstruction: false
-  UseF32XEmulation: false
-  UseGeneralizedNLCOneA: false
-  UseGeneralizedNLCOneB: false
-  UseGeneralizedNLCOneMXSA: false
-  UseGeneralizedNLCOneMXSB: false
-  UseGeneralizedNLCOneMetadata: false
-  UseMFMAF32XEmulation: false
-  Valid: true
-  VectorWidthA: 2
-  VectorWidthB: 1
-  VectorWidthMetadata: 1
-  WavefrontSize: 64
-  WorkGroup: [32, 8, 1]
-  WorkGroupMapping: 1
-  WorkspaceCheck: [4, 0, -1]
-  _DepthU: 128
-  _DepthUA: 128
-  _DepthUB: 64
-  _DepthUMetadata: 16
-  _GlobalAccumulation: MultipleBuffer
-  _ScheduleIterAlg: 3
-  _StinkyTofuOptLevel: 0
-  _UseSgprForGRO: false
-  _VectorStore: 1
-  _WorkspaceSizePerElemBias: 0
-  _WorkspaceSizePerElemC: 4
-  _inputVWA_was_auto: false
-  _inputVWB_was_auto: false
-  _staggerStrideShift: 1
-  enableGLTrA: false
-  enableGLTrB: false
-  enableLDSTrA: false
-  enableLDSTrB: false
-  enableLDSTrMXSA: false
-  enableLDSTrMXSB: false
-  enableLDSTrMetadata: 0
-  enableTDMA: false
-  enableTDMB: false
-  enableTDMMetadata: false
-  ldsNumBytesA: 46080
   ldsNumBytesB: 6272
   ldsNumBytesMXSA: 0
   ldsNumBytesMXSB: 0
@@ -700022,8 +699370,6 @@ ExactLogic:
   - [154, 429.3]
 - - [69888, 400, 1, 8192]
   - [411, 427.57]
-- - [70400, 400, 1, 8192]
-  - [431, 436.36]
 - - [70656, 400, 1, 8192]
   - [154, 442.17]
 - - [71424, 400, 1, 8192]
@@ -700032,18 +699378,12 @@ ExactLogic:
   - [20, 430.52]
 - - [72960, 400, 1, 8192]
   - [154, 443.38]
-- - [73216, 400, 1, 8192]
-  - [431, 442.61]
 - - [73728, 400, 1, 8192]
   - [411, 426.84]
-- - [74240, 400, 1, 8192]
-  - [431, 430.86]
 - - [75264, 400, 1, 8192]
   - [411, 452.2]
 - - [76032, 400, 1, 8192]
   - [20, 438.68]
-- - [76544, 400, 1, 8192]
-  - [431, 440.38]
 - - [76800, 400, 1, 8192]
   - [411, 436.96]
 - - [77824, 400, 1, 8192]
@@ -700196,18 +699536,12 @@ ExactLogic:
   - [154, 460.61]
 - - [73216, 416, 1, 8192]
   - [20, 442.14]
-- - [73728, 416, 1, 8192]
-  - [431, 443.76]
 - - [74240, 416, 1, 8192]
   - [411, 440.25]
-- - [75264, 416, 1, 8192]
-  - [431, 452.13]
 - - [76032, 416, 1, 8192]
   - [411, 452.7]
 - - [76544, 416, 1, 8192]
   - [411, 455.14]
-- - [76800, 416, 1, 8192]
-  - [431, 454.08]
 - - [77824, 416, 1, 8192]
   - [411, 464.37]
 - - [78848, 416, 1, 8192]
@@ -700358,8 +699692,6 @@ ExactLogic:
   - [23, 477.14]
 - - [73216, 432, 1, 8192]
   - [411, 454.55]
-- - [73728, 432, 1, 8192]
-  - [431, 459.38]
 - - [74240, 432, 1, 8192]
   - [411, 460.15]
 - - [75264, 432, 1, 8192]
@@ -701810,12 +701142,8 @@ ExactLogic:
   - [20, 503.99]
 - - [49920, 672, 1, 8192]
   - [411, 512.34]
-- - [50176, 672, 1, 8192]
-  - [431, 505.16]
 - - [50688, 672, 1, 8192]
   - [20, 510.98]
-- - [51200, 672, 1, 8192]
-  - [431, 510.89]
 - - [51968, 672, 1, 8192]
   - [20, 526.41]
 - - [52224, 672, 1, 8192]
@@ -702072,8 +701400,6 @@ ExactLogic:
   - [411, 542.84]
 - - [49920, 736, 1, 8192]
   - [411, 540.99]
-- - [50176, 736, 1, 8192]
-  - [431, 544.09]
 - - [50688, 736, 1, 8192]
   - [411, 553.82]
 - - [51200, 736, 1, 8192]
@@ -752352,12 +751678,8 @@ ExactLogic:
   - [1398, 374.58]
 - - [76032, 176, 1, 16384]
   - [410, 401.99]
-- - [76544, 176, 1, 16384]
-  - [444, 407.09]
 - - [76800, 176, 1, 16384]
   - [410, 406.1]
-- - [77824, 176, 1, 16384]
-  - [444, 400.94]
 - - [78848, 176, 1, 16384]
   - [38, 399.42]
 - - [79360, 176, 1, 16384]
@@ -752412,16 +751734,12 @@ ExactLogic:
   - [410, 426.45]
 - - [71424, 192, 1, 16384]
   - [410, 419.34]
-- - [71680, 192, 1, 16384]
-  - [431, 465.09]
 - - [72960, 192, 1, 16384]
   - [354, 435.22]
 - - [73216, 192, 1, 16384]
   - [410, 432.29]
 - - [73728, 192, 1, 16384]
   - [38, 420.64]
-- - [74240, 192, 1, 16384]
-  - [444, 458.94]
 - - [75264, 192, 1, 16384]
   - [410, 435.73]
 - - [76032, 192, 1, 16384]
@@ -752476,34 +751794,16 @@ ExactLogic:
   - [11, 454.11]
 - - [69120, 208, 1, 16384]
   - [445, 427.02]
-- - [69632, 208, 1, 16384]
-  - [431, 425.98]
-- - [69888, 208, 1, 16384]
-  - [431, 431.26]
 - - [70400, 208, 1, 16384]
   - [154, 454.84]
 - - [70656, 208, 1, 16384]
   - [154, 426.56]
-- - [71424, 208, 1, 16384]
-  - [431, 437.01]
 - - [71680, 208, 1, 16384]
   - [154, 431.48]
 - - [72960, 208, 1, 16384]
   - [154, 439.36]
-- - [73216, 208, 1, 16384]
-  - [431, 436.18]
-- - [73728, 208, 1, 16384]
-  - [431, 437.31]
-- - [74240, 208, 1, 16384]
-  - [431, 433.84]
-- - [75264, 208, 1, 16384]
-  - [431, 432.49]
 - - [76032, 208, 1, 16384]
   - [411, 440.8]
-- - [76544, 208, 1, 16384]
-  - [431, 426.93]
-- - [76800, 208, 1, 16384]
-  - [431, 437.03]
 - - [77824, 208, 1, 16384]
   - [411, 444.96]
 - - [78848, 208, 1, 16384]
@@ -752546,12 +751846,8 @@ ExactLogic:
   - [11, 481.34]
 - - [68096, 224, 1, 16384]
   - [11, 503.13]
-- - [69120, 224, 1, 16384]
-  - [431, 441.01]
 - - [69632, 224, 1, 16384]
   - [154, 451.63]
-- - [69888, 224, 1, 16384]
-  - [431, 453.94]
 - - [70400, 224, 1, 16384]
   - [154, 451.11]
 - - [70656, 224, 1, 16384]
@@ -752560,14 +751856,8 @@ ExactLogic:
   - [154, 470.9]
 - - [71680, 224, 1, 16384]
   - [154, 471.29]
-- - [72960, 224, 1, 16384]
-  - [431, 458.47]
-- - [73216, 224, 1, 16384]
-  - [431, 461.45]
 - - [73728, 224, 1, 16384]
   - [411, 482.16]
-- - [74240, 224, 1, 16384]
-  - [431, 460.57]
 - - [56320, 240, 1, 16384]
   - [20, 532.02]
 - - [56576, 240, 1, 16384]
@@ -752618,10 +751908,6 @@ ExactLogic:
   - [1403, 570.27]
 - - [69120, 240, 1, 16384]
   - [154, 479.59]
-- - [69632, 240, 1, 16384]
-  - [431, 485.35]
-- - [69888, 240, 1, 16384]
-  - [431, 490.61]
 - - [52224, 256, 1, 16384]
   - [39, 564.76]
 - - [52992, 256, 1, 16384]
@@ -753028,22 +752314,14 @@ ExactLogic:
   - [11, 507.82]
 - - [34560, 400, 1, 16384]
   - [154, 457.47]
-- - [34816, 400, 1, 16384]
-  - [431, 470.24]
 - - [35328, 400, 1, 16384]
   - [154, 476.25]
 - - [35840, 400, 1, 16384]
   - [154, 472.65]
-- - [36608, 400, 1, 16384]
-  - [431, 474.41]
 - - [36864, 400, 1, 16384]
   - [411, 472.13]
 - - [37120, 400, 1, 16384]
   - [411, 475.19]
-- - [37632, 400, 1, 16384]
-  - [431, 482.85]
-- - [38400, 400, 1, 16384]
-  - [431, 489.72]
 - - [38912, 400, 1, 16384]
   - [411, 477.8]
 - - [39168, 400, 1, 16384]
@@ -753076,20 +752354,8 @@ ExactLogic:
   - [154, 494.34]
 - - [35328, 416, 1, 16384]
   - [154, 491.96]
-- - [35840, 416, 1, 16384]
-  - [431, 498.8]
 - - [36608, 416, 1, 16384]
   - [1408, 548.74]
-- - [36864, 416, 1, 16384]
-  - [431, 492.73]
-- - [37120, 416, 1, 16384]
-  - [431, 498.74]
-- - [37632, 416, 1, 16384]
-  - [431, 505.51]
-- - [38400, 416, 1, 16384]
-  - [431, 503.49]
-- - [38912, 416, 1, 16384]
-  - [431, 509.73]
 - - [39168, 416, 1, 16384]
   - [23, 424.11]
 - - [39424, 416, 1, 16384]
@@ -753122,16 +752388,8 @@ ExactLogic:
   - [154, 508.38]
 - - [35840, 432, 1, 16384]
   - [154, 507.21]
-- - [36608, 432, 1, 16384]
-  - [431, 506.74]
-- - [36864, 432, 1, 16384]
-  - [431, 514.61]
 - - [37120, 432, 1, 16384]
   - [411, 510.98]
-- - [37632, 432, 1, 16384]
-  - [431, 512.08]
-- - [38400, 432, 1, 16384]
-  - [431, 519.84]
 - - [29952, 448, 1, 16384]
   - [86, 516.16]
 - - [30464, 448, 1, 16384]
@@ -753154,8 +752412,6 @@ ExactLogic:
   - [413, 544.77]
 - - [34048, 448, 1, 16384]
   - [11, 579.4]
-- - [34560, 448, 1, 16384]
-  - [431, 522.08]
 - - [34816, 448, 1, 16384]
   - [413, 539.63]
 - - [35328, 448, 1, 16384]
@@ -753166,8 +752422,6 @@ ExactLogic:
   - [1410, 606.2]
 - - [36864, 448, 1, 16384]
   - [413, 537.91]
-- - [37120, 448, 1, 16384]
-  - [431, 535.5]
 - - [29184, 464, 1, 16384]
   - [20, 603.5]
 - - [29440, 464, 1, 16384]
@@ -753196,12 +752450,6 @@ ExactLogic:
   - [11, 562.96]
 - - [34048, 464, 1, 16384]
   - [11, 607.77]
-- - [34560, 464, 1, 16384]
-  - [431, 541.39]
-- - [34816, 464, 1, 16384]
-  - [431, 544.44]
-- - [35328, 464, 1, 16384]
-  - [431, 542.39]
 - - [35840, 464, 1, 16384]
   - [413, 578.88]
 - - [28160, 480, 1, 16384]
@@ -753382,10 +752630,6 @@ ExactLogic:
   - [1406, 607.52]
 - - [24576, 608, 1, 16384]
   - [113, 531.11]
-- - [25088, 608, 1, 16384]
-  - [431, 536.0]
-- - [25344, 608, 1, 16384]
-  - [431, 525.12]
 - - [25600, 608, 1, 16384]
   - [113, 542.46]
 - - [26112, 608, 1, 16384]
@@ -753446,8 +752690,6 @@ ExactLogic:
   - [3, 562.59]
 - - [24320, 672, 1, 16384]
   - [3, 595.71]
-- - [24576, 672, 1, 16384]
-  - [431, 564.93]
 - - [19200, 704, 1, 16384]
   - [20, 635.18]
 - - [19456, 704, 1, 16384]
@@ -753526,16 +752768,12 @@ ExactLogic:
   - [11, 555.95]
 - - [17408, 800, 1, 16384]
   - [413, 514.0]
-- - [17664, 800, 1, 16384]
-  - [431, 512.98]
 - - [17920, 800, 1, 16384]
   - [0, 540.62]
 - - [18432, 800, 1, 16384]
   - [1410, 607.82]
 - - [19200, 800, 1, 16384]
   - [1410, 587.66]
-- - [19456, 800, 1, 16384]
-  - [431, 538.9]
 - - [19712, 800, 1, 16384]
   - [303, 439.42]
 - - [19968, 800, 1, 16384]
@@ -753552,16 +752790,10 @@ ExactLogic:
   - [11, 575.7]
 - - [16896, 832, 1, 16384]
   - [11, 579.2]
-- - [17408, 832, 1, 16384]
-  - [431, 531.6]
 - - [17664, 832, 1, 16384]
   - [1410, 585.5]
 - - [17920, 832, 1, 16384]
   - [154, 550.37]
-- - [18432, 832, 1, 16384]
-  - [431, 534.17]
-- - [19200, 832, 1, 16384]
-  - [431, 553.27]
 - - [19456, 832, 1, 16384]
   - [1410, 621.79]
 - - [19712, 832, 1, 16384]
@@ -753580,8 +752812,6 @@ ExactLogic:
   - [11, 596.53]
 - - [17408, 864, 1, 16384]
   - [413, 555.21]
-- - [17664, 864, 1, 16384]
-  - [431, 561.46]
 - - [17920, 864, 1, 16384]
   - [413, 554.02]
 - - [18432, 864, 1, 16384]
@@ -753832,8 +753062,6 @@ ExactLogic:
   - [11, 631.15]
 - - [9728, 1600, 1, 16384]
   - [113, 586.33]
-- - [9984, 1600, 1, 16384]
-  - [431, 618.93]
 - - [10240, 1600, 1, 16384]
   - [154, 602.55]
 - - [8192, 1664, 1, 16384]
@@ -753942,8 +753170,6 @@ ExactLogic:
   - [1403, 733.97]
 - - [7168, 2176, 1, 16384]
   - [11, 681.84]
-- - [7424, 2176, 1, 16384]
-  - [431, 617.55]
 - - [7680, 2176, 1, 16384]
   - [3, 646.97]
 - - [5888, 2304, 1, 16384]
@@ -754006,8 +753232,6 @@ ExactLogic:
   - [86, 686.08]
 - - [5376, 2944, 1, 16384]
   - [11, 747.75]
-- - [5632, 2944, 1, 16384]
-  - [431, 666.15]
 - - [4352, 3072, 1, 16384]
   - [20, 783.44]
 - - [4608, 3072, 1, 16384]
@@ -754636,8 +753860,6 @@ ExactLogic:
   - [154, 610.18]
 - - [736, 19712, 1, 16384]
   - [3, 618.69]
-- - [768, 19712, 1, 16384]
-  - [431, 635.47]
 - - [800, 19712, 1, 16384]
   - [3, 665.68]
 - - [832, 19712, 1, 16384]
@@ -754648,8 +753870,6 @@ ExactLogic:
   - [154, 631.51]
 - - [736, 19968, 1, 16384]
   - [3, 620.52]
-- - [768, 19968, 1, 16384]
-  - [431, 624.25]
 - - [800, 19968, 1, 16384]
   - [3, 669.41]
 - - [832, 19968, 1, 16384]
@@ -754660,8 +753880,6 @@ ExactLogic:
   - [154, 607.75]
 - - [736, 20480, 1, 16384]
   - [3, 606.74]
-- - [768, 20480, 1, 16384]
-  - [431, 620.27]
 - - [800, 20480, 1, 16384]
   - [3, 671.21]
 - - [672, 20736, 1, 16384]
@@ -754670,8 +753888,6 @@ ExactLogic:
   - [3, 611.5]
 - - [736, 20736, 1, 16384]
   - [3, 628.22]
-- - [768, 20736, 1, 16384]
-  - [431, 636.38]
 - - [800, 20736, 1, 16384]
   - [3, 699.53]
 - - [640, 21504, 1, 16384]
@@ -754682,8 +753898,6 @@ ExactLogic:
   - [154, 626.97]
 - - [736, 21504, 1, 16384]
   - [3, 619.72]
-- - [768, 21504, 1, 16384]
-  - [431, 648.17]
 - - [640, 21760, 1, 16384]
   - [412, 649.53]
 - - [672, 21760, 1, 16384]
@@ -754692,8 +753906,6 @@ ExactLogic:
   - [147, 615.87]
 - - [736, 21760, 1, 16384]
   - [3, 639.66]
-- - [768, 21760, 1, 16384]
-  - [431, 640.5]
 - - [608, 22272, 1, 16384]
   - [11, 641.2]
 - - [640, 22272, 1, 16384]
@@ -754864,8 +754076,6 @@ ExactLogic:
   - [16, 584.86]
 - - [496, 29440, 1, 16384]
   - [113, 515.8]
-- - [512, 29440, 1, 16384]
-  - [431, 560.39]
 - - [544, 29440, 1, 16384]
   - [8, 550.46]
 - - [464, 29696, 1, 16384]
@@ -754874,8 +754084,6 @@ ExactLogic:
   - [154, 581.0]
 - - [496, 29696, 1, 16384]
   - [337, 486.77]
-- - [512, 29696, 1, 16384]
-  - [431, 573.39]
 - - [544, 29696, 1, 16384]
   - [413, 520.48]
 - - [448, 29952, 1, 16384]
@@ -754886,8 +754094,6 @@ ExactLogic:
   - [3, 588.43]
 - - [496, 29952, 1, 16384]
   - [113, 528.1]
-- - [512, 29952, 1, 16384]
-  - [431, 590.21]
 - - [544, 29952, 1, 16384]
   - [8, 532.06]
 - - [448, 30464, 1, 16384]
@@ -754898,8 +754104,6 @@ ExactLogic:
   - [3, 596.57]
 - - [496, 30464, 1, 16384]
   - [113, 533.47]
-- - [512, 30464, 1, 16384]
-  - [431, 576.5]
 - - [544, 30464, 1, 16384]
   - [413, 528.22]
 - - [448, 30720, 1, 16384]
@@ -754924,8 +754128,6 @@ ExactLogic:
   - [16, 597.18]
 - - [496, 30976, 1, 16384]
   - [113, 524.31]
-- - [512, 30976, 1, 16384]
-  - [431, 585.07]
 - - [432, 31744, 1, 16384]
   - [11, 587.07]
 - - [448, 31744, 1, 16384]
@@ -754936,8 +754138,6 @@ ExactLogic:
   - [154, 601.87]
 - - [496, 31744, 1, 16384]
   - [113, 497.89]
-- - [512, 31744, 1, 16384]
-  - [431, 575.36]
 - - [432, 32000, 1, 16384]
   - [11, 580.1]
 - - [448, 32000, 1, 16384]
@@ -755512,8 +754712,6 @@ ExactLogic:
   - [11, 497.43]
 - - [240, 59904, 1, 16384]
   - [154, 506.89]
-- - [256, 59904, 1, 16384]
-  - [431, 502.53]
 - - [272, 59904, 1, 16384]
   - [1409, 447.22]
 - - [224, 60928, 1, 16384]
@@ -756058,32 +755256,18 @@ ExactLogic:
   - [30, 369.77]
 - - [103936, 128, 1, 16384]
   - [30, 376.77]
-- - [69632, 144, 1, 16384]
-  - [444, 327.84]
 - - [69888, 144, 1, 16384]
   - [354, 337.01]
 - - [70400, 144, 1, 16384]
   - [433, 369.47]
-- - [70656, 144, 1, 16384]
-  - [444, 319.23]
-- - [71424, 144, 1, 16384]
-  - [444, 324.07]
 - - [71680, 144, 1, 16384]
   - [433, 321.01]
-- - [72960, 144, 1, 16384]
-  - [444, 357.85]
-- - [73216, 144, 1, 16384]
-  - [444, 329.93]
 - - [73728, 144, 1, 16384]
   - [433, 318.26]
-- - [74240, 144, 1, 16384]
-  - [444, 330.44]
 - - [75264, 144, 1, 16384]
   - [433, 329.42]
 - - [76032, 144, 1, 16384]
   - [433, 328.22]
-- - [76544, 144, 1, 16384]
-  - [444, 332.13]
 - - [76800, 144, 1, 16384]
   - [410, 336.24]
 - - [77824, 144, 1, 16384]
@@ -756176,8 +755360,6 @@ ExactLogic:
   - [433, 368.22]
 - - [76544, 160, 1, 16384]
   - [410, 372.17]
-- - [76800, 160, 1, 16384]
-  - [444, 377.51]
 - - [77824, 160, 1, 16384]
   - [410, 371.59]
 - - [78848, 160, 1, 16384]
@@ -756242,20 +755424,12 @@ ExactLogic:
   - [140, 402.7]
 - - [68096, 176, 1, 16384]
   - [21, 413.9]
-- - [69120, 176, 1, 16384]
-  - [444, 377.43]
-- - [69632, 176, 1, 16384]
-  - [444, 378.93]
 - - [69888, 176, 1, 16384]
   - [410, 384.17]
 - - [70400, 176, 1, 16384]
   - [410, 367.67]
 - - [70656, 176, 1, 16384]
   - [410, 402.41]
-- - [71424, 176, 1, 16384]
-  - [444, 383.62]
-- - [71680, 176, 1, 16384]
-  - [444, 379.56]
 - - [72960, 176, 1, 16384]
   - [354, 386.87]
 - - [73216, 176, 1, 16384]
@@ -790224,8 +789398,6 @@ ExactLogic:
   - [603, 429.75]
 - - [69632, 192, 1, 32768]
   - [607, 418.07]
-- - [69888, 192, 1, 32768]
-  - [444, 421.25]
 - - [70400, 192, 1, 32768]
   - [607, 429.85]
 - - [70656, 192, 1, 32768]
@@ -790294,36 +789466,8 @@ ExactLogic:
   - [609, 451.83]
 - - [68096, 208, 1, 32768]
   - [609, 450.4]
-- - [69120, 208, 1, 32768]
-  - [431, 429.29]
-- - [69632, 208, 1, 32768]
-  - [611, 427.41]
-- - [69888, 208, 1, 32768]
-  - [431, 422.92]
-- - [70400, 208, 1, 32768]
-  - [431, 430.24]
-- - [70656, 208, 1, 32768]
-  - [431, 432.31]
 - - [71424, 208, 1, 32768]
   - [411, 430.88]
-- - [71680, 208, 1, 32768]
-  - [431, 430.88]
-- - [72960, 208, 1, 32768]
-  - [431, 440.78]
-- - [73216, 208, 1, 32768]
-  - [431, 436.87]
-- - [73728, 208, 1, 32768]
-  - [431, 444.91]
-- - [74240, 208, 1, 32768]
-  - [431, 443.81]
-- - [75264, 208, 1, 32768]
-  - [431, 450.55]
-- - [76032, 208, 1, 32768]
-  - [431, 451.84]
-- - [76544, 208, 1, 32768]
-  - [431, 454.66]
-- - [76800, 208, 1, 32768]
-  - [431, 454.78]
 - - [77824, 208, 1, 32768]
   - [411, 447.66]
 - - [78848, 208, 1, 32768]
@@ -790366,28 +789510,12 @@ ExactLogic:
   - [146, 464.14]
 - - [68096, 224, 1, 32768]
   - [609, 487.61]
-- - [69120, 224, 1, 32768]
-  - [431, 454.81]
-- - [69632, 224, 1, 32768]
-  - [431, 453.59]
 - - [69888, 224, 1, 32768]
   - [411, 457.08]
-- - [70400, 224, 1, 32768]
-  - [431, 464.15]
-- - [70656, 224, 1, 32768]
-  - [611, 459.78]
 - - [71424, 224, 1, 32768]
   - [411, 462.97]
-- - [71680, 224, 1, 32768]
-  - [431, 464.05]
-- - [72960, 224, 1, 32768]
-  - [431, 513.15]
-- - [73216, 224, 1, 32768]
-  - [611, 468.04]
 - - [73728, 224, 1, 32768]
   - [411, 471.87]
-- - [74240, 224, 1, 32768]
-  - [431, 469.32]
 - - [56320, 240, 1, 32768]
   - [615, 504.03]
 - - [56576, 240, 1, 32768]
@@ -790438,10 +789566,6 @@ ExactLogic:
   - [11, 506.26]
 - - [69120, 240, 1, 32768]
   - [411, 485.36]
-- - [69632, 240, 1, 32768]
-  - [431, 487.36]
-- - [69888, 240, 1, 32768]
-  - [431, 502.69]
 - - [52224, 256, 1, 32768]
   - [616, 533.94]
 - - [52992, 256, 1, 32768]
@@ -790848,24 +789972,8 @@ ExactLogic:
   - [610, 495.95]
 - - [34560, 400, 1, 32768]
   - [411, 473.0]
-- - [34816, 400, 1, 32768]
-  - [431, 476.43]
-- - [35328, 400, 1, 32768]
-  - [431, 487.47]
-- - [35840, 400, 1, 32768]
-  - [431, 488.54]
-- - [36608, 400, 1, 32768]
-  - [431, 481.67]
-- - [36864, 400, 1, 32768]
-  - [611, 490.4]
 - - [37120, 400, 1, 32768]
   - [411, 482.9]
-- - [37632, 400, 1, 32768]
-  - [431, 495.61]
-- - [38400, 400, 1, 32768]
-  - [431, 505.25]
-- - [38912, 400, 1, 32768]
-  - [431, 512.31]
 - - [39168, 400, 1, 32768]
   - [612, 430.26]
 - - [39424, 400, 1, 32768]
@@ -790890,26 +789998,8 @@ ExactLogic:
   - [609, 512.55]
 - - [34048, 416, 1, 32768]
   - [609, 514.59]
-- - [34560, 416, 1, 32768]
-  - [431, 494.52]
-- - [34816, 416, 1, 32768]
-  - [431, 496.07]
-- - [35328, 416, 1, 32768]
-  - [431, 500.32]
-- - [35840, 416, 1, 32768]
-  - [431, 499.6]
-- - [36608, 416, 1, 32768]
-  - [431, 505.13]
-- - [36864, 416, 1, 32768]
-  - [431, 503.13]
 - - [37120, 416, 1, 32768]
   - [411, 505.41]
-- - [37632, 416, 1, 32768]
-  - [431, 520.84]
-- - [38400, 416, 1, 32768]
-  - [431, 511.38]
-- - [38912, 416, 1, 32768]
-  - [431, 523.31]
 - - [39168, 416, 1, 32768]
   - [627, 446.01]
 - - [39424, 416, 1, 32768]
@@ -790934,24 +790024,8 @@ ExactLogic:
   - [11, 530.53]
 - - [34048, 432, 1, 32768]
   - [11, 548.67]
-- - [34560, 432, 1, 32768]
-  - [431, 519.89]
-- - [34816, 432, 1, 32768]
-  - [431, 511.27]
-- - [35328, 432, 1, 32768]
-  - [431, 522.11]
-- - [35840, 432, 1, 32768]
-  - [431, 519.62]
-- - [36608, 432, 1, 32768]
-  - [431, 521.07]
-- - [36864, 432, 1, 32768]
-  - [431, 525.99]
 - - [37120, 432, 1, 32768]
   - [411, 520.2]
-- - [37632, 432, 1, 32768]
-  - [431, 529.2]
-- - [38400, 432, 1, 32768]
-  - [431, 526.91]
 - - [29952, 448, 1, 32768]
   - [613, 529.18]
 - - [30464, 448, 1, 32768]
@@ -790976,8 +790050,6 @@ ExactLogic:
   - [610, 555.21]
 - - [34560, 448, 1, 32768]
   - [628, 538.44]
-- - [34816, 448, 1, 32768]
-  - [431, 540.97]
 - - [35328, 448, 1, 32768]
   - [628, 540.36]
 - - [35840, 448, 1, 32768]
@@ -790986,8 +790058,6 @@ ExactLogic:
   - [628, 553.57]
 - - [36864, 448, 1, 32768]
   - [628, 550.52]
-- - [37120, 448, 1, 32768]
-  - [431, 558.43]
 - - [29184, 464, 1, 32768]
   - [615, 568.38]
 - - [29440, 464, 1, 32768]
@@ -791058,8 +790128,6 @@ ExactLogic:
   - [11, 601.75]
 - - [34560, 480, 1, 32768]
   - [413, 569.79]
-- - [34816, 480, 1, 32768]
-  - [431, 573.36]
 - - [27648, 496, 1, 32768]
   - [615, 592.2]
 - - [28160, 496, 1, 32768]
@@ -791200,14 +790268,10 @@ ExactLogic:
   - [620, 566.5]
 - - [24320, 608, 1, 32768]
   - [16, 578.67]
-- - [24576, 608, 1, 32768]
-  - [431, 523.06]
 - - [25088, 608, 1, 32768]
   - [8, 531.6]
 - - [25344, 608, 1, 32768]
   - [8, 543.63]
-- - [25600, 608, 1, 32768]
-  - [431, 541.67]
 - - [26112, 608, 1, 32768]
   - [8, 549.05]
 - - [26624, 608, 1, 32768]
@@ -791266,8 +790330,6 @@ ExactLogic:
   - [623, 583.01]
 - - [24320, 672, 1, 32768]
   - [3, 599.28]
-- - [24576, 672, 1, 32768]
-  - [431, 578.15]
 - - [19200, 704, 1, 32768]
   - [20, 607.24]
 - - [19456, 704, 1, 32768]
@@ -791650,10 +790712,6 @@ ExactLogic:
   - [609, 622.96]
 - - [9216, 1600, 1, 32768]
   - [620, 617.41]
-- - [9728, 1600, 1, 32768]
-  - [431, 596.79]
-- - [9984, 1600, 1, 32768]
-  - [431, 596.8]
 - - [10240, 1600, 1, 32768]
   - [411, 614.62]
 - - [8192, 1664, 1, 32768]
@@ -791666,10 +790724,6 @@ ExactLogic:
   - [609, 652.65]
 - - [9216, 1664, 1, 32768]
   - [609, 649.07]
-- - [9728, 1664, 1, 32768]
-  - [431, 621.13]
-- - [9984, 1664, 1, 32768]
-  - [431, 623.35]
 - - [7936, 1728, 1, 32768]
   - [20, 653.57]
 - - [8192, 1728, 1, 32768]
@@ -791826,8 +790880,6 @@ ExactLogic:
   - [609, 658.97]
 - - [5376, 2944, 1, 32768]
   - [609, 681.04]
-- - [5632, 2944, 1, 32768]
-  - [431, 629.98]
 - - [4352, 3072, 1, 32768]
   - [616, 674.76]
 - - [4608, 3072, 1, 32768]
@@ -792126,8 +791178,6 @@ ExactLogic:
   - [609, 676.77]
 - - [1792, 8960, 1, 32768]
   - [11, 705.08]
-- - [1856, 8960, 1, 32768]
-  - [431, 629.18]
 - - [1472, 9216, 1, 32768]
   - [20, 684.71]
 - - [1536, 9216, 1, 32768]
@@ -792468,8 +791518,6 @@ ExactLogic:
   - [622, 561.52]
 - - [736, 19968, 1, 32768]
   - [3, 544.58]
-- - [768, 19968, 1, 32768]
-  - [431, 581.45]
 - - [800, 19968, 1, 32768]
   - [623, 591.53]
 - - [832, 19968, 1, 32768]
@@ -792480,8 +791528,6 @@ ExactLogic:
   - [622, 563.18]
 - - [736, 20480, 1, 32768]
   - [623, 555.32]
-- - [768, 20480, 1, 32768]
-  - [431, 592.19]
 - - [800, 20480, 1, 32768]
   - [3, 596.81]
 - - [672, 20736, 1, 32768]
@@ -792502,8 +791548,6 @@ ExactLogic:
   - [622, 571.9]
 - - [736, 21504, 1, 32768]
   - [3, 556.3]
-- - [768, 21504, 1, 32768]
-  - [431, 611.89]
 - - [640, 21760, 1, 32768]
   - [609, 583.09]
 - - [672, 21760, 1, 32768]
@@ -792684,8 +791728,6 @@ ExactLogic:
   - [16, 561.07]
 - - [496, 29440, 1, 32768]
   - [630, 501.96]
-- - [512, 29440, 1, 32768]
-  - [431, 564.87]
 - - [544, 29440, 1, 32768]
   - [630, 534.51]
 - - [464, 29696, 1, 32768]
@@ -792694,8 +791736,6 @@ ExactLogic:
   - [623, 548.78]
 - - [496, 29696, 1, 32768]
   - [411, 504.01]
-- - [512, 29696, 1, 32768]
-  - [431, 565.72]
 - - [544, 29696, 1, 32768]
   - [630, 534.44]
 - - [448, 29952, 1, 32768]
@@ -792706,8 +791746,6 @@ ExactLogic:
   - [3, 558.82]
 - - [496, 29952, 1, 32768]
   - [411, 507.02]
-- - [512, 29952, 1, 32768]
-  - [431, 582.06]
 - - [544, 29952, 1, 32768]
   - [630, 540.9]
 - - [448, 30464, 1, 32768]
@@ -792730,8 +791768,6 @@ ExactLogic:
   - [631, 553.18]
 - - [496, 30720, 1, 32768]
   - [628, 514.12]
-- - [512, 30720, 1, 32768]
-  - [431, 561.79]
 - - [544, 30720, 1, 32768]
   - [630, 536.41]
 - - [432, 30976, 1, 32768]
@@ -792756,8 +791792,6 @@ ExactLogic:
   - [3, 564.18]
 - - [496, 31744, 1, 32768]
   - [411, 512.63]
-- - [512, 31744, 1, 32768]
-  - [431, 579.14]
 - - [432, 32000, 1, 32768]
   - [11, 550.6]
 - - [448, 32000, 1, 32768]
@@ -792782,8 +791816,6 @@ ExactLogic:
   - [3, 569.56]
 - - [496, 32256, 1, 32768]
   - [411, 523.99]
-- - [512, 32256, 1, 32768]
-  - [431, 587.93]
 - - [416, 32768, 1, 32768]
   - [613, 582.8]
 - - [432, 32768, 1, 32768]
@@ -828042,8 +827074,6 @@ ExactLogic:
   - [5, 479.92]
 - - [95232, 176, 1, 65536]
   - [5, 443.4]
-- - [69632, 192, 1, 65536]
-  - [444, 453.6]
 - - [69888, 192, 1, 65536]
   - [607, 468.42]
 - - [70400, 192, 1, 65536]
@@ -828116,36 +827146,12 @@ ExactLogic:
   - [11, 518.43]
 - - [69120, 208, 1, 65536]
   - [632, 441.39]
-- - [69632, 208, 1, 65536]
-  - [431, 459.42]
-- - [69888, 208, 1, 65536]
-  - [431, 448.04]
-- - [70400, 208, 1, 65536]
-  - [611, 445.05]
 - - [70656, 208, 1, 65536]
   - [411, 450.13]
-- - [71424, 208, 1, 65536]
-  - [431, 488.22]
-- - [71680, 208, 1, 65536]
-  - [431, 449.91]
-- - [72960, 208, 1, 65536]
-  - [431, 452.84]
-- - [73216, 208, 1, 65536]
-  - [611, 452.76]
 - - [73728, 208, 1, 65536]
   - [411, 472.7]
-- - [74240, 208, 1, 65536]
-  - [431, 465.84]
-- - [75264, 208, 1, 65536]
-  - [431, 459.34]
 - - [76032, 208, 1, 65536]
   - [411, 481.13]
-- - [76544, 208, 1, 65536]
-  - [431, 474.09]
-- - [76800, 208, 1, 65536]
-  - [431, 471.16]
-- - [77824, 208, 1, 65536]
-  - [431, 477.35]
 - - [78848, 208, 1, 65536]
   - [23, 416.47]
 - - [79360, 208, 1, 65536]
@@ -828170,8 +827176,6 @@ ExactLogic:
   - [609, 488.44]
 - - [64000, 224, 1, 65536]
   - [609, 490.85]
-- - [64512, 224, 1, 65536]
-  - [431, 503.66]
 - - [64768, 224, 1, 65536]
   - [609, 502.96]
 - - [65280, 224, 1, 65536]
@@ -828186,28 +827190,8 @@ ExactLogic:
   - [609, 501.28]
 - - [68096, 224, 1, 65536]
   - [609, 508.89]
-- - [69120, 224, 1, 65536]
-  - [611, 491.15]
-- - [69632, 224, 1, 65536]
-  - [431, 476.14]
-- - [69888, 224, 1, 65536]
-  - [431, 473.75]
-- - [70400, 224, 1, 65536]
-  - [431, 481.03]
-- - [70656, 224, 1, 65536]
-  - [431, 511.09]
-- - [71424, 224, 1, 65536]
-  - [431, 489.66]
-- - [71680, 224, 1, 65536]
-  - [431, 491.24]
-- - [72960, 224, 1, 65536]
-  - [431, 522.84]
-- - [73216, 224, 1, 65536]
-  - [431, 492.35]
 - - [73728, 224, 1, 65536]
   - [411, 491.69]
-- - [74240, 224, 1, 65536]
-  - [431, 509.5]
 - - [56320, 240, 1, 65536]
   - [615, 542.95]
 - - [56576, 240, 1, 65536]
@@ -828248,20 +827232,12 @@ ExactLogic:
   - [11, 565.28]
 - - [65536, 240, 1, 65536]
   - [609, 534.19]
-- - [66560, 240, 1, 65536]
-  - [431, 540.19]
 - - [66816, 240, 1, 65536]
   - [11, 545.01]
 - - [67584, 240, 1, 65536]
   - [609, 554.12]
 - - [68096, 240, 1, 65536]
   - [609, 546.77]
-- - [69120, 240, 1, 65536]
-  - [431, 540.42]
-- - [69632, 240, 1, 65536]
-  - [611, 532.6]
-- - [69888, 240, 1, 65536]
-  - [431, 515.33]
 - - [52224, 256, 1, 65536]
   - [616, 563.29]
 - - [52992, 256, 1, 65536]
@@ -828666,26 +827642,8 @@ ExactLogic:
   - [609, 533.18]
 - - [34048, 400, 1, 65536]
   - [609, 524.94]
-- - [34560, 400, 1, 65536]
-  - [431, 503.01]
 - - [34816, 400, 1, 65536]
   - [411, 495.19]
-- - [35328, 400, 1, 65536]
-  - [431, 504.89]
-- - [35840, 400, 1, 65536]
-  - [431, 515.64]
-- - [36608, 400, 1, 65536]
-  - [431, 518.42]
-- - [36864, 400, 1, 65536]
-  - [431, 535.53]
-- - [37120, 400, 1, 65536]
-  - [431, 523.72]
-- - [37632, 400, 1, 65536]
-  - [431, 514.26]
-- - [38400, 400, 1, 65536]
-  - [431, 541.91]
-- - [38912, 400, 1, 65536]
-  - [431, 535.43]
 - - [39168, 400, 1, 65536]
   - [612, 457.84]
 - - [39424, 400, 1, 65536]
@@ -828710,26 +827668,6 @@ ExactLogic:
   - [609, 546.32]
 - - [34048, 416, 1, 65536]
   - [609, 559.34]
-- - [34560, 416, 1, 65536]
-  - [431, 520.37]
-- - [34816, 416, 1, 65536]
-  - [431, 532.71]
-- - [35328, 416, 1, 65536]
-  - [431, 528.58]
-- - [35840, 416, 1, 65536]
-  - [431, 529.66]
-- - [36608, 416, 1, 65536]
-  - [431, 538.41]
-- - [36864, 416, 1, 65536]
-  - [611, 530.29]
-- - [37120, 416, 1, 65536]
-  - [431, 536.2]
-- - [37632, 416, 1, 65536]
-  - [431, 544.91]
-- - [38400, 416, 1, 65536]
-  - [431, 552.92]
-- - [38912, 416, 1, 65536]
-  - [431, 547.39]
 - - [39168, 416, 1, 65536]
   - [612, 471.46]
 - - [39424, 416, 1, 65536]
@@ -828754,24 +827692,10 @@ ExactLogic:
   - [609, 566.41]
 - - [34048, 432, 1, 65536]
   - [614, 562.54]
-- - [34560, 432, 1, 65536]
-  - [431, 542.31]
-- - [34816, 432, 1, 65536]
-  - [431, 544.2]
 - - [35328, 432, 1, 65536]
   - [411, 532.28]
 - - [35840, 432, 1, 65536]
   - [411, 530.2]
-- - [36608, 432, 1, 65536]
-  - [431, 558.82]
-- - [36864, 432, 1, 65536]
-  - [431, 560.25]
-- - [37120, 432, 1, 65536]
-  - [431, 558.9]
-- - [37632, 432, 1, 65536]
-  - [431, 568.53]
-- - [38400, 432, 1, 65536]
-  - [431, 570.25]
 - - [29952, 448, 1, 65536]
   - [613, 571.54]
 - - [30464, 448, 1, 65536]
@@ -829020,12 +827944,6 @@ ExactLogic:
   - [620, 597.0]
 - - [24320, 608, 1, 65536]
   - [620, 606.86]
-- - [24576, 608, 1, 65536]
-  - [431, 550.24]
-- - [25088, 608, 1, 65536]
-  - [431, 563.24]
-- - [25344, 608, 1, 65536]
-  - [431, 562.26]
 - - [25600, 608, 1, 65536]
   - [411, 566.11]
 - - [26112, 608, 1, 65536]
@@ -829054,8 +827972,6 @@ ExactLogic:
   - [620, 647.91]
 - - [24576, 640, 1, 65536]
   - [8, 593.04]
-- - [25088, 640, 1, 65536]
-  - [431, 592.94]
 - - [25344, 640, 1, 65536]
   - [8, 590.11]
 - - [25600, 640, 1, 65536]
@@ -829086,8 +828002,6 @@ ExactLogic:
   - [623, 620.25]
 - - [24320, 672, 1, 65536]
   - [623, 619.35]
-- - [24576, 672, 1, 65536]
-  - [431, 606.87]
 - - [19200, 704, 1, 65536]
   - [615, 640.83]
 - - [19456, 704, 1, 65536]
@@ -829224,8 +828138,6 @@ ExactLogic:
   - [628, 601.3]
 - - [17920, 864, 1, 65536]
   - [628, 608.85]
-- - [18432, 864, 1, 65536]
-  - [431, 610.38]
 - - [19200, 864, 1, 65536]
   - [628, 627.82]
 - - [15360, 896, 1, 65536]
@@ -829470,12 +828382,6 @@ ExactLogic:
   - [16, 647.71]
 - - [9216, 1600, 1, 65536]
   - [620, 656.42]
-- - [9728, 1600, 1, 65536]
-  - [431, 638.88]
-- - [9984, 1600, 1, 65536]
-  - [431, 639.75]
-- - [10240, 1600, 1, 65536]
-  - [431, 652.25]
 - - [8192, 1664, 1, 65536]
   - [615, 682.83]
 - - [8448, 1664, 1, 65536]
@@ -829486,10 +828392,6 @@ ExactLogic:
   - [609, 674.0]
 - - [9216, 1664, 1, 65536]
   - [609, 678.5]
-- - [9728, 1664, 1, 65536]
-  - [431, 643.77]
-- - [9984, 1664, 1, 65536]
-  - [431, 660.4]
 - - [7936, 1728, 1, 65536]
   - [20, 681.51]
 - - [8192, 1728, 1, 65536]
@@ -829584,8 +828486,6 @@ ExactLogic:
   - [609, 679.15]
 - - [7424, 2176, 1, 65536]
   - [3, 647.12]
-- - [7680, 2176, 1, 65536]
-  - [431, 656.96]
 - - [5888, 2304, 1, 65536]
   - [615, 687.5]
 - - [6144, 2304, 1, 65536]
@@ -829646,8 +828546,6 @@ ExactLogic:
   - [613, 689.39]
 - - [5376, 2944, 1, 65536]
   - [11, 706.07]
-- - [5632, 2944, 1, 65536]
-  - [431, 658.62]
 - - [4352, 3072, 1, 65536]
   - [616, 716.0]
 - - [4608, 3072, 1, 65536]
@@ -829752,8 +828650,6 @@ ExactLogic:
   - [609, 705.99]
 - - [3712, 4352, 1, 65536]
   - [609, 720.03]
-- - [3840, 4352, 1, 65536]
-  - [431, 681.17]
 - - [2944, 4608, 1, 65536]
   - [20, 699.3]
 - - [3072, 4608, 1, 65536]
@@ -829804,8 +828700,6 @@ ExactLogic:
   - [613, 736.77]
 - - [2816, 5632, 1, 65536]
   - [609, 727.04]
-- - [2944, 5632, 1, 65536]
-  - [431, 675.88]
 - - [2304, 5888, 1, 65536]
   - [615, 713.87]
 - - [2432, 5888, 1, 65536]
@@ -829858,8 +828752,6 @@ ExactLogic:
   - [613, 707.17]
 - - [2176, 7168, 1, 65536]
   - [609, 711.06]
-- - [2304, 7168, 1, 65536]
-  - [431, 684.74]
 - - [1856, 7424, 1, 65536]
   - [615, 705.73]
 - - [1920, 7424, 1, 65536]
@@ -829892,8 +828784,6 @@ ExactLogic:
   - [609, 708.14]
 - - [1984, 7936, 1, 65536]
   - [609, 724.6]
-- - [2048, 7936, 1, 65536]
-  - [431, 686.07]
 - - [1664, 8192, 1, 65536]
   - [20, 693.81]
 - - [1728, 8192, 1, 65536]
@@ -829906,8 +828796,6 @@ ExactLogic:
   - [609, 705.11]
 - - [1984, 8192, 1, 65536]
   - [609, 730.18]
-- - [2048, 8192, 1, 65536]
-  - [431, 692.21]
 - - [1600, 8448, 1, 65536]
   - [615, 686.97]
 - - [1664, 8448, 1, 65536]
@@ -829946,8 +828834,6 @@ ExactLogic:
   - [609, 691.57]
 - - [1792, 8960, 1, 65536]
   - [609, 738.44]
-- - [1856, 8960, 1, 65536]
-  - [431, 665.58]
 - - [1472, 9216, 1, 65536]
   - [615, 697.01]
 - - [1536, 9216, 1, 65536]
@@ -830010,8 +828896,6 @@ ExactLogic:
   - [609, 694.28]
 - - [1408, 11264, 1, 65536]
   - [602, 646.34]
-- - [1472, 11264, 1, 65536]
-  - [431, 655.38]
 - - [1216, 11520, 1, 65536]
   - [613, 680.38]
 - - [1280, 11520, 1, 65536]
@@ -830028,8 +828912,6 @@ ExactLogic:
   - [609, 685.87]
 - - [1344, 11776, 1, 65536]
   - [609, 719.48]
-- - [1408, 11776, 1, 65536]
-  - [431, 646.04]
 - - [1088, 12288, 1, 65536]
   - [615, 664.05]
 - - [1152, 12288, 1, 65536]
@@ -830072,8 +828954,6 @@ ExactLogic:
   - [609, 671.01]
 - - [1152, 13312, 1, 65536]
   - [622, 647.13]
-- - [1216, 13312, 1, 65536]
-  - [431, 631.58]
 - - [992, 13824, 1, 65536]
   - [613, 646.45]
 - - [1024, 13824, 1, 65536]
@@ -830144,8 +829024,6 @@ ExactLogic:
   - [3, 623.87]
 - - [992, 15872, 1, 65536]
   - [622, 631.59]
-- - [1024, 15872, 1, 65536]
-  - [431, 649.52]
 - - [832, 16128, 1, 65536]
   - [613, 646.95]
 - - [864, 16128, 1, 65536]
@@ -830172,8 +829050,6 @@ ExactLogic:
   - [623, 633.66]
 - - [992, 16384, 1, 65536]
   - [622, 644.01]
-- - [1024, 16384, 1, 65536]
-  - [431, 678.01]
 - - [832, 16640, 1, 65536]
   - [613, 700.39]
 - - [864, 16640, 1, 65536]
@@ -830184,8 +829060,6 @@ ExactLogic:
   - [3, 617.97]
 - - [960, 16640, 1, 65536]
   - [623, 651.17]
-- - [992, 16640, 1, 65536]
-  - [431, 643.58]
 - - [800, 16896, 1, 65536]
   - [613, 663.01]
 - - [832, 16896, 1, 65536]
@@ -830198,8 +829072,6 @@ ExactLogic:
   - [3, 620.24]
 - - [960, 16896, 1, 65536]
   - [3, 650.23]
-- - [992, 16896, 1, 65536]
-  - [431, 637.97]
 - - [768, 17408, 1, 65536]
   - [20, 695.81]
 - - [800, 17408, 1, 65536]
@@ -830276,8 +829148,6 @@ ExactLogic:
   - [622, 598.43]
 - - [736, 19712, 1, 65536]
   - [630, 567.14]
-- - [768, 19712, 1, 65536]
-  - [431, 607.93]
 - - [800, 19712, 1, 65536]
   - [623, 627.36]
 - - [832, 19712, 1, 65536]
@@ -830288,8 +829158,6 @@ ExactLogic:
   - [622, 602.26]
 - - [736, 19968, 1, 65536]
   - [3, 575.89]
-- - [768, 19968, 1, 65536]
-  - [431, 611.5]
 - - [800, 19968, 1, 65536]
   - [3, 630.73]
 - - [832, 19968, 1, 65536]
@@ -830300,8 +829168,6 @@ ExactLogic:
   - [622, 601.45]
 - - [736, 20480, 1, 65536]
   - [623, 576.49]
-- - [768, 20480, 1, 65536]
-  - [431, 619.01]
 - - [800, 20480, 1, 65536]
   - [623, 637.69]
 - - [672, 20736, 1, 65536]
@@ -830310,8 +829176,6 @@ ExactLogic:
   - [622, 619.76]
 - - [736, 20736, 1, 65536]
   - [623, 600.42]
-- - [768, 20736, 1, 65536]
-  - [431, 628.15]
 - - [800, 20736, 1, 65536]
   - [623, 658.97]
 - - [640, 21504, 1, 65536]
@@ -830322,8 +829186,6 @@ ExactLogic:
   - [622, 626.66]
 - - [736, 21504, 1, 65536]
   - [3, 588.0]
-- - [768, 21504, 1, 65536]
-  - [431, 634.32]
 - - [640, 21760, 1, 65536]
   - [626, 621.14]
 - - [672, 21760, 1, 65536]
@@ -830332,8 +829194,6 @@ ExactLogic:
   - [622, 617.5]
 - - [736, 21760, 1, 65536]
   - [623, 615.83]
-- - [768, 21760, 1, 65536]
-  - [431, 643.0]
 - - [608, 22272, 1, 65536]
   - [609, 593.61]
 - - [640, 22272, 1, 65536]
@@ -830352,8 +829212,6 @@ ExactLogic:
   - [609, 669.9]
 - - [704, 22528, 1, 65536]
   - [622, 634.1]
-- - [736, 22528, 1, 65536]
-  - [431, 597.13]
 - - [608, 23040, 1, 65536]
   - [613, 656.59]
 - - [640, 23040, 1, 65536]
@@ -830504,8 +829362,6 @@ ExactLogic:
   - [620, 584.46]
 - - [496, 29440, 1, 65536]
   - [628, 541.69]
-- - [512, 29440, 1, 65536]
-  - [431, 588.04]
 - - [544, 29440, 1, 65536]
   - [630, 576.77]
 - - [464, 29696, 1, 65536]
@@ -830514,8 +829370,6 @@ ExactLogic:
   - [3, 578.78]
 - - [496, 29696, 1, 65536]
   - [628, 549.32]
-- - [512, 29696, 1, 65536]
-  - [431, 595.05]
 - - [544, 29696, 1, 65536]
   - [630, 589.02]
 - - [448, 29952, 1, 65536]
@@ -830526,8 +829380,6 @@ ExactLogic:
   - [623, 607.52]
 - - [496, 29952, 1, 65536]
   - [628, 547.28]
-- - [512, 29952, 1, 65536]
-  - [431, 597.88]
 - - [544, 29952, 1, 65536]
   - [630, 579.01]
 - - [448, 30464, 1, 65536]
@@ -830538,8 +829390,6 @@ ExactLogic:
   - [623, 587.39]
 - - [496, 30464, 1, 65536]
   - [628, 556.95]
-- - [512, 30464, 1, 65536]
-  - [431, 602.4]
 - - [544, 30464, 1, 65536]
   - [628, 582.61]
 - - [448, 30720, 1, 65536]
@@ -830550,8 +829400,6 @@ ExactLogic:
   - [623, 591.96]
 - - [496, 30720, 1, 65536]
   - [628, 557.76]
-- - [512, 30720, 1, 65536]
-  - [431, 600.1]
 - - [544, 30720, 1, 65536]
   - [630, 584.87]
 - - [432, 30976, 1, 65536]
@@ -830588,8 +829436,6 @@ ExactLogic:
   - [620, 599.82]
 - - [496, 32000, 1, 65536]
   - [628, 578.22]
-- - [512, 32000, 1, 65536]
-  - [431, 611.45]
 - - [416, 32256, 1, 65536]
   - [613, 609.55]
 - - [432, 32256, 1, 65536]
@@ -830602,8 +829448,6 @@ ExactLogic:
   - [3, 605.28]
 - - [496, 32256, 1, 65536]
   - [628, 568.22]
-- - [512, 32256, 1, 65536]
-  - [431, 621.76]
 - - [416, 32768, 1, 65536]
   - [613, 635.33]
 - - [432, 32768, 1, 65536]
@@ -831144,8 +829988,6 @@ ExactLogic:
   - [668, 435.2]
 - - [240, 59392, 1, 65536]
   - [628, 463.03]
-- - [256, 59392, 1, 65536]
-  - [431, 544.7]
 - - [272, 59392, 1, 65536]
   - [612, 464.24]
 - - [224, 59904, 1, 65536]
@@ -831160,8 +830002,6 @@ ExactLogic:
   - [11, 522.98]
 - - [240, 60928, 1, 65536]
   - [628, 469.66]
-- - [256, 60928, 1, 65536]
-  - [431, 547.94]
 - - [272, 60928, 1, 65536]
   - [612, 468.18]
 - - [224, 61440, 1, 65536]
@@ -831208,8 +830048,6 @@ ExactLogic:
   - [11, 532.86]
 - - [240, 64512, 1, 65536]
   - [628, 484.66]
-- - [256, 64512, 1, 65536]
-  - [431, 562.04]
 - - [208, 64768, 1, 65536]
   - [613, 496.65]
 - - [224, 64768, 1, 65536]
@@ -831892,8 +830730,6 @@ ExactLogic:
   - [410, 407.09]
 - - [70656, 176, 1, 65536]
   - [410, 412.27]
-- - [71424, 176, 1, 65536]
-  - [444, 405.48]
 - - [71680, 176, 1, 65536]
   - [604, 403.78]
 - - [72960, 176, 1, 65536]
@@ -865866,8 +864702,6 @@ ExactLogic:
   - [410, 454.51]
 - - [69888, 192, 1, 131072]
   - [354, 466.64]
-- - [70400, 192, 1, 131072]
-  - [444, 465.58]
 - - [70656, 192, 1, 131072]
   - [410, 464.11]
 - - [71424, 192, 1, 131072]
@@ -865876,20 +864710,12 @@ ExactLogic:
   - [354, 464.08]
 - - [72960, 192, 1, 131072]
   - [354, 466.08]
-- - [73216, 192, 1, 131072]
-  - [444, 443.04]
 - - [73728, 192, 1, 131072]
   - [410, 513.97]
-- - [74240, 192, 1, 131072]
-  - [444, 471.67]
-- - [75264, 192, 1, 131072]
-  - [444, 477.37]
 - - [76032, 192, 1, 131072]
   - [410, 464.74]
 - - [76544, 192, 1, 131072]
   - [410, 475.94]
-- - [76800, 192, 1, 131072]
-  - [444, 462.53]
 - - [77824, 192, 1, 131072]
   - [410, 480.54]
 - - [78848, 192, 1, 131072]
@@ -865918,12 +864744,8 @@ ExactLogic:
   - [38, 480.39]
 - - [87296, 192, 1, 131072]
   - [38, 481.23]
-- - [64512, 208, 1, 131072]
-  - [431, 465.04]
 - - [64768, 208, 1, 131072]
   - [11, 477.78]
-- - [65280, 208, 1, 131072]
-  - [431, 463.64]
 - - [65536, 208, 1, 131072]
   - [11, 480.7]
 - - [66560, 208, 1, 131072]
@@ -865936,36 +864758,16 @@ ExactLogic:
   - [11, 480.23]
 - - [69120, 208, 1, 131072]
   - [154, 464.26]
-- - [69632, 208, 1, 131072]
-  - [431, 463.89]
-- - [69888, 208, 1, 131072]
-  - [431, 457.93]
-- - [70400, 208, 1, 131072]
-  - [431, 463.35]
 - - [70656, 208, 1, 131072]
   - [154, 465.96]
-- - [71424, 208, 1, 131072]
-  - [431, 467.26]
 - - [71680, 208, 1, 131072]
   - [154, 462.42]
 - - [72960, 208, 1, 131072]
   - [154, 464.61]
-- - [73216, 208, 1, 131072]
-  - [431, 480.32]
 - - [73728, 208, 1, 131072]
   - [411, 469.58]
 - - [74240, 208, 1, 131072]
   - [411, 469.92]
-- - [75264, 208, 1, 131072]
-  - [431, 476.32]
-- - [76032, 208, 1, 131072]
-  - [431, 477.19]
-- - [76544, 208, 1, 131072]
-  - [431, 481.39]
-- - [76800, 208, 1, 131072]
-  - [431, 477.0]
-- - [77824, 208, 1, 131072]
-  - [431, 484.74]
 - - [78848, 208, 1, 131072]
   - [23, 418.19]
 - - [79360, 208, 1, 131072]
@@ -865994,8 +864796,6 @@ ExactLogic:
   - [11, 503.96]
 - - [64768, 224, 1, 131072]
   - [11, 517.25]
-- - [65280, 224, 1, 131072]
-  - [431, 492.71]
 - - [65536, 224, 1, 131072]
   - [11, 511.35]
 - - [66560, 224, 1, 131072]
@@ -866006,28 +864806,14 @@ ExactLogic:
   - [11, 506.11]
 - - [68096, 224, 1, 131072]
   - [11, 522.44]
-- - [69120, 224, 1, 131072]
-  - [431, 500.02]
 - - [69632, 224, 1, 131072]
   - [154, 500.19]
 - - [69888, 224, 1, 131072]
   - [154, 495.94]
-- - [70400, 224, 1, 131072]
-  - [431, 491.24]
-- - [70656, 224, 1, 131072]
-  - [431, 501.7]
 - - [71424, 224, 1, 131072]
   - [154, 494.47]
 - - [71680, 224, 1, 131072]
   - [411, 496.56]
-- - [72960, 224, 1, 131072]
-  - [431, 503.43]
-- - [73216, 224, 1, 131072]
-  - [431, 497.34]
-- - [73728, 224, 1, 131072]
-  - [431, 506.46]
-- - [74240, 224, 1, 131072]
-  - [431, 508.23]
 - - [56320, 240, 1, 131072]
   - [20, 541.27]
 - - [56576, 240, 1, 131072]
@@ -866076,12 +864862,6 @@ ExactLogic:
   - [11, 541.95]
 - - [68096, 240, 1, 131072]
   - [11, 543.15]
-- - [69120, 240, 1, 131072]
-  - [431, 517.49]
-- - [69632, 240, 1, 131072]
-  - [431, 530.68]
-- - [69888, 240, 1, 131072]
-  - [431, 525.4]
 - - [52224, 256, 1, 131072]
   - [39, 580.56]
 - - [52992, 256, 1, 131072]
@@ -866486,26 +865266,10 @@ ExactLogic:
   - [11, 530.12]
 - - [34048, 400, 1, 131072]
   - [11, 532.25]
-- - [34560, 400, 1, 131072]
-  - [431, 505.85]
-- - [34816, 400, 1, 131072]
-  - [431, 520.94]
 - - [35328, 400, 1, 131072]
   - [154, 517.46]
 - - [35840, 400, 1, 131072]
   - [154, 517.26]
-- - [36608, 400, 1, 131072]
-  - [431, 517.93]
-- - [36864, 400, 1, 131072]
-  - [431, 538.11]
-- - [37120, 400, 1, 131072]
-  - [431, 518.03]
-- - [37632, 400, 1, 131072]
-  - [431, 530.99]
-- - [38400, 400, 1, 131072]
-  - [431, 545.28]
-- - [38912, 400, 1, 131072]
-  - [431, 543.45]
 - - [39168, 400, 1, 131072]
   - [156, 451.46]
 - - [39424, 400, 1, 131072]
@@ -866532,24 +865296,8 @@ ExactLogic:
   - [11, 558.89]
 - - [34560, 416, 1, 131072]
   - [154, 535.2]
-- - [34816, 416, 1, 131072]
-  - [431, 531.24]
-- - [35328, 416, 1, 131072]
-  - [431, 532.0]
 - - [35840, 416, 1, 131072]
   - [154, 540.49]
-- - [36608, 416, 1, 131072]
-  - [431, 556.31]
-- - [36864, 416, 1, 131072]
-  - [431, 545.69]
-- - [37120, 416, 1, 131072]
-  - [431, 549.05]
-- - [37632, 416, 1, 131072]
-  - [431, 559.26]
-- - [38400, 416, 1, 131072]
-  - [431, 552.34]
-- - [38912, 416, 1, 131072]
-  - [431, 563.96]
 - - [39168, 416, 1, 131072]
   - [156, 469.11]
 - - [39424, 416, 1, 131072]
@@ -866576,22 +865324,8 @@ ExactLogic:
   - [11, 569.65]
 - - [34560, 432, 1, 131072]
   - [154, 547.56]
-- - [34816, 432, 1, 131072]
-  - [431, 550.54]
 - - [35328, 432, 1, 131072]
   - [154, 566.6]
-- - [35840, 432, 1, 131072]
-  - [431, 561.6]
-- - [36608, 432, 1, 131072]
-  - [431, 565.18]
-- - [36864, 432, 1, 131072]
-  - [431, 576.9]
-- - [37120, 432, 1, 131072]
-  - [431, 563.85]
-- - [37632, 432, 1, 131072]
-  - [431, 574.12]
-- - [38400, 432, 1, 131072]
-  - [431, 575.64]
 - - [29952, 448, 1, 131072]
   - [86, 557.51]
 - - [30464, 448, 1, 131072]
@@ -866902,12 +865636,8 @@ ExactLogic:
   - [3, 607.5]
 - - [23552, 672, 1, 131072]
   - [3, 605.3]
-- - [23808, 672, 1, 131072]
-  - [431, 616.22]
 - - [24320, 672, 1, 131072]
   - [3, 617.98]
-- - [24576, 672, 1, 131072]
-  - [431, 615.92]
 - - [19200, 704, 1, 131072]
   - [20, 660.98]
 - - [19456, 704, 1, 131072]
@@ -866984,12 +865714,8 @@ ExactLogic:
   - [3, 687.16]
 - - [16896, 800, 1, 131072]
   - [11, 553.8]
-- - [17408, 800, 1, 131072]
-  - [431, 554.47]
 - - [17664, 800, 1, 131072]
   - [154, 566.79]
-- - [17920, 800, 1, 131072]
-  - [431, 560.74]
 - - [18432, 800, 1, 131072]
   - [413, 569.29]
 - - [19200, 800, 1, 131072]
@@ -867018,12 +865744,8 @@ ExactLogic:
   - [154, 584.33]
 - - [17920, 832, 1, 131072]
   - [413, 581.2]
-- - [18432, 832, 1, 131072]
-  - [431, 590.37]
 - - [19200, 832, 1, 131072]
   - [413, 602.62]
-- - [19456, 832, 1, 131072]
-  - [431, 604.91]
 - - [19712, 832, 1, 131072]
   - [156, 498.07]
 - - [19968, 832, 1, 131072]
@@ -867040,14 +865762,8 @@ ExactLogic:
   - [11, 599.71]
 - - [17408, 864, 1, 131072]
   - [154, 592.05]
-- - [17664, 864, 1, 131072]
-  - [431, 602.12]
 - - [17920, 864, 1, 131072]
   - [413, 605.06]
-- - [18432, 864, 1, 131072]
-  - [431, 616.67]
-- - [19200, 864, 1, 131072]
-  - [431, 627.98]
 - - [15360, 896, 1, 131072]
   - [86, 625.65]
 - - [15872, 896, 1, 131072]
@@ -867060,8 +865776,6 @@ ExactLogic:
   - [11, 627.56]
 - - [16896, 896, 1, 131072]
   - [148, 615.69]
-- - [17408, 896, 1, 131072]
-  - [431, 622.27]
 - - [17664, 896, 1, 131072]
   - [413, 628.12]
 - - [17920, 896, 1, 131072]
@@ -867086,8 +865800,6 @@ ExactLogic:
   - [11, 645.42]
 - - [17408, 928, 1, 131072]
   - [154, 639.2]
-- - [17664, 928, 1, 131072]
-  - [431, 633.0]
 - - [17920, 928, 1, 131072]
   - [413, 652.28]
 - - [14080, 960, 1, 131072]
@@ -867240,8 +865952,6 @@ ExactLogic:
   - [3, 638.4]
 - - [11776, 1344, 1, 131072]
   - [154, 646.3]
-- - [12288, 1344, 1, 131072]
-  - [431, 665.46]
 - - [9728, 1408, 1, 131072]
   - [412, 672.68]
 - - [9984, 1408, 1, 131072]
@@ -867254,8 +865964,6 @@ ExactLogic:
   - [3, 648.07]
 - - [11520, 1408, 1, 131072]
   - [3, 675.5]
-- - [11776, 1408, 1, 131072]
-  - [431, 665.69]
 - - [9216, 1472, 1, 131072]
   - [20, 717.3]
 - - [9728, 1472, 1, 131072]
@@ -867292,8 +866000,6 @@ ExactLogic:
   - [16, 646.21]
 - - [9728, 1600, 1, 131072]
   - [154, 630.18]
-- - [9984, 1600, 1, 131072]
-  - [431, 633.46]
 - - [10240, 1600, 1, 131072]
   - [154, 651.73]
 - - [8192, 1664, 1, 131072]
@@ -867404,8 +866110,6 @@ ExactLogic:
   - [11, 670.05]
 - - [7424, 2176, 1, 131072]
   - [3, 644.24]
-- - [7680, 2176, 1, 131072]
-  - [431, 662.35]
 - - [5888, 2304, 1, 131072]
   - [20, 701.48]
 - - [6144, 2304, 1, 131072]
@@ -867712,8 +866416,6 @@ ExactLogic:
   - [11, 707.22]
 - - [1984, 7936, 1, 131072]
   - [11, 729.28]
-- - [2048, 7936, 1, 131072]
-  - [431, 683.02]
 - - [1664, 8192, 1, 131072]
   - [20, 715.02]
 - - [1728, 8192, 1, 131072]
@@ -867726,8 +866428,6 @@ ExactLogic:
   - [11, 699.71]
 - - [1984, 8192, 1, 131072]
   - [11, 726.53]
-- - [2048, 8192, 1, 131072]
-  - [431, 698.36]
 - - [1600, 8448, 1, 131072]
   - [20, 666.35]
 - - [1664, 8448, 1, 131072]
@@ -867766,8 +866466,6 @@ ExactLogic:
   - [11, 699.12]
 - - [1792, 8960, 1, 131072]
   - [11, 707.49]
-- - [1856, 8960, 1, 131072]
-  - [431, 661.71]
 - - [1472, 9216, 1, 131072]
   - [20, 725.36]
 - - [1536, 9216, 1, 131072]
@@ -867830,8 +866528,6 @@ ExactLogic:
   - [11, 691.9]
 - - [1408, 11264, 1, 131072]
   - [154, 663.48]
-- - [1472, 11264, 1, 131072]
-  - [431, 668.62]
 - - [1216, 11520, 1, 131072]
   - [86, 656.82]
 - - [1280, 11520, 1, 131072]
@@ -867882,8 +866578,6 @@ ExactLogic:
   - [11, 654.49]
 - - [1152, 13056, 1, 131072]
   - [147, 649.54]
-- - [1216, 13056, 1, 131072]
-  - [431, 637.71]
 - - [1280, 13056, 1, 131072]
   - [3, 688.07]
 - - [1024, 13312, 1, 131072]
@@ -867962,10 +866656,6 @@ ExactLogic:
   - [154, 625.85]
 - - [960, 15872, 1, 131072]
   - [154, 646.79]
-- - [992, 15872, 1, 131072]
-  - [431, 654.54]
-- - [1024, 15872, 1, 131072]
-  - [431, 670.17]
 - - [832, 16128, 1, 131072]
   - [86, 632.77]
 - - [864, 16128, 1, 131072]
@@ -867978,8 +866668,6 @@ ExactLogic:
   - [154, 647.89]
 - - [992, 16128, 1, 131072]
   - [147, 665.95]
-- - [1024, 16128, 1, 131072]
-  - [431, 656.72]
 - - [832, 16384, 1, 131072]
   - [86, 666.52]
 - - [864, 16384, 1, 131072]
@@ -867990,10 +866678,6 @@ ExactLogic:
   - [154, 635.31]
 - - [960, 16384, 1, 131072]
   - [154, 676.14]
-- - [992, 16384, 1, 131072]
-  - [431, 648.49]
-- - [1024, 16384, 1, 131072]
-  - [431, 693.11]
 - - [832, 16640, 1, 131072]
   - [86, 659.59]
 - - [864, 16640, 1, 131072]
@@ -868004,8 +866688,6 @@ ExactLogic:
   - [154, 647.99]
 - - [960, 16640, 1, 131072]
   - [154, 684.33]
-- - [992, 16640, 1, 131072]
-  - [431, 660.69]
 - - [800, 16896, 1, 131072]
   - [86, 622.92]
 - - [832, 16896, 1, 131072]
@@ -868018,8 +866700,6 @@ ExactLogic:
   - [154, 648.12]
 - - [960, 16896, 1, 131072]
   - [154, 678.96]
-- - [992, 16896, 1, 131072]
-  - [431, 664.32]
 - - [768, 17408, 1, 131072]
   - [20, 683.2]
 - - [800, 17408, 1, 131072]
@@ -868096,8 +866776,6 @@ ExactLogic:
   - [147, 606.5]
 - - [736, 19712, 1, 131072]
   - [148, 591.39]
-- - [768, 19712, 1, 131072]
-  - [431, 625.02]
 - - [800, 19712, 1, 131072]
   - [3, 642.12]
 - - [832, 19712, 1, 131072]
@@ -868108,8 +866786,6 @@ ExactLogic:
   - [147, 616.94]
 - - [736, 19968, 1, 131072]
   - [148, 591.07]
-- - [768, 19968, 1, 131072]
-  - [431, 617.63]
 - - [800, 19968, 1, 131072]
   - [3, 630.7]
 - - [832, 19968, 1, 131072]
@@ -868118,10 +866794,6 @@ ExactLogic:
   - [11, 627.46]
 - - [704, 20480, 1, 131072]
   - [154, 606.09]
-- - [736, 20480, 1, 131072]
-  - [431, 603.68]
-- - [768, 20480, 1, 131072]
-  - [431, 640.3]
 - - [800, 20480, 1, 131072]
   - [3, 642.94]
 - - [672, 20736, 1, 131072]
@@ -868130,8 +866802,6 @@ ExactLogic:
   - [147, 607.92]
 - - [736, 20736, 1, 131072]
   - [3, 597.9]
-- - [768, 20736, 1, 131072]
-  - [431, 648.13]
 - - [800, 20736, 1, 131072]
   - [3, 668.18]
 - - [640, 21504, 1, 131072]
@@ -868142,8 +866812,6 @@ ExactLogic:
   - [154, 632.19]
 - - [736, 21504, 1, 131072]
   - [148, 622.58]
-- - [768, 21504, 1, 131072]
-  - [431, 659.6]
 - - [640, 21760, 1, 131072]
   - [412, 635.24]
 - - [672, 21760, 1, 131072]
@@ -868162,8 +866830,6 @@ ExactLogic:
   - [11, 651.87]
 - - [704, 22272, 1, 131072]
   - [154, 631.7]
-- - [736, 22272, 1, 131072]
-  - [431, 633.1]
 - - [608, 22528, 1, 131072]
   - [86, 631.1]
 - - [640, 22528, 1, 131072]
@@ -868172,8 +866838,6 @@ ExactLogic:
   - [11, 646.78]
 - - [704, 22528, 1, 131072]
   - [154, 644.04]
-- - [736, 22528, 1, 131072]
-  - [431, 624.86]
 - - [608, 23040, 1, 131072]
   - [86, 636.48]
 - - [640, 23040, 1, 131072]
@@ -868324,8 +866988,6 @@ ExactLogic:
   - [16, 589.3]
 - - [496, 29440, 1, 131072]
   - [148, 552.66]
-- - [512, 29440, 1, 131072]
-  - [431, 612.94]
 - - [544, 29440, 1, 131072]
   - [148, 625.96]
 - - [464, 29696, 1, 131072]
@@ -868334,8 +866996,6 @@ ExactLogic:
   - [154, 587.73]
 - - [496, 29696, 1, 131072]
   - [148, 573.93]
-- - [512, 29696, 1, 131072]
-  - [431, 606.34]
 - - [544, 29696, 1, 131072]
   - [148, 605.3]
 - - [448, 29952, 1, 131072]
@@ -868346,8 +867006,6 @@ ExactLogic:
   - [3, 591.55]
 - - [496, 29952, 1, 131072]
   - [411, 567.21]
-- - [512, 29952, 1, 131072]
-  - [431, 603.66]
 - - [544, 29952, 1, 131072]
   - [148, 596.73]
 - - [448, 30464, 1, 131072]
@@ -868358,8 +867016,6 @@ ExactLogic:
   - [16, 601.3]
 - - [496, 30464, 1, 131072]
   - [148, 596.49]
-- - [512, 30464, 1, 131072]
-  - [431, 622.04]
 - - [544, 30464, 1, 131072]
   - [148, 626.07]
 - - [448, 30720, 1, 131072]
@@ -868370,8 +867026,6 @@ ExactLogic:
   - [154, 598.7]
 - - [496, 30720, 1, 131072]
   - [411, 570.21]
-- - [512, 30720, 1, 131072]
-  - [431, 607.54]
 - - [544, 30720, 1, 131072]
   - [148, 611.04]
 - - [432, 30976, 1, 131072]
@@ -868384,8 +867038,6 @@ ExactLogic:
   - [16, 601.94]
 - - [496, 30976, 1, 131072]
   - [411, 569.46]
-- - [512, 30976, 1, 131072]
-  - [431, 629.62]
 - - [432, 31744, 1, 131072]
   - [148, 571.29]
 - - [448, 31744, 1, 131072]
@@ -868396,8 +867048,6 @@ ExactLogic:
   - [154, 604.26]
 - - [496, 31744, 1, 131072]
   - [413, 587.34]
-- - [512, 31744, 1, 131072]
-  - [431, 620.02]
 - - [432, 32000, 1, 131072]
   - [147, 563.26]
 - - [448, 32000, 1, 131072]
@@ -868408,8 +867058,6 @@ ExactLogic:
   - [3, 603.97]
 - - [496, 32000, 1, 131072]
   - [413, 600.24]
-- - [512, 32000, 1, 131072]
-  - [431, 628.47]
 - - [416, 32256, 1, 131072]
   - [86, 599.01]
 - - [432, 32256, 1, 131072]
@@ -868422,8 +867070,6 @@ ExactLogic:
   - [154, 605.16]
 - - [496, 32256, 1, 131072]
   - [413, 578.3]
-- - [512, 32256, 1, 131072]
-  - [431, 631.94]
 - - [416, 32768, 1, 131072]
   - [147, 559.52]
 - - [432, 32768, 1, 131072]
@@ -868952,52 +867598,38 @@ ExactLogic:
   - [38, 547.47]
 - - [240, 58880, 1, 131072]
   - [154, 519.55]
-- - [256, 58880, 1, 131072]
-  - [431, 551.56]
 - - [272, 58880, 1, 131072]
   - [156, 434.58]
 - - [240, 59136, 1, 131072]
   - [154, 507.65]
-- - [256, 59136, 1, 131072]
-  - [431, 542.37]
 - - [272, 59136, 1, 131072]
   - [156, 432.81]
 - - [240, 59392, 1, 131072]
   - [154, 518.15]
-- - [256, 59392, 1, 131072]
-  - [431, 548.08]
 - - [272, 59392, 1, 131072]
   - [156, 439.56]
 - - [224, 59904, 1, 131072]
   - [11, 515.48]
 - - [240, 59904, 1, 131072]
   - [154, 523.38]
-- - [256, 59904, 1, 131072]
-  - [431, 547.69]
 - - [272, 59904, 1, 131072]
   - [156, 441.43]
 - - [224, 60928, 1, 131072]
   - [11, 519.59]
 - - [240, 60928, 1, 131072]
   - [154, 518.25]
-- - [256, 60928, 1, 131072]
-  - [431, 559.93]
 - - [272, 60928, 1, 131072]
   - [156, 447.26]
 - - [224, 61440, 1, 131072]
   - [11, 510.57]
 - - [240, 61440, 1, 131072]
   - [154, 524.62]
-- - [256, 61440, 1, 131072]
-  - [431, 559.22]
 - - [272, 61440, 1, 131072]
   - [156, 450.8]
 - - [224, 61952, 1, 131072]
   - [11, 521.5]
 - - [240, 61952, 1, 131072]
   - [154, 529.03]
-- - [256, 61952, 1, 131072]
-  - [431, 560.12]
 - - [224, 62208, 1, 131072]
   - [11, 499.62]
 - - [240, 62208, 1, 131072]
@@ -869020,16 +867652,12 @@ ExactLogic:
   - [11, 519.41]
 - - [240, 64000, 1, 131072]
   - [154, 538.37]
-- - [256, 64000, 1, 131072]
-  - [431, 565.67]
 - - [208, 64512, 1, 131072]
   - [86, 511.46]
 - - [224, 64512, 1, 131072]
   - [11, 522.92]
 - - [240, 64512, 1, 131072]
   - [154, 533.95]
-- - [256, 64512, 1, 131072]
-  - [431, 570.75]
 - - [208, 64768, 1, 131072]
   - [11, 494.0]
 - - [224, 64768, 1, 131072]
@@ -869526,20 +868154,14 @@ ExactLogic:
   - [433, 340.26]
 - - [70656, 144, 1, 131072]
   - [410, 340.93]
-- - [71424, 144, 1, 131072]
-  - [444, 344.7]
 - - [71680, 144, 1, 131072]
   - [410, 362.62]
 - - [72960, 144, 1, 131072]
   - [354, 370.94]
-- - [73216, 144, 1, 131072]
-  - [444, 338.48]
 - - [73728, 144, 1, 131072]
   - [410, 340.12]
 - - [74240, 144, 1, 131072]
   - [410, 348.3]
-- - [75264, 144, 1, 131072]
-  - [444, 340.67]
 - - [76032, 144, 1, 131072]
   - [410, 342.95]
 - - [76544, 144, 1, 131072]
@@ -869608,24 +868230,14 @@ ExactLogic:
   - [21, 393.98]
 - - [68096, 160, 1, 131072]
   - [140, 387.21]
-- - [69120, 160, 1, 131072]
-  - [444, 369.54]
-- - [69632, 160, 1, 131072]
-  - [444, 371.71]
 - - [69888, 160, 1, 131072]
   - [433, 372.01]
 - - [70400, 160, 1, 131072]
   - [433, 369.77]
-- - [70656, 160, 1, 131072]
-  - [444, 382.45]
-- - [71424, 160, 1, 131072]
-  - [444, 373.95]
 - - [71680, 160, 1, 131072]
   - [354, 371.39]
 - - [72960, 160, 1, 131072]
   - [433, 378.44]
-- - [73216, 160, 1, 131072]
-  - [444, 374.7]
 - - [73728, 160, 1, 131072]
   - [433, 378.64]
 - - [74240, 160, 1, 131072]
@@ -869638,8 +868250,6 @@ ExactLogic:
   - [410, 382.03]
 - - [76800, 160, 1, 131072]
   - [433, 381.9]
-- - [77824, 160, 1, 131072]
-  - [444, 385.25]
 - - [78848, 160, 1, 131072]
   - [90, 389.33]
 - - [79360, 160, 1, 131072]
@@ -869692,8 +868302,6 @@ ExactLogic:
   - [21, 417.89]
 - - [65280, 176, 1, 131072]
   - [21, 467.4]
-- - [65536, 176, 1, 131072]
-  - [444, 419.33]
 - - [66560, 176, 1, 131072]
   - [21, 427.16]
 - - [66816, 176, 1, 131072]
@@ -869714,12 +868322,8 @@ ExactLogic:
   - [410, 412.2]
 - - [71424, 176, 1, 131072]
   - [410, 405.56]
-- - [71680, 176, 1, 131072]
-  - [444, 406.35]
 - - [72960, 176, 1, 131072]
   - [410, 422.83]
-- - [73216, 176, 1, 131072]
-  - [444, 403.32]
 - - [73728, 176, 1, 131072]
   - [410, 406.58]
 - - [74240, 176, 1, 131072]
@@ -869790,8 +868394,6 @@ ExactLogic:
   - [21, 472.27]
 - - [68096, 192, 1, 131072]
   - [140, 466.58]
-- - [69120, 192, 1, 131072]
-  - [444, 445.77]
 - - [48384, 208, 1, 131072]
   - [23, 464.25]
 - - [48640, 208, 1, 131072]
@@ -869904,8 +868506,6 @@ ExactLogic:
   - [20, 491.54]
 - - [56576, 224, 1, 131072]
   - [20, 494.6]
-- - [57344, 224, 1, 131072]
-  - [431, 500.77]
 - - [57600, 224, 1, 131072]
   - [20, 510.64]
 - - [58368, 224, 1, 131072]
@@ -876839,7 +875439,7 @@ ExactLogic:
 - - [4352, 448, 1, 131072]
   - [572, 489.62]
 - - [144, 464, 1, 131072]
-  - [1545, 180.58]
+  - [431, 180.58]
 - - [160, 464, 1, 131072]
   - [534, 190.25]
 - - [176, 464, 1, 131072]
@@ -877131,7 +875731,7 @@ ExactLogic:
 - - [4352, 480, 1, 131072]
   - [573, 521.89]
 - - [144, 496, 1, 131072]
-  - [1545, 185.24]
+  - [431, 185.24]
 - - [160, 496, 1, 131072]
   - [534, 202.53]
 - - [176, 496, 1, 131072]
@@ -877427,7 +876027,7 @@ ExactLogic:
 - - [128, 544, 1, 131072]
   - [485, 184.04]
 - - [144, 544, 1, 131072]
-  - [1545, 201.07]
+  - [431, 201.07]
 - - [160, 544, 1, 131072]
   - [534, 212.81]
 - - [176, 544, 1, 131072]
@@ -880797,7 +879397,7 @@ ExactLogic:
 - - [4352, 1408, 1, 131072]
   - [572, 519.3]
 - - [48, 1472, 1, 131072]
-  - [1546, 167.75]
+  - [444, 167.75]
 - - [64, 1472, 1, 131072]
   - [582, 215.38]
 - - [80, 1472, 1, 131072]
@@ -881113,7 +879713,7 @@ ExactLogic:
 - - [4352, 1536, 1, 131072]
   - [557, 546.6]
 - - [48, 1600, 1, 131072]
-  - [1546, 175.84]
+  - [444, 175.84]
 - - [64, 1600, 1, 131072]
   - [470, 222.91]
 - - [80, 1600, 1, 131072]
@@ -881429,7 +880029,7 @@ ExactLogic:
 - - [4352, 1664, 1, 131072]
   - [557, 577.49]
 - - [48, 1728, 1, 131072]
-  - [1546, 187.77]
+  - [444, 187.77]
 - - [64, 1728, 1, 131072]
   - [470, 233.56]
 - - [80, 1728, 1, 131072]
@@ -886679,7 +885279,7 @@ ExactLogic:
 - - [29952, 80, 1, 131072]
   - [526, 241.81]
 - - [30464, 80, 1, 131072]
-  - [1547, 235.65]
+  - [611, 235.65]
 - - [30720, 80, 1, 131072]
   - [526, 241.67]
 - - [30976, 80, 1, 131072]
@@ -886747,7 +885347,7 @@ ExactLogic:
 - - [44800, 80, 1, 131072]
   - [526, 232.43]
 - - [45056, 80, 1, 131072]
-  - [1547, 238.01]
+  - [611, 238.01]
 - - [46080, 80, 1, 131072]
   - [526, 233.4]
 - - [46592, 80, 1, 131072]
