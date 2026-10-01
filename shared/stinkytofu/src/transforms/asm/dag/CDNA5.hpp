@@ -561,6 +561,32 @@ class CDNA5ReadyQueue : public ReadyQueue {
     // WMMA is held in Phase B until this reaches popcount(coIssueWindow)+1
     // (WMMA->WMMA coexec slots + 1).
     int nonWmmaFillsSinceActiveWmma_ = 0;
+    // --- Even-spread fillers (dagFeatures.evenSpreadFillers) ---
+    // A "filler" is any SALU/VALU op (otherQueue + valuQueue). A "window" is
+    // the span between two consecutive WMMA issues.
+    //
+    // Problem: by default an open window is held until its full co-issue
+    // length (popcount(coIssueWindow)+1, i.e. 7+1 on gfx1250) is consumed and
+    // the hide budget's non-WMMA count is met. A loop body only supplies ~2
+    // ds_loads per window, so the scheduler pulls 3-6 fillers into each early
+    // window just to pad it, and the later windows end up with none.
+    //
+    // Fix: each window is owed fillQuotaPerWindow_ fillers, computed once per
+    // region in onInitRegion as ceil(fillers / WMMAs). Once the quota is met,
+    // (1) the window closes so the next WMMA can issue (Phase B), and
+    // (2) further fillers are deferred unless nothing else can issue
+    // (findSmallestPickableNonWmma). A window can still get more than the
+    // quota when a hazard or dependency forces it, e.g. an s_cmp/s_cmov SCC chain.
+    //
+    // Invariants: ds_load selection and the ds_load half of the hide budget are
+    // untouched. fillsThisWindow_ is separate from nonWmmaFillsSinceActiveWmma_,
+    // which counts VALU only and pads the WMMA->WMMA / WMMA->VALU coexec
+    // hazards; those pads keep their full 7+1 length. 0 = feature off.
+    int fillQuotaPerWindow_ = 0;
+    int fillsThisWindow_ = 0;
+    bool fillQuotaMet() const {
+        return fillQuotaPerWindow_ > 0 && fillsThisWindow_ >= fillQuotaPerWindow_;
+    }
     // Region-wide actual and required cumulative non-WMMA issue counts.
     int nonWmmaIssuedThisRegion_ = 0;
     int cumulativeWmmaHideBudget_ = 0;
@@ -942,6 +968,7 @@ DAGNode* CDNA5ReadyQueue::popNonWmma(DAGNode* node, int pickKind) {
     }
     // Only VALU-pipe ops fill a coexec slot.
     if (pickKind == kValu) nonWmmaFillsSinceActiveWmma_++;
+    if (pickKind == kOther || pickKind == kValu) fillsThisWindow_++;
     // (A) RAW: stamp this producer's dest data-ready latency (e.g. ds_load).
     // (B) elapse: record the timeline touch for all operands (dst + src).
     touchOperands(*node->inst);
@@ -1236,6 +1263,7 @@ DAGNode* CDNA5ReadyQueue::pickOneFromWMMA(DAGNode* pick) {
     activeWmmaBlockedScale_ = node->inst->getHwInstDesc()->blockedScaleMask;
     activeWmmaNode_ = node;
     nonWmmaFillsSinceActiveWmma_ = 0;  // new window: restart WMMA->WMMA fill count
+    fillsThisWindow_ = 0;
     dsSchedulingBudgetUsed_ = 0;
     // Advance by WMMA issue cycles after opening a new timeline window.
     // This keeps coIssueCyclePos_ aligned with elapsed cycles right after WMMA
@@ -1377,13 +1405,17 @@ bool CDNA5ReadyQueue::findSmallestPickableNonWmma(DAGNode* pickedDS, DAGNode** o
     }
     // SALU/other allows hidden stalls (see pickFreeBest); VALU stays
     // RAW-free-only.
+    // evenSpreadFillers: past this window's quota a filler only goes when
+    // nothing else can, so it is not pulled forward from a later window.
+    const bool fillerAllowed = !fillQuotaMet() || best == nullptr;
     int otherWait = 0;
     if (DAGNode* t = pickFreeBest(otherQueue, &otherWait, /*allowHiddenStall=*/true)) {
-        consider(t, kOther, otherWait);
+        if (fillerAllowed) consider(t, kOther, otherWait);
     }
     if (isValuPickable() || best == nullptr) {
         if (DAGNode* t = pickFreeBest(valuQueue)) {
-            if (!dsWindowOk && !destOverlapsActiveWmmaSrc(t)) consider(t, kValu, 0);
+            if (!dsWindowOk && !destOverlapsActiveWmmaSrc(t) && fillerAllowed)
+                consider(t, kValu, 0);
         }
     }
 
@@ -2016,8 +2048,12 @@ DAGNode* CDNA5ReadyQueue::pickOne() {
 
         const bool blockWmmaForLoopHeadBalance =
             deferHeadBalanceThisRegion_ && deferFirstHeadWmmaActive_ && otherQueuesHaveWork;
+        // evenSpreadFillers: an open window closes on the fill quota instead of
+        // on its full cycle count, so surplus fillers are not pulled in to pad it.
+        const bool quotaClosesWindow = fillQuotaPerWindow_ > 0 && activeWmmaNode_ != nullptr;
         const bool blockWmmaForActiveWindow =
-            (coIssueCyclePos_ < activeWmmaLatency_) && (smallestPickable != nullptr);
+            (quotaClosesWindow ? !fillQuotaMet() : coIssueCyclePos_ < activeWmmaLatency_) &&
+            (smallestPickable != nullptr);
 
         bool blockWmmaForAtLeastOneNonWmmaInterleaving = false;
         if (lastPickedNode_ != nullptr) {
@@ -2034,9 +2070,12 @@ DAGNode* CDNA5ReadyQueue::pickOne() {
         }
         const int hideBudget = cumulativeWmmaHideBudget_;
         const int dsLoadBudget = cumulativeWmmaDsLoadBudget_;
+        // The ds_load budget always applies; under the quota it replaces the
+        // non-WMMA count, which is what demanded the surplus fillers.
+        const bool fillsOwed =
+            quotaClosesWindow ? !fillQuotaMet() : nonWmmaIssuedThisRegion_ < hideBudget;
         const bool blockWmmaForHideBudget =
-            hasPickableNonWmma &&
-            (nonWmmaIssuedThisRegion_ < hideBudget || dsLoadIssuedThisRegion_ < dsLoadBudget);
+            hasPickableNonWmma && (fillsOwed || dsLoadIssuedThisRegion_ < dsLoadBudget);
         PASS_DEBUG(std::cerr << "[CDNA5 pickOne] Phase B candidate wmmaId=" << bestWMMA->id
                              << " bestLatency=" << bestLatency
                              << " blockLoopHead=" << blockWmmaForLoopHeadBalance
@@ -2259,6 +2298,7 @@ void CDNA5ReadyQueue::onInit(IRList::iterator regionStart, IRList::iterator regi
     activeWmmaBlockedScale_ = 0;
     activeWmmaNode_ = nullptr;
     nonWmmaFillsSinceActiveWmma_ = 0;
+    fillsThisWindow_ = 0;
     dsSchedulingBudgetUsed_ = 0;
     nonWmmaIssuedThisRegion_ = 0;
     cumulativeWmmaHideBudget_ = 0;
@@ -2438,6 +2478,8 @@ void CDNA5ReadyQueue::onInitRegion(IRList::iterator regionStart, IRList::iterato
     // DAGNodeList.
     activeWmmaNode_ = nullptr;
     nonWmmaFillsSinceActiveWmma_ = 0;
+    fillsThisWindow_ = 0;
+    fillQuotaPerWindow_ = 0;
     nonWmmaIssuedThisRegion_ = 0;
     cumulativeWmmaHideBudget_ = 0;
     dsLoadIssuedThisRegion_ = 0;
@@ -2468,11 +2510,18 @@ void CDNA5ReadyQueue::onInitRegion(IRList::iterator regionStart, IRList::iterato
     int wmmaHideBudgetBase = 0;
     bool hasWmmaHideBudgetBase = false;
     std::unordered_set<StinkyInstruction*> regionInsts;
+    const auto& dagFeatures = getPassContext().getPassFeatureConfig().dagFeatures;
+    int regionFillerCount = 0;
     for (IRList::iterator it = regionStart; it != regionEnd; ++it) {
         auto* instPtr = dyn_cast<StinkyInstruction>(it.getNodePtr());
         if (!instPtr) continue;
         StinkyInstruction& inst = *instPtr;
         regionInsts.insert(instPtr);
+
+        // Fillers are exactly what push() routes to otherQueue/valuQueue.
+        if (!isMatrixInstruction(inst) && !isDSRead(inst) && !isBarrier(inst) &&
+            !(dagFeatures.distributeGlobalRead && isTensorLoad(inst)))
+            ++regionFillerCount;
 
         if (isMatrixInstruction(inst)) {
             wmmaIssueConfig.issuedCount++;
@@ -2497,6 +2546,12 @@ void CDNA5ReadyQueue::onInitRegion(IRList::iterator regionStart, IRList::iterato
             ++dsTotalThisRegion_;
         }
     }
+
+    // Ceil, not floor: a typical loop has far fewer fillers than WMMAs (e.g.
+    // 25 / 128), and floor would give a quota of 0 that never closes a window.
+    if (dagFeatures.evenSpreadFillers && wmmaTotalThisRegion_ > 0)
+        fillQuotaPerWindow_ =
+            (regionFillerCount + wmmaTotalThisRegion_ - 1) / wmmaTotalThisRegion_;
 
     // Rule (4) ds_load cap: at most dsReadPerCap ds_loads in any
     // dsIssueCapSpan() cycles of the real timeline. Sliding, so it is defined
