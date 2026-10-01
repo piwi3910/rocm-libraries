@@ -4,6 +4,8 @@
 #pragma once
 
 #include <hipdnn_data_sdk/types/Bfloat16.hpp>
+#include <hipdnn_data_sdk/types/Fp8E4M3.hpp>
+#include <hipdnn_data_sdk/types/Fp8E5M2.hpp>
 #include <hipdnn_data_sdk/types/Half.hpp>
 
 #include <cstdint>
@@ -59,13 +61,13 @@ struct HipRtcTypeName<int32_t>
 template <>
 struct HipRtcTypeName<hipdnn_data_sdk::types::fp8_e5m2>
 {
-    static constexpr const char* VALUE = "hipdnn_gpu_ref::types::fp8_e5m2";
+    static constexpr const char* VALUE = "hipdnn_gpu_ref::device_types::fp8_e5m2";
 };
 
 template <>
 struct HipRtcTypeName<hipdnn_data_sdk::types::fp8_e4m3>
 {
-    static constexpr const char* VALUE = "hipdnn_gpu_ref::types::fp8_e4m3";
+    static constexpr const char* VALUE = "hipdnn_gpu_ref::device_types::fp8_e4m3";
 };
 
 } // namespace hipdnn_gpu_ref::detail

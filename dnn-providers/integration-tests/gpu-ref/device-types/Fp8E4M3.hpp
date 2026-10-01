@@ -3,12 +3,10 @@
 
 #pragma once
 
-#include "Common.hpp"
 #include <cstdint>
-#include <limits>
 #include <type_traits>
 
-namespace hipdnn_gpu_ref::types
+namespace hipdnn_gpu_ref::device_types
 {
 
 namespace detail
@@ -78,9 +76,9 @@ constexpr uint32_t FP8_E4M3_ROUND_THRESHOLD = 0x80000;
 // NOTE: The `saturate=false` paths return NaN on overflow per the OCP spec and
 // are reserved for future non-saturating-mode support.
 // NOLINTNEXTLINE(readability-identifier-naming)
-HOST_DEVICE inline uint8_t float_to_fp8_e4m3_bits(float f, bool saturate = true) noexcept
+__device__ inline uint8_t float_to_fp8_e4m3_bits(float f, bool saturate = true) noexcept
 {
-    const uint32_t bits = floatToBits(f);
+    const uint32_t bits = __builtin_bit_cast(uint32_t, f);
     const uint32_t absBits = bits & 0x7FFFFFFFu;
     const uint32_t sign = (bits >> 24) & FP8_E4M3_SIGN_MASK; // sign moved to bit 7
 
@@ -174,7 +172,7 @@ HOST_DEVICE inline uint8_t float_to_fp8_e4m3_bits(float f, bool saturate = true)
 
 // Convert FP8 E4M3 bits to float
 // NOLINTNEXTLINE(readability-identifier-naming)
-HOST_DEVICE inline float fp8_e4m3_bits_to_float(uint8_t b) noexcept
+__device__ inline float fp8_e4m3_bits_to_float(uint8_t b) noexcept
 {
     const uint32_t sign = (static_cast<uint32_t>(b) & 0x80u) << 24;
     const uint32_t exp = (static_cast<uint32_t>(b) >> 3) & 0xFu;
@@ -205,7 +203,7 @@ HOST_DEVICE inline float fp8_e4m3_bits_to_float(uint8_t b) noexcept
         out = sign | ((exp + 120u) << 23) | (mant << 20);
     }
 
-    return bitsToFloat(out);
+    return __builtin_bit_cast(float, out);
 }
 
 } // namespace detail
@@ -239,46 +237,66 @@ struct fp8_e4m3
     fp8_e4m3& operator=(const fp8_e4m3&) = default;
     fp8_e4m3& operator=(fp8_e4m3&&) noexcept = default;
 
-    HOST_DEVICE explicit fp8_e4m3(float f) noexcept
+    __device__ explicit fp8_e4m3(float f) noexcept
         : data(detail::float_to_fp8_e4m3_bits(f))
     {
     }
 
-    HOST_DEVICE explicit fp8_e4m3(double d) noexcept
+    __device__ explicit fp8_e4m3(double d) noexcept
         : fp8_e4m3(static_cast<float>(d))
     {
     }
 
+    __device__ explicit fp8_e4m3(_Float16 h) noexcept
+        : fp8_e4m3(static_cast<float>(h))
+    {
+    }
+
+    __device__ explicit fp8_e4m3(__bf16 b) noexcept
+        : fp8_e4m3(static_cast<float>(b))
+    {
+    }
+
     template <typename T, typename = std::enable_if_t<std::is_integral_v<T>>>
-    HOST_DEVICE explicit fp8_e4m3(T value) noexcept
+    __device__ explicit fp8_e4m3(T value) noexcept
         : fp8_e4m3(static_cast<float>(value))
     {
     }
 
     // NOLINTNEXTLINE(readability-identifier-naming)
-    HOST_DEVICE static constexpr fp8_e4m3 from_bits(uint8_t bits) noexcept
+    __device__ static constexpr fp8_e4m3 from_bits(uint8_t bits) noexcept
     {
         fp8_e4m3 val;
         val.data = bits;
         return val;
     }
 
-    HOST_DEVICE explicit operator float() const noexcept
+    __device__ explicit operator float() const noexcept
     {
         return detail::fp8_e4m3_bits_to_float(data);
     }
 
-    HOST_DEVICE explicit operator double() const noexcept
+    __device__ explicit operator double() const noexcept
     {
         return static_cast<double>(detail::fp8_e4m3_bits_to_float(data));
     }
 
-    HOST_DEVICE fp8_e4m3 operator-() const noexcept
+    __device__ explicit operator _Float16() const noexcept
+    {
+        return static_cast<_Float16>(detail::fp8_e4m3_bits_to_float(data));
+    }
+
+    __device__ explicit operator __bf16() const noexcept
+    {
+        return static_cast<__bf16>(detail::fp8_e4m3_bits_to_float(data));
+    }
+
+    __device__ fp8_e4m3 operator-() const noexcept
     {
         return from_bits(static_cast<uint8_t>(data ^ detail::FP8_E4M3_SIGN_MASK));
     }
 
-    HOST_DEVICE fp8_e4m3 operator+() const noexcept
+    __device__ fp8_e4m3 operator+() const noexcept
     {
         return *this;
     }
@@ -299,97 +317,24 @@ static_assert(std::is_move_constructible_v<fp8_e4m3>, "fp8_e4m3 must be move con
 // Use unqualified calls like: isnan(x), isinf(x), etc.
 // ============================================================================
 
-HOST_DEVICE inline bool isnan(fp8_e4m3 x)
+__device__ inline bool isnan(fp8_e4m3 x)
 {
     return (x.data & detail::FP8_E4M3_ABS_MASK) == detail::FP8_E4M3_NAN;
 }
 
-HOST_DEVICE inline bool isinf(fp8_e4m3 /*x*/)
+__device__ inline bool isinf(fp8_e4m3 /*x*/)
 {
     return false; // E4M3 has no infinity
 }
 
-HOST_DEVICE inline bool signbit(fp8_e4m3 x)
+__device__ inline bool signbit(fp8_e4m3 x)
 {
     return (x.data & detail::FP8_E4M3_SIGN_MASK) != 0;
 }
 
-HOST_DEVICE inline bool isfinite(fp8_e4m3 x)
+__device__ inline bool isfinite(fp8_e4m3 x)
 {
     return !isnan(x);
 }
 
-} // namespace hipdnn_gpu_ref::types
-
-// std::numeric_limits specialization
-// NOLINTBEGIN(readability-identifier-naming) - standard library names must match exactly
-template <>
-class std::numeric_limits<hipdnn_gpu_ref::types::fp8_e4m3>
-{
-    using T = hipdnn_gpu_ref::types::fp8_e4m3;
-
-public:
-    static constexpr bool is_specialized = true;
-    static constexpr bool is_signed = true;
-    static constexpr bool is_integer = false;
-    static constexpr bool is_exact = false;
-    static constexpr bool has_infinity = false; // OCP E4M3 has no infinity
-    static constexpr bool has_quiet_NaN = true;
-    static constexpr bool has_signaling_NaN = false;
-    static constexpr std::float_denorm_style has_denorm = std::denorm_present;
-    static constexpr bool has_denorm_loss = false;
-    static constexpr std::float_round_style round_style = std::round_to_nearest;
-    static constexpr bool is_iec559 = false;
-    static constexpr bool is_bounded = true;
-    static constexpr bool is_modulo = false;
-    static constexpr int digits = 4; // 3 mantissa + 1 implicit
-    static constexpr int digits10 = 0;
-    static constexpr int max_digits10 = 3;
-    static constexpr int radix = 2;
-    static constexpr int min_exponent = -5;
-    static constexpr int min_exponent10 = -2;
-    static constexpr int max_exponent = 9;
-    static constexpr int max_exponent10 = 2;
-    static constexpr bool traps = false;
-    static constexpr bool tinyness_before = false;
-
-    HOST_DEVICE static constexpr T min() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_MIN_NORMAL);
-    }
-    HOST_DEVICE static constexpr T lowest() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_LOWEST);
-    }
-    HOST_DEVICE static constexpr T max() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_MAX);
-    }
-    HOST_DEVICE static constexpr T epsilon() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_EPSILON);
-    }
-    HOST_DEVICE static constexpr T round_error() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_ROUND_ERROR);
-    }
-    HOST_DEVICE static constexpr T infinity() noexcept
-    {
-        // no infinity, return max()
-        return max();
-    }
-
-    HOST_DEVICE static constexpr T quiet_NaN() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_NAN);
-    }
-    HOST_DEVICE static constexpr T signaling_NaN() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_NAN);
-    }
-    HOST_DEVICE static constexpr T denorm_min() noexcept
-    {
-        return T::from_bits(hipdnn_gpu_ref::types::detail::FP8_E4M3_DENORM_MIN);
-    }
-};
-// NOLINTEND(readability-identifier-naming)
+} // namespace hipdnn_gpu_ref::device_types
