@@ -7386,6 +7386,14 @@ class KernelWriter(metaclass=abc.ABCMeta):
                                # Requires TDM multicast, not just a cluster: without a peer
                                # ld_bcst that wait has nothing to retire (gfx1250-strict).
                                "StreamKMulticast": bool(streamKMulticast(kernel)),
+                               # InsertClusterBarrierPass placement experiments; the
+                               # defaults keep today's handshakes.
+                               "ClusterBarrierRule3SignalLeadCycles": int(
+                                   globalParameters.get("StinkyTofuClusterBarrierRule3SignalLeadCycles", -1)),
+                               "ClusterBarrierRule3Mode": int(
+                                   globalParameters.get("StinkyTofuClusterBarrierRule3Mode", 0)),
+                               "ClusterProducerDrain": int(
+                                   globalParameters.get("StinkyTofuClusterProducerDrain", -1)),
                                # TDMLoadWaveSyncPass (Gfx1250Backend): insert a barrier
                                # between an urgent and a deferrable tensor_load group.
                                # Off by default.
