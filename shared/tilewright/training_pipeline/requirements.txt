@@ -1,0 +1,20 @@
+# pipeline_v3 -- self-contained per-cell ML recommender pipeline.
+#
+# Tested under micromamba env `pipeline_v3` with Python 3.12 on
+# Linux/gfx950. Pin to the versions we know to work; loosen only if
+# you've validated upstream changes against the full pipeline.
+
+numpy>=1.26,<2.3
+pyyaml>=6.0
+msgpack>=1.0,<2.0
+
+# ML deps. lightgbm is the LambdaRank teacher (skip with stage05
+# --no-teacher); the GenericTwoTower student itself only needs torch.
+torch>=2.3,<3.0
+lightgbm>=4.0,<5.0
+
+# Optional: origami python binding (built separately from
+# rocm-libraries/shared/origami; not on PyPI). stage02 (probe baseline)
+# and stage05 (origami per-cell baseline) AUTO-DETECT it via
+# `--origami-python-path`; pipeline runs without it but those features
+# degrade to disabled.

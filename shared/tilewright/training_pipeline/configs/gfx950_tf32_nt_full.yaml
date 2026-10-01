@@ -1,0 +1,428 @@
+# TF32 (xf32) / NT / gfx950 (MI350X) configuration for the ML recommender
+# pipeline. f32_r tensors, compute_type=c_xf32_r selects the TF32 MFMA.
+#
+# Single source of truth for ONE end-to-end run. `run_orchestrator.py`
+# takes ONLY this file plus --mode {initial,active,full}. Active mode
+# auto-discovers every round_*/ already under --run-dir as priors;
+# there's no `--prior-round-dir` knob on the orchestrator. Every
+# other tunable lives here -- devices, build paths, per-stage
+# parameters, training hyperparams, total round count for `--mode
+# full`, deploy options.
+#
+# Grid-based: NO clustering section. The 96-cell grid in lib/grid.py
+# is the partitioning. One trained model per cell.
+
+# `config_id` identifies this OOB CONFIGURATION (arch + dtype + layout).
+# Not to be confused with a "grid cell" (one of the 96 categorical
+# regions of (M, N, K, B) tier space; see `seed.target_per_cell`).
+config_id: gfx950_tf32_nt_v2
+# v2: exercises the data-quality + coverage features --
+#   - stage04 populates the 7 config_ml features (without them the model is
+#     blind to prefetch/LSU/LDS-read/non-temporal; train/serve skew),
+#   - stage01 guarantees >= min_cell_gemms shapes per split leaf (no orphans),
+#   - stage04b disables splitting on the final round (no untrained leaves),
+#   - hardening enabled below (extra weak-cell rounds + higher smart_k_min).
+# These are exercised by a FRESH run (re-synthesize + re-bench each round).
+arch: gfx950
+# hipblaslt-bench yaml type fields. Mirror the val pool yamls so hash-
+# based dedup works across rounds. TF32 is NOT a storage dtype: tensors
+# are f32_r and the TF32 path is selected by compute_type=c_xf32_r
+# (xfloat32 emulated MFMA). stage05/stage04 derive mi_dtype=xf32 from
+# the compute_type, and the .dat tag is SS_SS_HA... (Ailk_Bjlk = NT,
+# i.e. transA=N -> Ailk, transB=T -> Bjlk).
+hipblaslt:
+  a_type: f32_r
+  b_type: f32_r
+  c_type: f32_r
+  d_type: f32_r
+  scale_type: f32_r
+  compute_type: c_xf32_r
+  transA: N
+  transB: T
+
+# Host-side runtime: GPUs available + root of the rocm-libraries
+# checkout this run targets. Build paths are derived from the root
+# (orchestrator computes bench_binary, dat_dir, match_table,
+#  origami_python_path automatically using the standard rocm-libraries
+#  layout).
+# Paths in this file may use ${VAR}: run_orchestrator.py expands ${VAR}
+# and a leading ~ in every config string at load time and refuses to run
+# if a referenced variable is unset. scripts/run_gfx1250v0.sh exports
+# TILEWRIGHT_BENCH_ROOT and TILEWRIGHT_DEPLOY_ROOT (default: the
+# rocm-libraries checkout this pipeline lives in); for gfx950 runs,
+# export them yourself.
+runtime:
+  devices: [0, 1, 2, 3, 4, 5, 6, 7]
+  rocm_libraries_root: ${TILEWRIGHT_BENCH_ROOT}
+
+# Stage 01 OOB seed defaults.
+seed:
+  target_per_cell: 400        # FULL run; per populated cell
+  shapes_per_cell: 150         # active mode; constant N per populated cell
+  rotating_mb: 512            # rotating buffer stamp on every bench line
+  seed: 42                    # rng seed for shape synthesis
+  # Per-axis log-equal strata for WITHIN-cell corner coverage. 1 =
+  # legacy pure log-uniform on the whole cell box; 2 = octant
+  # stratification (8 sub-boxes per cell); 4 = quartiles (64
+  # sub-boxes). Higher = more guaranteed corner coverage at the cost
+  # of smaller per-sub-box sample budgets. Use 4 once target_per_cell
+  # is comfortably above 64; leave at 1 for tiny per-cell budgets.
+  #
+  # Set to 2 (octant stratification): with the widened Large/LargeK
+  # ceilings (lib/grid.py) a Large cell box now spans ~9 octaves, so
+  # pure log-uniform (n_strata=1) clusters samples at the geometric
+  # MIDDLE (~2k) and under-covers the high-magnitude decade where real
+  # workloads live. n_strata=2 guarantees the top sub-box (large M/N/K)
+  # gets its share of the budget; the adaptive splitter then carves by
+  # magnitude over rounds.
+  n_strata: 2
+
+# Stage 02 probe: measure each shape's representative `us` quickly,
+# then calibrate per-shape iters / cold_iters / skip_slow_solution_ratio
+# so every shape's main bench runs for ~`duration_us` of measured wall-
+# time per kernel. The output is ONE shapes_probed.yaml ready for
+# stage03 (load-balanced bench).
+probe:
+  # Knobs for the probe pass itself (cheap; only used to GET the `us`):
+  first_line_iters: 10            # first line of each probe-split yaml
+  first_line_cold_iters: 10
+  other_lines_iters: 1            # all subsequent lines: 1 iter, 0 cold
+  other_lines_cold_iters: 0
+
+  # Knobs the probe writes into the FINAL per-shape line stamps.
+  # `duration_us` is the ONLY thing that drives iters -- no min/max
+  # cap; the script just clamps iters at >=1 (the bench tool's hard
+  # floor) so we never emit `iters: 0`. cold_iters always == iters.
+  duration_us: 2000               # target wall-time per kernel measurement
+  # skip_slow_solution_ratio mode:
+  #   sigmoid -- continuous logistic ramp in log-latency, bounded to
+  #              [skip_ratio_min, skip_ratio_max]; slow GEMMs prune harder,
+  #              fast/near-tied GEMMs prune little (protects winner label).
+  #   bucket  -- legacy 2-tier (fast_us_threshold -> ratio_light/ratio_heavy).
+  skip_ratio_mode: sigmoid
+  skip_ratio_min: 0.05            # lightest prune (fast / near-tied GEMMs)
+  skip_ratio_max: 0.95            # heaviest prune (very slow GEMMs)
+  skip_ratio_center_us: 30        # 50% pivot latency (us)
+  skip_ratio_k: 1.5               # logistic steepness in ln(probe_us/center)
+  # Legacy bucket knobs (consulted only when skip_ratio_mode: bucket):
+  fast_us_threshold: 30           # probe_us < this -> "fast" -> ratio_light
+  ratio_light: 0.3                # skip_slow_solution_ratio for fast shapes
+  ratio_heavy: 0.8                # for slow shapes
+
+# Stage 03 bench (per-GPU work queue + crash recovery).
+bench:
+  blocks_per_gpu: 50         # target ~N blocks per device. Smaller =>
+                             # finer dynamic balancing (slower GPUs
+                             # take fewer / smaller blocks; faster
+                             # ones drain the queue first), and
+                             # smaller tail latency. block_size =
+                             # ceil(n_shapes / (n_gpus * blocks_per_gpu)).
+
+# Stage 05 training.
+train:
+  # Per-cell training parallelism (thread-capped process pool over
+  # train_cell; bit-identical to sequential).
+  # threads_per_worker=0 auto-sizes to cpu_count//workers.
+  workers: 48
+  threads_per_worker: 0
+  epochs: 200
+  device: cpu                # torch device: cpu | cuda | cuda:0 | hip
+  # stage05 trains the student (and the LightGBM teacher) on ALL of
+  # each cell's GEMMs -- there is no per-cell train/val split inside
+  # stage05. The "sel_eff" reported per-epoch in stage05 is therefore
+  # TRAINING-SET accuracy by design (reference only). The REAL
+  # selection-efficiency signal -- on unknown shapes -- comes from
+  # the NEXT round's stage04b (active-round validate; logical stage
+  # 4.5), where stage01's history-dedup guarantees those GEMMs were
+  # never trained on. Weights are randomly reinitialized on every
+  # retrain (no warm-start from the prior round); cross-round
+  # augmentation comes from training data, not from initial weights.
+  #
+  # `eval_sample_frac` just controls how many GEMMs the per-epoch
+  # report covers (1.0 = all GEMMs, the configured default). Set
+  # lower only as a speed knob on very large cells.
+  eval_sample_frac: 1.0
+  smart_k: 15                # Per-cell candidate cap after the
+                             # check_lds_capacity + is_kernel_feasible
+                             # pre-filter. The cell's K kernel
+                             # SIGNATURES are chosen post-training by
+                             # student-aware greedy max-coverage
+                             # (select_smart_k_signatures), stored in
+                             # models.pt / the deployed .bin, and the
+                             # deploy runtime + stage 7 parity check
+                             # both filter to exactly that list.
+                             # `smart_k` is the legacy fixed target
+                             # used when adaptive-K is OFF.
+  # ── Adaptive-K (opt-in) ──────────────────────────────────────────
+  # When `smart_k_max` is set, the per-cell list is grown to k_max
+  # then truncated at the regret-curve knee in [smart_k_min,
+  # smart_k_max]: cells whose coverage saturates early keep a SHORT
+  # list (selection-time win) and cells still improving keep a LONGER
+  # list up to k_max (the OOD whitelist-coverage win).
+  # Parity-safe: the runtime + parity check read
+  # whatever-length list ships, so NO C++ change is needed. Comment
+  # `smart_k_max` out to fall back to the fixed `smart_k` above.
+  smart_k_max: 25            # grow up to 20 sigs for coverage-limited cells
+  smart_k_min: 5             # floor; saturated cells shrink to here
+  smart_k_saturation_eps: 0.005   # stop growing K once the next sig
+                                  # adds < 0.5 pp sel_eff (knee also
+                                  # requires full GEMM coverage)
+  # round_0 trains every populated cell; round_R (R>=1) retrains only
+  # the cells stage04b marks as failing. In BOTH cases the training set
+  # is the UNION of every round's enriched data (cross-round data
+  # augmentation).
+  min_cell_gemms: 30         # skip cells with fewer GEMMs than this
+
+# Stage 4.5 active-learning iteration (stage04b on disk).
+validate:
+  # PASS cutoff. Accepts a numeric value in (0, 1] (e.g. 0.95) OR the
+  # literal string `origami`, in which case the per-cell PASS
+  # threshold = that cell's measured Origami sel_eff this round --
+  # i.e. "the trained model must do at least as well as plain
+  # Origami". If the Origami baseline failed for that cell, falls
+  # back to 0.95.
+  # Why not lower: under a looser bar, wide cells (e.g. Large|Large|LargeK)
+  # can PASS on same-distribution synthetic shapes and get carried
+  # forever, yet score markedly worse on real OOD data. At
+  # 0.95 the whole sub-0.95 band stays active (retrain/split-eligible),
+  # so those wide cells keep getting augmented data and get carved by
+  # magnitude until they actually clear the bar on held-out shapes.
+  sel_eff_threshold: 0.95
+  # If a cell has fewer than this many NEW GEMMs after the bench, the
+  # per-cell sel_eff is too noisy to trust -- we conservatively mark
+  # that cell for retrain rather than risk a "PASS" call on bad data.
+  min_cell_gemms: 20
+  # Adaptive cell splitting. A cell becomes a SPLIT candidate when
+  # its measured held-out `sel_eff_new` (the new shapes this round)
+  # is below `split_floor`. Split candidates are DEMOTED to plain
+  # retrain until the cell has been retrained `split_after_attempts`
+  # times -- i.e. data augmentation gets that many shots before we
+  # carve. Only after that does stage04b actually split the cell.
+  #
+  # Split-AXIS selection (when a cell is carved):
+  #   1. TIER-FIRST: restrict candidate axes to those at the WIDEST
+  #      base-cell tier (M / N: Tiny < Small < Mid < Large; K:
+  #      TinyK < MidK < LargeK). Stops the pipeline from carving an
+  #      already-Tiny / TinyK axis when M or N has more room.
+  #   2. Among those, pick the axis with the largest CART variance-
+  #      reduction gain on the prior round's per-GEMM log_ratios.
+  #   3. Threshold = the cell's log-median value on the chosen axis.
+  # Depth is capped by `max_split_depth` (one base cell can produce
+  # at most 2 ** max_split_depth leaves).
+  #
+  # split_floor accepts a numeric value OR the literal "origami" --
+  # "origami" means: split when the model is worse than plain
+  # Origami on this round's data.
+  split_floor: 0.83
+  # A below-floor cell is SPLIT only when its `sel_eff_new` did NOT
+  # improve over the prior round's `sel_eff` by at least this delta
+  # -- i.e. "data augmentation has stopped helping, carve the cell".
+  # Combined with `split_after_attempts`, this codifies the operator
+  # rule: split a cell ONLY if data was augmented enough (N rounds)
+  # but sel_eff did not improve. Set to 0 to disable the not-
+  # improving check (then SPLIT triggers purely on attempts + floor).
+  split_min_improvement: 0.02
+  # SPLIT requires the cell to have already received this many
+  # rounds of augmented training (counted from the cumulative
+  # retrain history). Default 2 means a below-floor cell gets two
+  # full rounds of data-augmentation + fresh-init retraining BEFORE
+  # being carved. Larger values bias against splitting (more data
+  # first); 0 splits below-floor cells immediately.
+  # 1 rather than the default 2: attempts=2 delays the first carve to
+  # round 3, leaving a short run little room for depth >= 2. With
+  # attempts=1 a below-bar cell splits after a single non-improving
+  # retrain, so carving starts ~round 2 and depth grows every ~2 rounds
+  # (depth ~4 reachable within total_rounds=8).
+  split_after_attempts: 1
+  max_split_depth: 6
+  # STRUCTURAL width-split guarantee (0 = off). The sel_eff trigger above
+  # trusts the synthetic held-out as a proxy for real OOD data; for a leaf
+  # spanning ~10 octaves (Large M/N, LargeK) that proxy can be optimistic
+  # (mis-PASS the bar, then freeze). With this >0, ANY cell whose widest
+  # splittable axis still spans more than this many octaves is carved by
+  # magnitude regardless of sel_eff -- a robustness guarantee independent
+  # of the proxy. 6.0 carves the Large (~10 oct) / LargeK (~8 oct) tiers
+  # down to ~5-octave leaves, then the sel_eff trigger refines within.
+  structural_split_min_octaves: 6.0
+  # Cap (split-tree depth) on how deep the structural width-split may carve a
+  # base cell, independent of max_split_depth (which still bounds CART/sel_eff
+  # splits). -1 = use max_split_depth (no extra cap; current behavior). Lower
+  # it (e.g. 2-3) to stop over-carving Large/LargeK into thin, data-starved
+  # leaves that get tiny per-cell models and overfit the few benched large
+  # GEMMs -- a failure mode that can regress large compute-bound GEMMs.
+  structural_split_max_depth: -1
+
+# `--mode full` runs round_0 (initial) followed by (total_rounds - 1)
+# active rounds under the SAME run dir. Resume any mid-run crash via
+# --run-dir <existing> --from-round R --from-stage N.
+full:
+  # 8 rounds for a full run: the 0.95 bar keeps more cells active and
+  # split_after_attempts=1 carves earlier; the extra rounds give the
+  # carved children room to refine + re-split (depth ~4) so the worst
+  # wide cells can reach 0.95.
+  total_rounds: 8
+
+# Stage 06 deploy (formerly numbered stage07).
+# stage06 fires automatically when ANY of these is
+# true, in addition to whenever you pass `--deploy` on the
+# orchestrator CLI:
+#   * `target_sel_eff` is a number AND this round's global_sel_eff
+#     (from stage05/metrics.json) is >= that number, OR
+#   * we're at the LAST round of `--mode full` and `on_final_round`
+#     is true.
+# If `stop_when_target_reached` is true, hitting target_sel_eff also
+# stops the orchestrator from running further rounds.
+# Opt-in post-rounds weak-cell hardening (O4). After `full.total_rounds`
+# completes, run extra ACTIVE rounds focused on the weak tail until every
+# cell's latest held-out sel_eff >= sel_eff_threshold (or max_rounds), with a
+# boosted smart_k_min so weak cells get a thicker kernel shortlist. When
+# enabled, the planned rounds defer deploy to the last hardening round.
+# Disabled by default -> no behavior change.
+hardening:
+  enabled: true
+  sel_eff_threshold: 0.80     # cells below this latest held-out sel_eff are "weak"
+  max_rounds: 4               # cap on extra hardening rounds (full weak-cell enhancement)
+  smart_k_min: 10             # raise the per-cell K floor (default = train.smart_k_min)
+
+deploy:
+  target_sel_eff: 0.95
+  on_final_round: true
+  stop_when_target_reached: false
+
+  # Precision the deployed .bin stores the MLP `.weight` matrices in.
+  #   bf16 (default) -- top 16 bits of each float32 weight; ~halves
+  #     the binary (weights dominate the per-cell payload). The C++
+  #     runtime promotes bf16->fp32 at load and computes in fp32, and
+  #     stage 7's parity check rounds the Python weights identically,
+  #     so C++<->Python picks stay bit-for-bit identical. Biases /
+  #     whitening / temperature remain fp32.
+  #   fp32 -- legacy full precision (larger .bin, no behavior change).
+  #   int8 -- per-tensor symmetric int8 (scale=max|w|/127); halves the .bin
+  #     again vs bf16. The C++ runtime dequantizes (w=q*scale) and stage 7's
+  #     parity check rounds the Python weights through the same int8 grid, so
+  #     C++<->Python picks stay exact. This is the productized precision.
+  weight_dtype: int8
+
+  # `rocm_libraries_to_deploy` is the rocm-libraries CHECKOUT that
+  # stage06 modifies. We ASSUME the kernels in this checkout are
+  # already built (the `.dat` libraries under
+  # `projects/hipblaslt/build/release/Tensile/library/<arch>/` exist),
+  # and the origami source tree under `shared/origami/` is already
+  # plumbed into the build system. stage06's job is then just to drop
+  # in the new model:
+  #   1. Weights binary -> <repo>/shared/mosaic/backends/hipblaslt/data/
+  #                          mosaic_weights.bin
+  #      (The mosaic engine C++ is shipped via git in shared/mosaic; stage06
+  #       does NOT touch C++ source -- only the .bin. hipBLASLt calls
+  #       mosaic::hipblaslt::rank_configs directly behind TENSILE_USE_MOSAIC.)
+  #   2. Install docs   -> <repo>/shared/origami/ML_RECOMMENDER_INSTALL.md
+  #   The confidential manifest/summary stay in the run output, NOT the repo.
+  # When null, stage06 only emits to <round>/stage06/staged_for_deploy/
+  # and the operator does the drop-in manually.
+  rocm_libraries_to_deploy: ${TILEWRIGHT_DEPLOY_ROOT}
+
+  # If false, stage06 stops after staging changes under
+  # <round>/stage06/staged_for_deploy/ (a mirror of what WOULD be
+  # written into the repo) and prints a diff -- the operator can
+  # inspect, then rerun with apply_patch=true. If true, stage06
+  # actually overwrites the files in `rocm_libraries_to_deploy`.
+  apply_patch: true
+
+  # When apply_patch is true AND build_after_apply is true, stage06
+  # also relinks the parts of the deploy repo that consume the new
+  # model. The kernels are NOT rebuilt -- they're assumed live. The
+  # steps actually run are:
+  #   (a) cmake --build <repo>/shared/origami/build --parallel <jobs>
+  #         -- rebuilds libOrigami + the origami Python binding `.so`
+  #         (it embeds ml_recommender.cpp)
+  #   (b) make -C <repo>/projects/hipblaslt/build/release/clients
+  #         -j <jobs>
+  #         -- relinks hipblaslt-bench against the new libOrigami
+  #   (c) cp <repo>/shared/origami/build/python/src/origami/origami.cpython-*.so
+  #            <python_site_packages>/origami/
+  #         -- so the offline-eval Python path
+  #            (stage08_validate_sel_eff) sees the new library too.
+  #            The dest is auto-detected from `sys`.
+  # Output is tee'd to <round>/stage06/build.log. Cost: small
+  # (origami is small; we're only relinking hipblaslt-bench,
+  # not rebuilding any kernels).
+  #
+  # NB: relinking needs the deploy checkout at `rocm_libraries_to_deploy`
+  # to have its origami cmake build configured (`shared/origami/build/`
+  # exists). Until it does, keep this FALSE: the .bin is still copied
+  # into the checkout's `shared/origami/data/` -- the operator can run
+  # `cmake -S shared/origami -B shared/origami/build
+  # -DORIGAMI_ENABLE_PYTHON=ON && cmake --build shared/origami/build`
+  # by hand and flip this to true once that's done.
+  build_after_apply: false
+  # null lets the build commands pick the parallelism; set to int to
+  # override.
+  build_jobs: null
+
+# Stage 07 + Stage 08 -- OPTIONAL post-deploy validation.
+#
+# Triggered together by the orchestrator with `--mode validate
+# --run-dir <existing>`. Validate mode reads ONLY the two lists below
+# (`stage07.bench_yamls` and `stage08.datasets`); every other knob is
+# derived from the sections you've already configured:
+#
+#   * devices               <- runtime.devices
+#                              (stage 7 single-device runs use the
+#                               first; stage 8 multi-GPU offline-tune
+#                               uses all)
+#   * blocks_per_gpu        <- bench.blocks_per_gpu
+#   * sel_eff_threshold     <- validate.sel_eff_threshold
+#   * min_cell_gemms        <- validate.min_cell_gemms
+#   * torch_device          <- train.device
+#   * rocm_libraries        <- deploy.rocm_libraries_to_deploy
+#                              (for stage 7's hipblaslt-bench + stage 8's
+#                               enrich paths). Stage 8 falls back to
+#                               runtime.rocm_libraries_root if that
+#                               build is incomplete.
+#   * arch                  <- arch
+#   * iters / cold_iters    stage 7 uses 1/0 so selection time
+#                              dominates -- never duplicate these
+#                              here.
+#
+# To VERIFY the tilewright model is actually active (vs falling back
+# to plain Origami), stage 7 runs its ML-on bench with
+#   TENSILE_USE_TILEWRIGHT=1 TILEWRIGHT_DIAG=1 TILEWRIGHT_PICK_LOG=1
+# and its ML-off baseline with none of them. The runtime finds weights
+# only through a `tilewright_index` beside the Tensile library .dat
+# (stage06 stages them; `build_after_apply` runs the colocate step).
+# With TILEWRIGHT_DIAG=1 it prints a one-shot stderr line
+#   [TILEWRIGHT_DIAG FILE] ... arch=... qhash=... n_cells=N n_splits=K
+# when a weights .bin loads -- a missing line means the runtime
+# could not find / open / parse the weights and is silently using
+# plain Origami. Stage 7's summary flags whether this marker was
+# seen in each bench log.
+stage07:
+  # When > 0, stage 7 times + parity-checks this many random UNIQUE shapes
+  # SAMPLED FROM THE TRAINED DATASET (union of every round_*/stage01/
+  # shapes.yaml) instead of the external bench_yamls below. These are the
+  # in-distribution shapes the deployed cells actually serve, and they're
+  # guaranteed to match the run's dtype/layout (the workload filter never
+  # drops them as OOD). Set to 0 to fall back to bench_yamls.
+  parity_sample_trained: 1000
+  # bench yamls to time. One run per yaml; each yaml is run twice
+  # (ML-on vs ML-off, both with TENSILE_PREDICTION_LIB=1 and
+  # TENSILE_DB=0x10000 so the selection-time spans print).
+  # Used only when parity_sample_trained == 0. Empty: add hipblaslt-bench
+  # yaml paths (may use ${TILEWRIGHT_DATASETS}) to time external traces.
+  bench_yamls: []
+
+stage08:
+  # External datasets to re-evaluate the trained ML recommender on.
+  # Each entry is auto-classified:
+  #   *.yaml                  -> run Origami offline tune via stage03,
+  #                              then enrich, then evaluate.
+  #   dir of block_*.log      -> skip bench; enrich; then evaluate.
+  #   dir of chunk_*.csv      -> already enriched; evaluate directly.
+  # xf32 workloads: stage08 benches/enriches them against the xf32
+  # (F32XdlMathOp) kernels and reports model-vs-Origami sel_eff per cell
+  # (every populated cell is scored).
+  # For a quick run, list only pre-benched log dirs (block_*.log): stage08
+  # then skips the GPU bench and only enriches + evaluates.
+  # Empty: add `{name, path, rocm_libraries_used}` entries (paths may use
+  # ${TILEWRIGHT_DATASETS}) to evaluate on external traces.
+  datasets: []

@@ -1,0 +1,33 @@
+# ── Per-run artifacts (heavy; not source) ──────────────────────────────────
+# Each orchestrator run produces hundreds of MB of bench logs, enriched CSV
+# chunks, trained model bundles and an HTML report. They are per-host, and the
+# logs, metrics and report all carry measured performance numbers, which must
+# not be committed.
+runs/
+
+# Out-of-tree origami builds (scripts/run_gfx1250v0.sh puts one on
+# LD_LIBRARY_PATH) and other build outputs.
+.origami_build*/
+*_out/
+
+# Train artifacts are heavy and regenerable from the enriched chunks + code.
+*.pt
+# Deployed weights belong under shared/tilewright/backends/hipblaslt/weights/,
+# written there by stage06 -- never inside the pipeline tree.
+*.bin
+
+# Big tarballs / packed binaries that don't belong in a code repo
+*.tar
+*.tar.gz
+*.tar.zst
+
+# Python / test scaffolding
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Editor / OS scaffolding
+.DS_Store
+.idea/
+.vscode/
+*.swp
